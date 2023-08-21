@@ -8,19 +8,7 @@
 <script src="lc-offline.js" type="text/javascript"></script>
 </head>
 <body id="lc">
-<script>
-// toto je naše:
-const currentDate = new Date();
-const year = currentDate.getFullYear();
-const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-const day = String(currentDate.getDate()).padStart(2, '0');
-
-const formattedDate = `${year}-${month}-${day}`;
-console.log(formattedDate);
-// window.location.hash = formattedDate;        
-
-init(); // lc.kbs.sk
-</script>
+<script>init();</script>
 <div class="lc hvr-scl-chldrn-a">
 <section class="lcDEN ned psv">
 <h1 class="datum" nav="Ne 1. 1. 2023">
@@ -69,7 +57,7 @@ Panny Márie Bohorodičky
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> január 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Alexandra, Karina</span>
 </span>
@@ -107,7 +95,7 @@ Svätých Bazila Veľkého a Gregora Nazianzského, biskupov a učiteľov Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> január 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Daniela</span>
 </span>
@@ -170,7 +158,7 @@ Najsvätejšieho mena Ježiš
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> január 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Drahoslav</span>
 </span>
@@ -207,7 +195,7 @@ Streda vo Vianočnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> január 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Andrea</span>
 </span>
@@ -275,7 +263,7 @@ Zjavenie Pána
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> január 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Antónia</span>
 </span>
@@ -316,7 +304,7 @@ Zjavenie Pána
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> január 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Bohuslava</span>
 </span>
@@ -358,7 +346,7 @@ Svätého Rajmunda z Peňafortu, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> január 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Severín</span>
 </span>
@@ -397,7 +385,7 @@ Krst Krista Pána
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> január 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Alexej</span>
 </span>
@@ -434,7 +422,7 @@ Pondelok 1. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> január 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Daša</span>
 </span>
@@ -471,7 +459,7 @@ Utorok 1. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> január 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Malvína</span>
 </span>
@@ -508,7 +496,7 @@ Streda 1. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> január 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Ernest</span>
 </span>
@@ -545,7 +533,7 @@ Streda 1. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> január 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Rastislav</span>
 </span>
@@ -587,7 +575,7 @@ Svätého Hilára, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> január 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Radovan</span>
 </span>
@@ -629,7 +617,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> január 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Dobroslav</span>
 </span>
@@ -669,7 +657,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> január 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Kristína</span>
 </span>
@@ -706,7 +694,7 @@ Pondelok 2. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> január 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Nataša</span>
 </span>
@@ -744,7 +732,7 @@ Svätého Antona, opáta
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> január 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Bohdana</span>
 </span>
@@ -781,7 +769,7 @@ Streda 2. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> január 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Drahomíra, Mário</span>
 </span>
@@ -818,7 +806,7 @@ Streda 2. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> január 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Dalibor</span>
 </span>
@@ -886,7 +874,7 @@ ORDINARIÁT OS a OZ SR: Svätého Šebastiána, mučeníka – hlavného patrón
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> január 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Vincent</span>
 </span>
@@ -924,7 +912,7 @@ Svätej Agnesy, panny a mučenice
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> január 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Zora</span>
 </span>
@@ -964,7 +952,7 @@ Svätej Agnesy, panny a mučenice
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> január 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Miloš</span>
 </span>
@@ -1016,7 +1004,7 @@ BRATISLAVA (len v katedrále): Svätého Jána Almužníka, biskupa
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> január 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Timotej</span>
 </span>
@@ -1054,7 +1042,7 @@ Svätého Františka Saleského, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> január 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Gejza</span>
 </span>
@@ -1095,7 +1083,7 @@ Obrátenie svätého Pavla, apoštola
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> január 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Tamara</span>
 </span>
@@ -1133,7 +1121,7 @@ Svätých Timoteja a Títa, biskupov
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> január 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Bohuš</span>
 </span>
@@ -1175,7 +1163,7 @@ Svätej Angely Merici, panny
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> január 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Alfonz</span>
 </span>
@@ -1213,7 +1201,7 @@ Svätého Tomáša Akvinského, kňaza a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> január 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Gašpar</span>
 </span>
@@ -1253,7 +1241,7 @@ Svätého Tomáša Akvinského, kňaza a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> január 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Ema</span>
 </span>
@@ -1290,7 +1278,7 @@ Pondelok 4. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">31.</span> január 2023
+<span class="lcMD">31.</span> <a class="lcMY" href="onepage_tabulka.html#2023-01">január 2023</a>
 </span>
 <span class="lcND">meniny: Emil</span>
 </span>
@@ -1328,7 +1316,7 @@ Svätého Jána Bosca, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> február 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Tatiana</span>
 </span>
@@ -1365,7 +1353,7 @@ Streda 4. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> február 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Erika, Erik</span>
 </span>
@@ -1403,7 +1391,7 @@ Obetovanie Pána
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> február 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Blažej</span>
 </span>
@@ -1449,7 +1437,7 @@ Svätého Oskára, biskupa
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> február 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Veronika</span>
 </span>
@@ -1491,7 +1479,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> február 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Agáta</span>
 </span>
@@ -1531,7 +1519,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> február 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Dorota</span>
 </span>
@@ -1569,7 +1557,7 @@ Svätého Pavla Mikiho a spoločníkov, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> február 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Vanda</span>
 </span>
@@ -1606,7 +1594,7 @@ Utorok 5. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> február 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Zoja</span>
 </span>
@@ -1652,7 +1640,7 @@ Svätej Jozefíny Bakhity, panny
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> február 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Zdenko</span>
 </span>
@@ -1689,7 +1677,7 @@ Svätej Jozefíny Bakhity, panny
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> február 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Gabriela</span>
 </span>
@@ -1727,7 +1715,7 @@ Svätej Školastiky, panny
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> február 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Dezider</span>
 </span>
@@ -1769,7 +1757,7 @@ Preblahoslavenej Panny Márie Lurdskej
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> február 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Perla</span>
 </span>
@@ -1809,7 +1797,7 @@ Preblahoslavenej Panny Márie Lurdskej
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> február 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Arpád</span>
 </span>
@@ -1846,7 +1834,7 @@ Pondelok 6. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> február 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Valentín</span>
 </span>
@@ -1931,7 +1919,7 @@ votívna svätá omša o svätých Cyrilovi, mníchovi, a Metodovi, biskupovi, p
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> február 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Pravoslav</span>
 </span>
@@ -1968,7 +1956,7 @@ Streda 6. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> február 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Ida, Liana</span>
 </span>
@@ -2005,7 +1993,7 @@ Streda 6. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> február 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Miloslava</span>
 </span>
@@ -2047,7 +2035,7 @@ Siedmich svätých zakladateľov Rehole služobníkov preblahoslavenej Panny Má
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> február 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Jaromír</span>
 </span>
@@ -2089,7 +2077,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> február 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Vlasta</span>
 </span>
@@ -2129,7 +2117,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> február 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Lívia</span>
 </span>
@@ -2166,7 +2154,7 @@ Pondelok 7. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> február 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Eleonóra</span>
 </span>
@@ -2208,7 +2196,7 @@ Svätého Petra Damianiho, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> február 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Etela</span>
 </span>
@@ -2249,7 +2237,7 @@ Popolcová streda
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> február 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Roman, Romana</span>
 </span>
@@ -2289,7 +2277,7 @@ Popolcová streda
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> február 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Matej</span>
 </span>
@@ -2326,7 +2314,7 @@ Piatok po Popolcovej strede
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> február 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Frederik, Frederika</span>
 </span>
@@ -2363,7 +2351,7 @@ Sobota po Popolcovej strede
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> február 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Viktor</span>
 </span>
@@ -2403,7 +2391,7 @@ Sobota po Popolcovej strede
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> február 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Alexander</span>
 </span>
@@ -2443,7 +2431,7 @@ Pondelok po 1. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> február 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-02">február 2023</a>
 </span>
 <span class="lcND">meniny: Zlatica</span>
 </span>
@@ -2480,7 +2468,7 @@ Utorok po 1. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> marec 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Albín</span>
 </span>
@@ -2517,7 +2505,7 @@ Streda po 1. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> marec 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Anežka</span>
 </span>
@@ -2554,7 +2542,7 @@ Streda po 1. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> marec 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Bohumil, Bohumila</span>
 </span>
@@ -2591,7 +2579,7 @@ Piatok po 1. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> marec 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Kazimír</span>
 </span>
@@ -2631,7 +2619,7 @@ Sobota po 1. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> marec 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Fridrich</span>
 </span>
@@ -2671,7 +2659,7 @@ Sobota po 1. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> marec 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Radoslav, Radoslava</span>
 </span>
@@ -2708,7 +2696,7 @@ Pondelok po 2. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> marec 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Tomáš</span>
 </span>
@@ -2748,7 +2736,7 @@ Utorok po 2. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> marec 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Alan, Alana</span>
 </span>
@@ -2788,7 +2776,7 @@ Streda po 2. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> marec 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Františka</span>
 </span>
@@ -2828,7 +2816,7 @@ Streda po 2. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> marec 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Branislav, Bruno</span>
 </span>
@@ -2888,7 +2876,7 @@ BRATISLAVA: Výročie posviacky katedrálneho chrámu svätého Martina z Tours 
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> marec 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Angela, Angelika</span>
 </span>
@@ -2925,7 +2913,7 @@ Sobota po 2. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> marec 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Gregor</span>
 </span>
@@ -2965,7 +2953,7 @@ Sobota po 2. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> marec 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Vlastimil</span>
 </span>
@@ -3002,7 +2990,7 @@ Pondelok po 3. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> marec 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Matilda</span>
 </span>
@@ -3039,7 +3027,7 @@ Utorok po 3. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> marec 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Svetlana</span>
 </span>
@@ -3076,7 +3064,7 @@ Streda po 3. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> marec 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Boleslav</span>
 </span>
@@ -3113,7 +3101,7 @@ Streda po 3. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> marec 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Ľubica</span>
 </span>
@@ -3153,7 +3141,7 @@ Piatok po 3. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> marec 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Eduard</span>
 </span>
@@ -3193,7 +3181,7 @@ Sobota po 3. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> marec 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Jozef</span>
 </span>
@@ -3233,7 +3221,7 @@ Sobota po 3. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> marec 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Víťazoslav, Klaudius</span>
 </span>
@@ -3274,7 +3262,7 @@ Svätého Jozefa, ženícha Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> marec 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Blahoslav</span>
 </span>
@@ -3311,7 +3299,7 @@ Utorok po 4. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> marec 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Beňadik</span>
 </span>
@@ -3348,7 +3336,7 @@ Streda po 4. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> marec 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Adrián</span>
 </span>
@@ -3388,7 +3376,7 @@ Streda po 4. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> marec 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Gabriel</span>
 </span>
@@ -3425,7 +3413,7 @@ Piatok po 4. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> marec 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Marián</span>
 </span>
@@ -3466,7 +3454,7 @@ Zvestovanie Pána
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> marec 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Emanuel</span>
 </span>
@@ -3506,7 +3494,7 @@ Zvestovanie Pána
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> marec 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Alena</span>
 </span>
@@ -3543,7 +3531,7 @@ Pondelok po 5. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> marec 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Soňa</span>
 </span>
@@ -3580,7 +3568,7 @@ Utorok po 5. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> marec 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Miroslav</span>
 </span>
@@ -3617,7 +3605,7 @@ Streda po 5. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> marec 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Vieroslava</span>
 </span>
@@ -3654,7 +3642,7 @@ Streda po 5. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">31.</span> marec 2023
+<span class="lcMD">31.</span> <a class="lcMY" href="onepage_tabulka.html#2023-03">marec 2023</a>
 </span>
 <span class="lcND">meniny: Benjamín</span>
 </span>
@@ -3691,7 +3679,7 @@ Piatok po 5. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> apríl 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Hugo</span>
 </span>
@@ -3728,7 +3716,7 @@ Sobota po 5. pôstnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> apríl 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Zita</span>
 </span>
@@ -3781,7 +3769,7 @@ Palmová (Kvetná) nedeľa – Nedeľa utrpenia Pána
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> apríl 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Richard</span>
 </span>
@@ -3818,7 +3806,7 @@ Pondelok Svätého týždňa
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> apríl 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Izidor</span>
 </span>
@@ -3855,7 +3843,7 @@ Utorok Svätého týždňa
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> apríl 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Miroslava</span>
 </span>
@@ -3892,7 +3880,7 @@ Streda Svätého týždňa
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> apríl 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Irena</span>
 </span>
@@ -3967,7 +3955,7 @@ Streda Svätého týždňa
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> apríl 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Zoltán</span>
 </span>
@@ -4007,7 +3995,7 @@ Piatok utrpenia Pána (Veľký piatok) – slávenie utrpenia a smrti Pána
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> apríl 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Albert</span>
 </span>
@@ -4139,7 +4127,7 @@ Veľkonočná nedeľa Pánovho zmŕtvychvstania
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> apríl 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Milena</span>
 </span>
@@ -4188,7 +4176,7 @@ Veľkonočná nedeľa Pánovho zmŕtvychvstania
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> apríl 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Igor</span>
 </span>
@@ -4225,7 +4213,7 @@ Pondelok vo Veľkonočnej oktáve
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> apríl 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Július</span>
 </span>
@@ -4262,7 +4250,7 @@ Utorok vo Veľkonočnej oktáve
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> apríl 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Estera</span>
 </span>
@@ -4299,7 +4287,7 @@ Streda vo Veľkonočnej oktáve
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> apríl 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Aleš</span>
 </span>
@@ -4336,7 +4324,7 @@ Streda vo Veľkonočnej oktáve
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> apríl 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Justína</span>
 </span>
@@ -4373,7 +4361,7 @@ Piatok vo Veľkonočnej oktáve
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> apríl 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Fedor</span>
 </span>
@@ -4410,7 +4398,7 @@ Sobota vo Veľkonočnej oktáve
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> apríl 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Dana, Danica</span>
 </span>
@@ -4450,7 +4438,7 @@ Sobota vo Veľkonočnej oktáve
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> apríl 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Rudolf</span>
 </span>
@@ -4487,7 +4475,7 @@ Pondelok po 2. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> apríl 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Valér</span>
 </span>
@@ -4524,7 +4512,7 @@ Utorok po 2. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> apríl 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Jela</span>
 </span>
@@ -4561,7 +4549,7 @@ Streda po 2. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> apríl 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Marcel</span>
 </span>
@@ -4598,7 +4586,7 @@ Streda po 2. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> apríl 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Ervín</span>
 </span>
@@ -4640,7 +4628,7 @@ Svätého Anzelma, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> apríl 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Slavomír</span>
 </span>
@@ -4677,7 +4665,7 @@ Sobota po 2. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> apríl 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Vojtech</span>
 </span>
@@ -4717,7 +4705,7 @@ Sobota po 2. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> apríl 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Juraj</span>
 </span>
@@ -4763,7 +4751,7 @@ Svätého Fidéla zo Sigmaringenu, kňaza a mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> apríl 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Marek</span>
 </span>
@@ -4801,7 +4789,7 @@ Svätého Marka, evanjelistu
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> apríl 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Jaroslava</span>
 </span>
@@ -4838,7 +4826,7 @@ Streda po 3. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> apríl 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Jaroslav</span>
 </span>
@@ -4875,7 +4863,7 @@ Streda po 3. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> apríl 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Jarmila</span>
 </span>
@@ -4921,7 +4909,7 @@ Svätého Ľudovíta Máriu Grigniona z Montfortu, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> apríl 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Lea</span>
 </span>
@@ -4959,7 +4947,7 @@ Svätej Kataríny Sienskej, panny a učiteľky Cirkvi, patrónky Európy
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> apríl 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-04">apríl 2023</a>
 </span>
 <span class="lcND">meniny: Anastázia</span>
 </span>
@@ -4999,7 +4987,7 @@ Svätej Kataríny Sienskej, panny a učiteľky Cirkvi, patrónky Európy
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> máj 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">Sviatok práce</span>
 </span>
@@ -5062,7 +5050,7 @@ Svätého Jozefa, robotníka
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> máj 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Žigmund</span>
 </span>
@@ -5100,7 +5088,7 @@ Svätého Atanáza, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> máj 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Galina</span>
 </span>
@@ -5138,7 +5126,7 @@ Svätých Filipa a Jakuba, apoštolov
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> máj 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Florián</span>
 </span>
@@ -5180,7 +5168,7 @@ Svätého Floriána, mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> máj 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Lesana, Lesia</span>
 </span>
@@ -5217,7 +5205,7 @@ Piatok po 4. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> máj 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Hermína</span>
 </span>
@@ -5254,7 +5242,7 @@ Sobota po 4. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> máj 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Monika</span>
 </span>
@@ -5294,7 +5282,7 @@ Sobota po 4. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> máj 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Ingrida</span>
 </span>
@@ -5331,7 +5319,7 @@ Pondelok po 5. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> máj 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Roland</span>
 </span>
@@ -5368,7 +5356,7 @@ Utorok po 5. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> máj 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Viktória</span>
 </span>
@@ -5410,7 +5398,7 @@ Svätého Jána z Avily, kňaza a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> máj 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Blažena</span>
 </span>
@@ -5452,7 +5440,7 @@ Blahoslavenej Sáry Salkaháziovej, panny a mučenice
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> máj 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Pankrác</span>
 </span>
@@ -5498,7 +5486,7 @@ Svätého Pankráca, mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> máj 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Servác</span>
 </span>
@@ -5540,7 +5528,7 @@ Blahoslavenej Panny Márie Fatimskej
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> máj 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Bonifác</span>
 </span>
@@ -5580,7 +5568,7 @@ Blahoslavenej Panny Márie Fatimskej
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> máj 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Žofia</span>
 </span>
@@ -5617,7 +5605,7 @@ Pondelok po 6. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> máj 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Svetozár</span>
 </span>
@@ -5678,7 +5666,7 @@ ROŽŇAVA: Svätého Jána Nepomuckého, kňaza a mučeníka – hlavného patr�
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> máj 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Gizela</span>
 </span>
@@ -5715,7 +5703,7 @@ Streda po 6. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> máj 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Viola</span>
 </span>
@@ -5756,7 +5744,7 @@ Nanebovstúpenie Pána
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> máj 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Gertrúda</span>
 </span>
@@ -5793,7 +5781,7 @@ Piatok po 6. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> máj 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Bernard</span>
 </span>
@@ -5835,7 +5823,7 @@ Svätého Bernardína Sienského, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> máj 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Zina</span>
 </span>
@@ -5875,7 +5863,7 @@ Svätého Bernardína Sienského, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> máj 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Júlia, Juliana</span>
 </span>
@@ -5917,7 +5905,7 @@ Svätej Rity z Cascie, rehoľníčky
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> máj 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Želmíra</span>
 </span>
@@ -5954,7 +5942,7 @@ Utorok po 7. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> máj 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Ela</span>
 </span>
@@ -5991,7 +5979,7 @@ Streda po 7. veľkonočnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> máj 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Urban</span>
 </span>
@@ -6041,7 +6029,7 @@ Svätej Márie Magdalény de’ Pazzi, panny
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> máj 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Dušan</span>
 </span>
@@ -6079,7 +6067,7 @@ Svätého Filipa Neriho, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> máj 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Iveta</span>
 </span>
@@ -6152,7 +6140,7 @@ Zoslanie Ducha Svätého
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> máj 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Viliam</span>
 </span>
@@ -6201,7 +6189,7 @@ Zoslanie Ducha Svätého
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> máj 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Vilma</span>
 </span>
@@ -6261,7 +6249,7 @@ Votívna omša o Duchu svätom
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> máj 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Ferdinand</span>
 </span>
@@ -6298,7 +6286,7 @@ Utorok 8. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">31.</span> máj 2023
+<span class="lcMD">31.</span> <a class="lcMY" href="onepage_tabulka.html#2023-05">máj 2023</a>
 </span>
 <span class="lcND">meniny: Petrana, Petronela</span>
 </span>
@@ -6335,7 +6323,7 @@ Streda 8. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> jún 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Žaneta</span>
 </span>
@@ -6373,7 +6361,7 @@ Nášho Pána Ježiša Krista, najvyššieho a večného kňaza
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> jún 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Xénia, Oxana</span>
 </span>
@@ -6415,7 +6403,7 @@ Svätých Marcelína a Petra, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> jún 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Karolína</span>
 </span>
@@ -6453,7 +6441,7 @@ Svätých Karola Lwangu a spoločníkov, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> jún 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Lenka</span>
 </span>
@@ -6509,7 +6497,7 @@ Najsvätejšej Trojice
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> jún 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Laura</span>
 </span>
@@ -6547,7 +6535,7 @@ Svätého Bonifáca, biskupa a mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> jún 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Norbert</span>
 </span>
@@ -6589,7 +6577,7 @@ Svätého Norberta, biskupa
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> jún 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Róbert</span>
 </span>
@@ -6626,7 +6614,7 @@ Streda 9. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> jún 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Medard</span>
 </span>
@@ -6670,7 +6658,7 @@ Najsvätejšieho Kristovho Tela a Krvi
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> jún 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Stanislava</span>
 </span>
@@ -6712,7 +6700,7 @@ Svätého Efréma, diakona a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> jún 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Margaréta</span>
 </span>
@@ -6754,7 +6742,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> jún 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Dobroslava</span>
 </span>
@@ -6794,7 +6782,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> jún 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Zlatko</span>
 </span>
@@ -6831,7 +6819,7 @@ Pondelok 10. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> jún 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Anton</span>
 </span>
@@ -6892,7 +6880,7 @@ ORDINARIÁT OS a OZ SR: Výročie posviacky katedrálneho chrámu svätého Šeb
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> jún 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Vasil</span>
 </span>
@@ -6929,7 +6917,7 @@ Streda 10. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> jún 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Vit</span>
 </span>
@@ -6966,7 +6954,7 @@ Streda 10. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> jún 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Blanka, Bianka</span>
 </span>
@@ -7022,7 +7010,7 @@ ROŽŇAVA (len v katedrále): Svätého Neita, mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> jún 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Adolf</span>
 </span>
@@ -7060,7 +7048,7 @@ Nepoškvrneného Srdca Preblahoslavenej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> jún 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Vratislav</span>
 </span>
@@ -7100,7 +7088,7 @@ Nepoškvrneného Srdca Preblahoslavenej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> jún 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Alfréd</span>
 </span>
@@ -7142,7 +7130,7 @@ Svätého Romualda, opáta
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> jún 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Valéria</span>
 </span>
@@ -7179,7 +7167,7 @@ Utorok 11. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> jún 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Alojz</span>
 </span>
@@ -7217,7 +7205,7 @@ Svätého Alojza Gonzágu, rehoľníka
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> jún 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Paulína</span>
 </span>
@@ -7263,7 +7251,7 @@ Svätých Jána Fišera, biskupa, a Tomáša Morusa, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> jún 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Sidónia</span>
 </span>
@@ -7331,7 +7319,7 @@ Narodenie svätého Jána Krstiteľa
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> jún 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Ján</span>
 </span>
@@ -7392,7 +7380,7 @@ TRNAVA: Narodenie svätého Jána Krstiteľa – hlavného patróna diecézy a t
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> jún 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Olívia, Tadeáš</span>
 </span>
@@ -7432,7 +7420,7 @@ TRNAVA: Narodenie svätého Jána Krstiteľa – hlavného patróna diecézy a t
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> jún 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Adriána</span>
 </span>
@@ -7469,7 +7457,7 @@ Pondelok 12. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> jún 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Ladislav, Ladislava</span>
 </span>
@@ -7526,7 +7514,7 @@ TRNAVA, NITRA, BANSKÁ BYSTRICA, ROŽŇAVA:<br/> <span class="lcMOD">alebo</span
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> jún 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Beáta</span>
 </span>
@@ -7595,7 +7583,7 @@ Svätých Petra a Pavla, apoštolov
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> jún 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Peter a Pavol, Petra</span>
 </span>
@@ -7647,7 +7635,7 @@ Svätých Petra a Pavla, apoštolov
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> jún 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-06">jún 2023</a>
 </span>
 <span class="lcND">meniny: Melánia</span>
 </span>
@@ -7689,7 +7677,7 @@ Prvých svätých mučeníkov Cirkvi v Ríme
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> júl 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Diana</span>
 </span>
@@ -7731,7 +7719,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> júl 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Berta</span>
 </span>
@@ -7771,7 +7759,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> júl 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Miloslav</span>
 </span>
@@ -7809,7 +7797,7 @@ Svätého Tomáša, apoštola
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> júl 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Prokop</span>
 </span>
@@ -7851,7 +7839,7 @@ Svätej Alžbety Portugalskej
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> júl 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Cyril a Metod</span>
 </span>
@@ -7892,7 +7880,7 @@ Svätých Cyrila a Metoda, slovanských vierozvestov
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> júl 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Patrik, Patrícia</span>
 </span>
@@ -7934,7 +7922,7 @@ Svätej Márie Goretti, panny a mučenice
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> júl 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Oliver</span>
 </span>
@@ -7976,7 +7964,7 @@ Svätého Antona Máriu Zaccariu, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> júl 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Ivan</span>
 </span>
@@ -8018,7 +8006,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> júl 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Lujza</span>
 </span>
@@ -8058,7 +8046,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> júl 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Amália</span>
 </span>
@@ -8095,7 +8083,7 @@ Pondelok 14. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> júl 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Milota</span>
 </span>
@@ -8133,7 +8121,7 @@ Svätého Benedikta, opáta, patróna Európy
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> júl 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Nina</span>
 </span>
@@ -8170,7 +8158,7 @@ Streda 14. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> júl 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Margita</span>
 </span>
@@ -8212,7 +8200,7 @@ Svätého Henricha
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> júl 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Kamil</span>
 </span>
@@ -8254,7 +8242,7 @@ Svätého Kamila z Lellisu, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> júl 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Henrich</span>
 </span>
@@ -8292,7 +8280,7 @@ Svätého Bonaventúru, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> júl 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Drahomír</span>
 </span>
@@ -8332,7 +8320,7 @@ Svätého Bonaventúru, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> júl 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Bohuslav</span>
 </span>
@@ -8419,7 +8407,7 @@ Mesto Nitra: Svätého Andreja-Svorada – patróna mesta
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> júl 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Kamila</span>
 </span>
@@ -8456,7 +8444,7 @@ Utorok 15. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> júl 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Dušana</span>
 </span>
@@ -8493,7 +8481,7 @@ Streda 15. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> júl 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Iľja, Eliáš</span>
 </span>
@@ -8535,7 +8523,7 @@ Svätého Apolinára, biskupa a mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> júl 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Daniel</span>
 </span>
@@ -8577,7 +8565,7 @@ Svätého Vavrinca z Brindisi, kňaza a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> júl 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Magdaléna</span>
 </span>
@@ -8615,7 +8603,7 @@ Svätej Márie Magdalény
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> júl 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Oľga</span>
 </span>
@@ -8655,7 +8643,7 @@ Svätej Márie Magdalény
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> júl 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Vladimír</span>
 </span>
@@ -8697,7 +8685,7 @@ Svätého Šarbela Machlúfa, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> júl 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Jakub</span>
 </span>
@@ -8735,7 +8723,7 @@ Svätého Jakuba, apoštola
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> júl 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Anna, Hana</span>
 </span>
@@ -8773,7 +8761,7 @@ Svätých Joachima a Anny, rodičov preblahoslavenej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> júl 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Božena</span>
 </span>
@@ -8811,7 +8799,7 @@ Svätých Gorazda a spoločníkov
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> júl 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Krištof</span>
 </span>
@@ -8848,7 +8836,7 @@ Piatok 16. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> júl 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Marta</span>
 </span>
@@ -8886,7 +8874,7 @@ Svätých Marty, Márie a Lazára
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> júl 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Libuša</span>
 </span>
@@ -8926,7 +8914,7 @@ Svätých Marty, Márie a Lazára
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">31.</span> júl 2023
+<span class="lcMD">31.</span> <a class="lcMY" href="onepage_tabulka.html#2023-07">júl 2023</a>
 </span>
 <span class="lcND">meniny: Ignác</span>
 </span>
@@ -8964,7 +8952,7 @@ Svätého Ignáca z Loyoly, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> august 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Božidara</span>
 </span>
@@ -9002,7 +8990,7 @@ Svätého Alfonza Máriu de’ Liguori, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> august 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Gustáv</span>
 </span>
@@ -9048,7 +9036,7 @@ Svätého Petra Juliána Eymarda, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> august 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Jerguš</span>
 </span>
@@ -9085,7 +9073,7 @@ Svätého Petra Juliána Eymarda, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> august 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Dominik, Dominika</span>
 </span>
@@ -9123,7 +9111,7 @@ Svätého Jána Máriu Vianneya, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> august 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Hortenzia</span>
 </span>
@@ -9169,7 +9157,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> august 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Jozefína</span>
 </span>
@@ -9210,7 +9198,7 @@ Premenenie Pána
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> august 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Štefánia</span>
 </span>
@@ -9256,7 +9244,7 @@ Svätého Kajetána, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> august 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Oskar</span>
 </span>
@@ -9294,7 +9282,7 @@ Svätého Dominika, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> august 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Ľubomíra</span>
 </span>
@@ -9332,7 +9320,7 @@ Svätej Terézie Benedikty od Kríža, panny a mučenice, patrónky Európy
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> august 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Vavrinec</span>
 </span>
@@ -9370,7 +9358,7 @@ Svätého Vavrinca, diakona a mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> august 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Zuzana</span>
 </span>
@@ -9408,7 +9396,7 @@ Svätej Kláry, panny
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> august 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Darina</span>
 </span>
@@ -9454,7 +9442,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> august 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Ľubomír</span>
 </span>
@@ -9494,7 +9482,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> august 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Mojmír</span>
 </span>
@@ -9563,7 +9551,7 @@ Nanebovzatie Preblahoslavenej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> august 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Marcela</span>
 </span>
@@ -9624,7 +9612,7 @@ ROŽŇAVA: Nanebovzatie Preblahoslavenej Panny Márie – titul katedrály
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> august 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Leonard</span>
 </span>
@@ -9666,7 +9654,7 @@ Svätého Štefana Uhorského
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> august 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Milica</span>
 </span>
@@ -9703,7 +9691,7 @@ Svätého Štefana Uhorského
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> august 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Elena, Helena</span>
 </span>
@@ -9745,7 +9733,7 @@ Svätej Heleny
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> august 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Lýdia</span>
 </span>
@@ -9791,7 +9779,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> august 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Anabela</span>
 </span>
@@ -9831,7 +9819,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> august 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Jana</span>
 </span>
@@ -9869,7 +9857,7 @@ Svätého Pia X., pápeža
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> august 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Tichomír</span>
 </span>
@@ -9907,7 +9895,7 @@ Preblahoslavenej Panny Márie Kráľovnej
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> august 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Filip</span>
 </span>
@@ -9949,7 +9937,7 @@ Svätej Ruženy Limskej, panny
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> august 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Bartolomej</span>
 </span>
@@ -9987,7 +9975,7 @@ Svätého Bartolomeja, apoštola
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> august 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Ľudovít</span>
 </span>
@@ -10033,7 +10021,7 @@ Svätého Jozefa Kalazanského, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> august 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Samuel</span>
 </span>
@@ -10075,7 +10063,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> august 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Silvia</span>
 </span>
@@ -10115,7 +10103,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> august 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Augustín</span>
 </span>
@@ -10153,7 +10141,7 @@ Svätého Augustína, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> august 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Nikola, Nikolaj</span>
 </span>
@@ -10191,7 +10179,7 @@ Mučenícka smrť svätého Jána Krstiteľa
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> august 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Ružena</span>
 </span>
@@ -10251,7 +10239,7 @@ TRNAVA: Výročie posviacky katedrálneho chrámu svätého Jána Krstiteľa v T
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">31.</span> august 2023
+<span class="lcMD">31.</span> <a class="lcMY" href="onepage_tabulka.html#2023-08">august 2023</a>
 </span>
 <span class="lcND">meniny: Nora</span>
 </span>
@@ -10288,7 +10276,7 @@ TRNAVA: Výročie posviacky katedrálneho chrámu svätého Jána Krstiteľa v T
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> september 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Drahoslava</span>
 </span>
@@ -10325,7 +10313,7 @@ Piatok 21. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> september 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Linda</span>
 </span>
@@ -10367,7 +10355,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> september 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Belo</span>
 </span>
@@ -10407,7 +10395,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> september 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Rozália</span>
 </span>
@@ -10444,7 +10432,7 @@ Pondelok 22. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> september 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Regina</span>
 </span>
@@ -10481,7 +10469,7 @@ Utorok 22. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> september 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Alica</span>
 </span>
@@ -10541,7 +10529,7 @@ KOŠICE: Výročie posviacky katedrálneho chrámu svätej Alžbety Uhorskej v K
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> september 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Marianna</span>
 </span>
@@ -10579,7 +10567,7 @@ Svätých Marka Križina, Melichara Grodzieckého a Štefana Pongrácza, kňazov
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> september 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Miriama</span>
 </span>
@@ -10617,7 +10605,7 @@ Narodenie Preblahoslavenej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> september 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Martina</span>
 </span>
@@ -10663,7 +10651,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> september 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Oleg</span>
 </span>
@@ -10703,7 +10691,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> september 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Bystrík</span>
 </span>
@@ -10740,7 +10728,7 @@ Pondelok 23. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> september 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Mária</span>
 </span>
@@ -10782,7 +10770,7 @@ Najsvätejšieho mena Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> september 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Ctibor</span>
 </span>
@@ -10820,7 +10808,7 @@ Svätého Jána Zlatoústeho, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> september 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Ľudomil</span>
 </span>
@@ -10858,7 +10846,7 @@ Povýšenie Svätého kríža
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> september 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Jolana</span>
 </span>
@@ -10917,7 +10905,7 @@ POPRAD: Sedembolestnej Panny Márie, patrónky Slovenska – titul konkatedrály
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> september 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Ľudmila</span>
 </span>
@@ -10955,7 +10943,7 @@ Svätých Kornélia, pápeža, a Cypriána, biskupa, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> september 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Olympia</span>
 </span>
@@ -10995,7 +10983,7 @@ Svätých Kornélia, pápeža, a Cypriána, biskupa, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> september 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Eugénia</span>
 </span>
@@ -11032,7 +11020,7 @@ Pondelok 24. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> september 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Konštantín</span>
 </span>
@@ -11074,7 +11062,7 @@ Svätého Januára, biskupa a mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> september 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Ľuboslav, Ľuboslava</span>
 </span>
@@ -11112,7 +11100,7 @@ Svätých Ondreja Kima Taegona, kňaza, Pavla Chonga Hasanga a spoločníkov, mu
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> september 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Matúš</span>
 </span>
@@ -11150,7 +11138,7 @@ Svätého Matúša, apoštola a evanjelistu
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> september 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Móric</span>
 </span>
@@ -11217,7 +11205,7 @@ NITRA: Svätého Emeráma, biskupa a mučeníka – titul katedrály
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> september 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Zdenka</span>
 </span>
@@ -11255,7 +11243,7 @@ Svätého Pia z Pietrelciny, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> september 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Ľuboš, Ľubor</span>
 </span>
@@ -11321,7 +11309,7 @@ BANSKÁ BYSTRICA: Výročie posviacky katedrálneho chrámu svätého Františka
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> september 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Vladislav</span>
 </span>
@@ -11358,7 +11346,7 @@ Pondelok 25. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> september 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Edita</span>
 </span>
@@ -11400,7 +11388,7 @@ Svätých Kozmu a Damiána, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> september 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Cyprián</span>
 </span>
@@ -11438,7 +11426,7 @@ Svätého Vincenta de Paul, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> september 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Václav</span>
 </span>
@@ -11484,7 +11472,7 @@ Svätých Vavrinca Ruiza a spoločníkov, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> september 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Michal, Michaela</span>
 </span>
@@ -11522,7 +11510,7 @@ Svätých Michala, Gabriela a Rafaela, archanjelov
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> september 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-09">september 2023</a>
 </span>
 <span class="lcND">meniny: Jarolím</span>
 </span>
@@ -11560,7 +11548,7 @@ Svätého Hieronyma, kňaza a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> október 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Arnold</span>
 </span>
@@ -11600,7 +11588,7 @@ Svätého Hieronyma, kňaza a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> október 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Levoslav</span>
 </span>
@@ -11638,7 +11626,7 @@ Svätých anjelov strážcov
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> október 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Stela</span>
 </span>
@@ -11675,7 +11663,7 @@ Utorok 26. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> október 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: František</span>
 </span>
@@ -11713,7 +11701,7 @@ Svätého Františka Assiského
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> október 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Viera</span>
 </span>
@@ -11755,7 +11743,7 @@ Svätej Faustíny Kowalskej, panny
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> október 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Natália</span>
 </span>
@@ -11797,7 +11785,7 @@ Svätého Bruna, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> október 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Eliška</span>
 </span>
@@ -11835,7 +11823,7 @@ Ružencovej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> október 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Brigita</span>
 </span>
@@ -11875,7 +11863,7 @@ Ružencovej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> október 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Dionýz</span>
 </span>
@@ -11921,7 +11909,7 @@ Svätého Jána Leonardiho, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> október 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Slavomíra</span>
 </span>
@@ -11981,7 +11969,7 @@ Utorok 27. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> október 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Valentína</span>
 </span>
@@ -12023,7 +12011,7 @@ Svätého Jána XXIII., pápeža
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> október 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Maximilián</span>
 </span>
@@ -12060,7 +12048,7 @@ Svätého Jána XXIII., pápeža
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> október 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Koloman</span>
 </span>
@@ -12097,7 +12085,7 @@ Piatok 27. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> október 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Boris</span>
 </span>
@@ -12143,7 +12131,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> október 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Terézia</span>
 </span>
@@ -12183,7 +12171,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> október 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Vladimíra</span>
 </span>
@@ -12233,7 +12221,7 @@ Svätého Gála, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> október 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Hedviga</span>
 </span>
@@ -12271,7 +12259,7 @@ Svätého Ignáca Antiochijského, biskupa a mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> október 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Lukáš</span>
 </span>
@@ -12309,7 +12297,7 @@ Svätého Lukáša, evanjelistu
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> október 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Kristián</span>
 </span>
@@ -12355,7 +12343,7 @@ Svätého Pavla od Kríža, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> október 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Vendelín</span>
 </span>
@@ -12392,7 +12380,7 @@ Piatok 28. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> október 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Uršuľa</span>
 </span>
@@ -12434,7 +12422,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> október 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Sergej</span>
 </span>
@@ -12474,7 +12462,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> október 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Alojzia</span>
 </span>
@@ -12516,7 +12504,7 @@ Svätého Jána Kapistránskeho, kňaza
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> október 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Kvetoslava</span>
 </span>
@@ -12558,7 +12546,7 @@ Svätého Antona Máriu Clareta, biskupa
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> október 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Aurel</span>
 </span>
@@ -12623,7 +12611,7 @@ SPIŠ: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Spi
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> október 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Demeter</span>
 </span>
@@ -12686,7 +12674,7 @@ Výročie posviacky chrámov, ktorých deň posviacky je neznámy
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> október 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Sabína</span>
 </span>
@@ -12746,7 +12734,7 @@ ROŽŇAVA: Výročie posviacky katedrálneho chrámu Nanebovzatia Panny Márie v
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> október 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Dobromila</span>
 </span>
@@ -12784,7 +12772,7 @@ Svätých Šimona a Júdu, apoštolov
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> október 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Klára</span>
 </span>
@@ -12824,7 +12812,7 @@ Svätých Šimona a Júdu, apoštolov
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> október 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Šimon, Simona</span>
 </span>
@@ -12861,7 +12849,7 @@ Pondelok 30. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">31.</span> október 2023
+<span class="lcMD">31.</span> <a class="lcMY" href="onepage_tabulka.html#2023-10">október 2023</a>
 </span>
 <span class="lcND">meniny: Aurélia</span>
 </span>
@@ -12898,7 +12886,7 @@ Utorok 30. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> november 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Denisa, Denis</span>
 </span>
@@ -12939,7 +12927,7 @@ Všetkých svätých
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> november 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">Pamiatka zosnulých</span>
 </span>
@@ -13023,7 +13011,7 @@ Spomienka na Všetkých zosnulých veriacich
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> november 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Hubert</span>
 </span>
@@ -13065,7 +13053,7 @@ Svätého Martina de Porres, rehoľníka
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> november 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Karol</span>
 </span>
@@ -13103,7 +13091,7 @@ Svätého Karola Boromejského, biskupa
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> november 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Imrich</span>
 </span>
@@ -13143,7 +13131,7 @@ Svätého Karola Boromejského, biskupa
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> november 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Renáta</span>
 </span>
@@ -13180,7 +13168,7 @@ Pondelok 31. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> november 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: René</span>
 </span>
@@ -13217,7 +13205,7 @@ Utorok 31. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> november 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Bohumír</span>
 </span>
@@ -13254,7 +13242,7 @@ Streda 31. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> november 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Teodor</span>
 </span>
@@ -13292,7 +13280,7 @@ Výročie posviacky Lateránskej baziliky
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> november 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Tibor</span>
 </span>
@@ -13330,7 +13318,7 @@ Svätého Leva Veľkého, pápeža a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> november 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Martin, Maroš</span>
 </span>
@@ -13394,7 +13382,7 @@ BRATISLAVA a SPIŠ: Svätého Martina z Tours, biskupa – hlavného patróna di
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> november 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Svätopluk</span>
 </span>
@@ -13434,7 +13422,7 @@ BRATISLAVA a SPIŠ: Svätého Martina z Tours, biskupa – hlavného patróna di
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> november 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Stanislav</span>
 </span>
@@ -13471,7 +13459,7 @@ Pondelok 32. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> november 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Irma</span>
 </span>
@@ -13508,7 +13496,7 @@ Utorok 32. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> november 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Leopold</span>
 </span>
@@ -13550,7 +13538,7 @@ Svätého Alberta Veľkého, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> november 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Agnesa</span>
 </span>
@@ -13596,7 +13584,7 @@ Svätej Gertrúdy, panny
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> november 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Klaudia</span>
 </span>
@@ -13656,7 +13644,7 @@ KOŠICE: Svätej Alžbety Uhorskej, rehoľníčky – titul katedrály a patrón
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> november 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Eugen</span>
 </span>
@@ -13702,7 +13690,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> november 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Alžbeta</span>
 </span>
@@ -13742,7 +13730,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> november 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Félix</span>
 </span>
@@ -13817,7 +13805,7 @@ NITRA: Výročie posviacky katedrálneho chrámu svätého Emeráma, biskupa a m
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> november 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Elvíra</span>
 </span>
@@ -13855,7 +13843,7 @@ Obetovanie preblahoslavenej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> november 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Cecília</span>
 </span>
@@ -13893,7 +13881,7 @@ Svätej Cecílie, panny a mučenice
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> november 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Klement</span>
 </span>
@@ -13939,7 +13927,7 @@ Svätého Kolumbána, opáta
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> november 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Emília</span>
 </span>
@@ -13977,7 +13965,7 @@ Svätých Ondreja Dung-Laka, kňaza, a spoločníkov, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> november 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Katarína</span>
 </span>
@@ -14023,7 +14011,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> november 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Kornel</span>
 </span>
@@ -14064,7 +14052,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> november 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Milan</span>
 </span>
@@ -14101,7 +14089,7 @@ Pondelok 34. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> november 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Henrieta</span>
 </span>
@@ -14138,7 +14126,7 @@ Utorok 34. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> november 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Vratko</span>
 </span>
@@ -14175,7 +14163,7 @@ Streda 34. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> november 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-11">november 2023</a>
 </span>
 <span class="lcND">meniny: Ondrej, Andrej</span>
 </span>
@@ -14228,7 +14216,7 @@ KOŠICE: Svätého Ondreja, apoštola – hlavného patróna arcidiecézy
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 1.</span> december 2023
+<span class="lcMD"> 1.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Edmund</span>
 </span>
@@ -14265,7 +14253,7 @@ Piatok 34. týždňa v Cezročnom období
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 2.</span> december 2023
+<span class="lcMD"> 2.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Bibiána</span>
 </span>
@@ -14307,7 +14295,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD"> 3.</span> december 2023
+<span class="lcMD"> 3.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Oldrich</span>
 </span>
@@ -14348,7 +14336,7 @@ Preblahoslavenej Panny Márie v sobotu
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD"> 4.</span> december 2023
+<span class="lcMD"> 4.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Barbora, Barbara</span>
 </span>
@@ -14422,7 +14410,7 @@ BANSKÁ BYSTRICA (len v katedrále): Svätého Františka Xaverského, kňaza �
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD"> 5.</span> december 2023
+<span class="lcMD"> 5.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Oto</span>
 </span>
@@ -14460,7 +14448,7 @@ Utorok po 1. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD"> 6.</span> december 2023
+<span class="lcMD"> 6.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Mikuláš</span>
 </span>
@@ -14530,7 +14518,7 @@ PREŠOV: Svätého Mikuláša, biskupa – titul konkatedrály
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD"> 7.</span> december 2023
+<span class="lcMD"> 7.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Ambróz</span>
 </span>
@@ -14569,7 +14557,7 @@ Svätého Ambróza, biskupa a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD"> 8.</span> december 2023
+<span class="lcMD"> 8.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Marína</span>
 </span>
@@ -14611,7 +14599,7 @@ Nepoškvrnené počatie Preblahoslavenej Panny Márie
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD"> 9.</span> december 2023
+<span class="lcMD"> 9.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Izabela</span>
 </span>
@@ -14654,7 +14642,7 @@ Svätého Jána Diega Cuauhtlatoatzina
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">10.</span> december 2023
+<span class="lcMD">10.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Radúz</span>
 </span>
@@ -14695,7 +14683,7 @@ Svätého Jána Diega Cuauhtlatoatzina
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">11.</span> december 2023
+<span class="lcMD">11.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Hilda</span>
 </span>
@@ -14738,7 +14726,7 @@ Svätého Damaza I., pápeža
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">12.</span> december 2023
+<span class="lcMD">12.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Otília</span>
 </span>
@@ -14781,7 +14769,7 @@ Preblahoslavenej Panny Márie Guadalupskej
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">13.</span> december 2023
+<span class="lcMD">13.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Lucia</span>
 </span>
@@ -14820,7 +14808,7 @@ Svätej Lucie, panny a mučenice
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">14.</span> december 2023
+<span class="lcMD">14.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Branislava, Bronislava</span>
 </span>
@@ -14859,7 +14847,7 @@ Svätého Jána od Kríža, kňaza a učiteľa Cirkvi
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">15.</span> december 2023
+<span class="lcMD">15.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Ivica</span>
 </span>
@@ -14897,7 +14885,7 @@ Piatok po 2. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">16.</span> december 2023
+<span class="lcMD">16.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Albína</span>
 </span>
@@ -14935,7 +14923,7 @@ Sobota po 2. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">17.</span> december 2023
+<span class="lcMD">17.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Kornélia</span>
 </span>
@@ -14976,7 +14964,7 @@ Sobota po 2. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">18.</span> december 2023
+<span class="lcMD">18.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Sláva, Slávka</span>
 </span>
@@ -15014,7 +15002,7 @@ Pondelok po 3. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">19.</span> december 2023
+<span class="lcMD">19.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Judita</span>
 </span>
@@ -15052,7 +15040,7 @@ Utorok po 3. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">20.</span> december 2023
+<span class="lcMD">20.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Dagmara</span>
 </span>
@@ -15090,7 +15078,7 @@ Streda po 3. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">21.</span> december 2023
+<span class="lcMD">21.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Bohdan</span>
 </span>
@@ -15131,7 +15119,7 @@ Streda po 3. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">22.</span> december 2023
+<span class="lcMD">22.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Adela</span>
 </span>
@@ -15169,7 +15157,7 @@ Piatok po 3. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">23.</span> december 2023
+<span class="lcMD">23.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Nadežda</span>
 </span>
@@ -15210,7 +15198,7 @@ Sobota po 3. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">24.</span> december 2023
+<span class="lcMD">24.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Adam a Eva</span>
 </span>
@@ -15251,7 +15239,7 @@ Sobota po 3. adventnej nedeli
 <span class="lcDATUM">
 <span class="lcWD">Pondelok</span>
 <span class="lcDMY">
-<span class="lcMD">25.</span> december 2023
+<span class="lcMD">25.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">Prvý sviatok vianočný</span>
 </span>
@@ -15336,7 +15324,7 @@ Narodenie Pána
 <span class="lcDATUM">
 <span class="lcWD">Utorok</span>
 <span class="lcDMY">
-<span class="lcMD">26.</span> december 2023
+<span class="lcMD">26.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Štefan</span>
 </span>
@@ -15375,7 +15363,7 @@ Svätého Štefana, prvého mučeníka
 <span class="lcDATUM">
 <span class="lcWD">Streda</span>
 <span class="lcDMY">
-<span class="lcMD">27.</span> december 2023
+<span class="lcMD">27.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Filoména</span>
 </span>
@@ -15414,7 +15402,7 @@ Svätého Jána, apoštola a evanjelistu
 <span class="lcDATUM">
 <span class="lcWD">Štvrtok</span>
 <span class="lcDMY">
-<span class="lcMD">28.</span> december 2023
+<span class="lcMD">28.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Ivana, Ivona</span>
 </span>
@@ -15453,7 +15441,7 @@ Svätých Neviniatok, mučeníkov
 <span class="lcDATUM">
 <span class="lcWD">Piatok</span>
 <span class="lcDMY">
-<span class="lcMD">29.</span> december 2023
+<span class="lcMD">29.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Milada</span>
 </span>
@@ -15494,7 +15482,7 @@ Piaty deň v oktáve narodenia Pána
 <span class="lcDATUM">
 <span class="lcWD">Sobota</span>
 <span class="lcDMY">
-<span class="lcMD">30.</span> december 2023
+<span class="lcMD">30.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Dávid</span>
 </span>
@@ -15532,7 +15520,7 @@ Piaty deň v oktáve narodenia Pána
 <span class="lcDATUM">
 <span class="lcWD">Nedeľa</span>
 <span class="lcDMY">
-<span class="lcMD">31.</span> december 2023
+<span class="lcMD">31.</span> <a class="lcMY" href="onepage_tabulka.html#2023-12">december 2023</a>
 </span>
 <span class="lcND">meniny: Silvester</span>
 </span>
@@ -15572,7 +15560,16 @@ Svätej rodiny – Ježiša, Márie a Jozefa
 </div>
 </body>
 <script>
+    // toto je naše:
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    
+    const formattedDate = `${year}-${month}-${day}`;
+    console.log(formattedDate);
+    // window.location.hash = formattedDate;     
+    
     document.getElementById(formattedDate).scrollIntoView({behavior: 'smooth'});
-    init(); // lc.kbs.sk
-  </script>
+</script>
 </html>
