@@ -1,2 +1,5 @@
-Projekt ilustruje generovanie liturgického kalendára vo forme jedného .html súboru z viacerých predgenerovaných html súborov (dostupných na https://lc.kbs.sk/ ako zip archív).
+Prejdite na:  
+- [one page](https://jablka.github.io/Liturgicky-kalendar/onepage.html)
+
+Podkladom boli predgenerované html súbory dostupné na https://lc.kbs.sk/ ako zip archív.
 
