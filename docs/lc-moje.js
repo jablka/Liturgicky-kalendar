@@ -40,12 +40,24 @@ function naDnes(){
   // window.location = dnes()[0]; // pôvodné
 
   // moje:
+  // zisťujeme súčasný dátum:
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   const month = String(currentDate.getMonth() + 1).padStart(2, '0');
   const day = String(currentDate.getDate()).padStart(2, '0');
 
-  const formattedDate = `${year}-${month}-${day}`; // rok-mesiac-deň
+  // výhybka:
+  // zisťujeme názov súboru, odkiaľ je funkcia volaná:
+  var my_title = document.title;
+  if (my_title==='kalendár 2023, tabuľka') {
+    console.log(my_title)
+    var formattedDate = `${year}-${month}`; // iba rok-mesiac
+  }
+  else if (my_title==='kalendár 2023') {
+    console.log(my_title)
+    var formattedDate = `${year}-${month}-${day}`; // rok-mesiac-deň
+  }
+
   console.log(formattedDate);
 
   // window.location.hash = formattedDate; 
