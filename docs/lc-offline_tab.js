@@ -37,14 +37,15 @@ function dig2(num){
 }
 
 function naDnes(){
-  // window.location = dnes()[0];
+  // window.location = dnes()[0]; // pôvodné
 
+  // moje:  
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   const month = String(currentDate.getMonth() + 1).padStart(2, '0');
   const day = String(currentDate.getDate()).padStart(2, '0');
   
-  const formattedDate = `${year}-${month}`;
+  const formattedDate = `${year}-${month}`; // iba rok-mesiac
   console.log(formattedDate);
   // window.location.hash = formattedDate;     
   

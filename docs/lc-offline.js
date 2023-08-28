@@ -35,20 +35,21 @@ function zmenRezim(){
 function dig2(num){
   return (num < 10)    ?   "0" + num   :   num;
 }
+
 function naDnes(){
-  // window.location = dnes()[0];
+  // window.location = dnes()[0]; // pôvodné
 
-// toto je naše:
-const currentDate = new Date();
-const year = currentDate.getFullYear();
-const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-const day = String(currentDate.getDate()).padStart(2, '0');
+  // moje:
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  const day = String(currentDate.getDate()).padStart(2, '0');
 
-const formattedDate = `${year}-${month}-${day}`;
-console.log(formattedDate);
+  const formattedDate = `${year}-${month}-${day}`; // rok-mesiac-deň
+  console.log(formattedDate);
 
-// window.location.hash = formattedDate; 
-document.getElementById(formattedDate).scrollIntoView({behavior: 'smooth'});
+  // window.location.hash = formattedDate; 
+  document.getElementById(formattedDate).scrollIntoView({behavior: 'smooth'});
 
 }
 
