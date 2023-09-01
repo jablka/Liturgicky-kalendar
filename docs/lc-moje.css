@@ -1,0 +1,774 @@
+
+
+:root {
+  --lit-farba-biela: white;
+  --lit-farba-zelena: green;
+  --lit-farba-fialova: purple;
+  --lit-farba-cervena: red;
+  --lit-farba-ruzova: pink;
+  --lit-farba-zlata: gold;
+  --lit-farba-cierna: black;
+
+  --farba-feria: #AAA;
+  --farba-feria-p: #CCC;
+  --farba-lsp: #DDDDFF;
+  --farba-lsp-p: #DDDDFF44;
+  --farba-sp: #BBBBFF;
+  --farba-sp-p: #BBBBFF44;
+  --farba-lsv: #DDFFDD;
+  --farba-lsv-p: #DDFFDD44;
+  --farba-sv: #BBFFBB;
+  --farba-sv-p: #BBFFBB44;
+  --farba-sl: #F88;
+  --farba-sl-p: #F884;
+  --farba-ned: red;
+  --farba-ned-p: #F00;  /* red */
+  --farba-psv: red;
+  --farba-psv-p: #F004;
+
+  --farba-pozadie: white;
+  --farba-pismo: black;
+
+  --farba-cierna: black;
+  --farba-biela: white;
+  --farba-seda: gray;
+  --farba-svetlo-seda: #CCC;
+
+  --zoom: 100%;
+  --zoom1: calc( var(--zoom) / 100 );
+}
+
+html {
+  font-size: var(--zoom);
+  padding: 0 0.5rem 5rem 0.5rem;
+}
+
+body {
+  max-width: 50em;
+  margin: auto;
+
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+h1, h2, h3, h4, h5 {
+	margin: 2rem 0 .5rem 0;
+}
+
+.lc h1.datum {
+	text-align: center;
+	margin-top: 0;
+  /*background-color: white;*/
+  padding: .3rem;
+  /*margin: .5rem;*/
+}
+.lcWD, .lcND {  /* deň v týždni a meniny */
+	/* font-size: 70%; */
+	color: var(--farba-seda);
+}
+a.lcMY {
+  display: inline-block;
+  background-color: var(--farba-pozadie);
+  --hoverScale: 1.1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+a.lcPREV,
+a.lcNEXT {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	/* font-size: 150%; */
+	background-color: var(--farba-svetlo-seda);
+  border: 1px solid var(--farba-pozadie);
+	color: var(--farba-cierna);
+	text-decoration: none;
+  padding: 0;
+  --hoverScale: 105%;
+}
+h1, .lcNAVIG {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 3px;
+	/* font-size: 180%; */ 
+}
+a.lcPREV {
+  flex-grow: 1;
+}
+a.lcNEXT {
+  flex-grow: 3;
+}
+
+
+.lcHEAD,
+.lcBODY .lcSECTIONtitle,
+.lcBODY .lcMOD,
+.lcBODY .lcREFblock,
+.lcBODY .lcVPEblock {
+  border-color: var(--farba-seda);
+}
+
+.lcDENalt {
+  /* padding-bottom: 3rem; */
+}
+
+.lcBODY p.lcINFO,
+.lcBODY p.lcMOD {
+  padding: .3em;
+  margin-top: 2rem;
+  color: var(--farba-seda);
+}
+
+
+
+/******** lcHEAD ************/
+
+.lcHEAD {
+	border-left: .3rem solid var(--farba-seda);
+	padding-left: .5rem;
+	margin: .5rem 0 .5rem 0;
+}
+
+.lcHEAD p {
+  margin: .303rem;
+  margin-bottom: 0;
+	padding: 0;
+}
+.lcHEAD p.lcSUR {
+	font-weight:bold;
+}
+.lcHEAD .lcLINE {
+  margin-top: .5rem;
+}
+.lcHEAD h2 {
+	font-size: 1.1rem;
+	margin-top: .5rem;
+}
+.lcHEAD h2 span.lcMOD {
+	font-size: 90%;
+	font-weight: normal;
+}
+.lcHEAD h2 i {
+  display: block;
+	font-size: 90%;
+	font-weight: normal;
+  padding-top: .2rem;
+	padding-left: 2.5rem;
+}
+.lcFARBA {
+  /* width: 1em; */
+  /* height: 1em; */
+  /* baseline-shift: .1em; */
+  padding: .1rem .2rem;
+  border-radius: .5em;
+  font-size: 75%;
+  font-weight: normal;
+}
+
+h3.lcSECTIONtitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: -.5rem;
+  margin-top: 1rem;
+  padding-top: .2rem;
+  text-transform: uppercase;
+}
+/*.lcHEADinfo .lcSECTION:first-child h3.lcSECTIONtitle {
+  margin-top: 0;
+  padding-top: 0;
+}*/
+.lcBODY h3.lcSECTIONtitle {
+  text-transform: uppercase;
+}
+
+
+.lcHEAD .lcSECTION,
+.lcREFblock,
+.lcVPEblock {
+	padding-left: .5rem;
+}
+.lcREF,
+.lcVPE,
+.lcMOD {
+	font-style: italic;
+	font-weight: normal;
+}
+.lcVPE {
+	display: block;
+}
+
+.lcHEAD .lcMOD,
+.lcHEAD .lcJOINprev,
+.lcHEAD .lcJOINnext,
+.lcHEAD .d-inline,
+.lcHEAD .d-inline p {
+  display: inline;
+}
+
+
+
+/********** BODY ( telo - výpis textov čítaní ) - čítania ************/
+
+.lcBODY p {
+  margin: .604rem 0;
+}
+
+.lcBODY .lcSECTIONtitle { /* H3.lcSECTIONtitle */
+  margin: 2.4rem 0 1rem 0;
+  padding-left: .5rem;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.lcBODY h4 {
+	font-size: 110%;
+}
+.lcBODY h4 span {
+	float: right;
+	font-size: 80%;
+	color: var(--farba-seda);
+  white-space: nowrap;
+}
+/* refrén a H4, alebo VPE a H4 v prípade ŽALMU / EVN... */
+.lcBODY .lcREFblock,
+.lcBODY .lcVPEblock {
+  border-left-width: .2rem;
+  border-left-style: solid;
+	margin: 2rem 0 1rem/* calc(2rem / 2) */ 0;
+}
+.lcBODY .lcCITANIE .lcREFblock,
+.lcBODY .lcCITANIE .lcVPEblock {
+  margin-top: 2rem;
+  margin-bottom: -1rem; /* calc( -2rem / 2 ) */
+}
+.lcREFblock + .lcCITANIE > h4,
+.lcVPEblock + .lcCITANIE > h4 {
+  margin: .5rem 0;
+}
+.lcREFblock + h4 {
+  color: var(--farba-seda);
+}
+
+.lcBODY h5 {
+	font-size: 100%;
+	font-style: italic;
+	font-weight: normal;
+	color: var(--farba-seda);
+}
+.lcBODY h5 var {
+  float: left;
+  padding: 0;
+	font-style: normal;
+	font-weight: normal;
+}
+.lcBODY .lcCITANIE > h4 + h5 {
+  margin-top: .2em;
+}
+
+.lcBODY .lcCITANIE p.info {
+  margin: 10px 0;
+  border: 1px dotted;
+  text-align: center;
+  text-indent: 0;
+  color:var(--farba-seda);
+}
+
+.lcBODY .lcCITANIE:not(.d-inline) + .lcMOD {
+  display: block;
+  margin: 1.5em 0;
+  padding-left: .5em;
+  border-left: 2px solid;
+  border-color: inherit;
+}
+
+.lcBODY .lcMOD,
+.lcBODY .lcTEXT {
+  color: var(--farba-seda);
+}
+
+.lcBODY .lcCITANIE > h4 + .lcTEXT.lcJOINprev,
+.lcBODY .lcCITANIE > h4 + .lcTEXT.lcJOINnext {
+  margin-bottom: -1.204rem;
+}
+
+/* Refrén žalmu */
+.lcCITANIE var {
+  margin-left: 1em;
+  font-weight: bold;
+  /* font-style: normal; */
+}
+
+/* Počuli sme ... */
+.dovetok {
+  padding-left: 2rem;
+  font-style: italic;
+}
+
+/* ******************************************* */
+/*                                             */
+/*             FAREBNE DELENIE                 */
+/*                                             */
+/* ******************************************* */
+
+.lcHEAD {
+  border-left: .5rem solid var(--farba-feria);
+  padding-left: .5rem;
+}
+.lcHEAD h2 {
+  background-color: var(--farba-feria-p);
+  margin-left: -.5rem;
+  padding: .5rem;
+  /* background-color-opacity: .3; */
+}
+
+.lcBODY .lcSECTIONtitle {
+  border-left: 1rem solid var(--farba-seda);
+}
+.lcBODY p.lcMOD,
+.lcBODY .lcREFblock,
+.lcBODY .lcVPEblock {
+  border-left: .3rem solid var(--farba-seda);
+  padding-left: .3rem;
+}
+
+/* ZÁKLAD *************************************** */
+.lcDENalt .lcHEAD,
+.lcDENalt .lcBODY .lcSECTIONtitle,
+.lcDENalt .lcBODY p.lcMOD,
+.lcDENalt .lcBODY .lcREFblock,
+.lcDENalt .lcBODY .lcVPEblock {
+  border-color: var(--farba-feria);
+}
+.lcDENalt .lcHEAD h2 {
+  background-color: var(--farba-feria-p);
+}
+#lcCalendar .lcDEN {
+  background-color: var(--farba-feria-p);
+  --hoverScale: 1.2;
+}
+
+/* FERIA *************************************** */
+.lcDENalt.feria .lcHEAD h2 {
+  color: var(--farba-cierna);
+}
+
+
+/* ĽSP *************************************** */
+.lcDENalt.lsp .lcHEAD,
+.lcDENalt.lsp .lcBODY .lcSECTIONtitle,
+.lcDENalt.lsp .lcBODY p.lcMOD,
+.lcDENalt.lsp .lcBODY .lcREFblock,
+.lcDENalt.lsp .lcBODY .lcVPEblock {
+  border-color: var(--farba-lsp);
+}
+.lcDENalt.lsp .lcHEAD h2 {
+  background-color: var(--farba-lsp-p);
+}
+#lcCalendar .lcDEN.lsp {
+  background-color: var(--farba-lsp);
+}
+
+/* SP **************************************** */
+.lcDENalt.sp .lcHEAD,
+.lcDENalt.sp .lcBODY .lcSECTIONtitle,
+.lcDENalt.sp .lcBODY p.lcMOD,
+.lcDENalt.sp .lcBODY .lcREFblock,
+.lcDENalt.sp .lcBODY .lcVPEblock {
+  border-color: var(--farba-sp);
+}
+.lcDENalt.sp .lcHEAD h2 {
+  background-color: var(--farba-sp-p);
+}
+#lcCalendar .lcDEN.sp {
+  background-color: var(--farba-sp);
+}
+
+/* SV **************************************** */
+.lcDENalt.sv .lcHEAD,
+.lcDENalt.sv .lcBODY .lcSECTIONtitle,
+.lcDENalt.sv .lcBODY p.lcMOD,
+.lcDENalt.sv .lcBODY .lcREFblock,
+.lcDENalt.sv .lcBODY .lcVPEblock {
+  border-color: var(--farba-sv);
+}
+.lcDENalt.sv .lcHEAD h2 {
+  background-color: var(--farba-sv-p);
+}
+#lcCalendar .lcDEN.sv {
+  background-color: var(--farba-sv);
+}
+
+/* ĽSV *************************************** */
+.lcDENalt.lsv .lcHEAD,
+.lcDENalt.lsv .lcBODY .lcSECTIONtitle,
+.lcDENalt.lsv .lcBODY p.lcMOD,
+.lcDENalt.lsv .lcBODY .lcREFblock,
+.lcDENalt.lsv .lcBODY .lcVPEblock {
+  border-color: var(--farba-lsv);
+}
+.lcDENalt.lsv .lcHEAD h2 {
+  background-color: var(--farba-lsv-p);
+}
+#lcCalendar .lcDEN.lsv {
+  background-color: var(--farba-lsv);
+}
+
+/* SL **************************************** */
+.lcDENalt.sl .lcHEAD,
+.lcDENalt.sl .lcBODY .lcSECTIONtitle,
+.lcDENalt.sl .lcBODY p.lcMOD,
+.lcDENalt.sl .lcBODY .lcREFblock,
+.lcDENalt.sl .lcBODY .lcVPEblock {
+  border-color: var(--farba-sl);
+}
+.lcDENalt.sl .lcHEAD h2 {
+  background-color: var(--farba-sl-p);
+}
+#lcCalendar .lcDEN.sl {
+  background-color: var(--farba-sl);
+}
+
+/* NED *************************************** */
+.lcDEN.ned .lcHEAD,
+.lcDEN.ned .lcBODY .lcSECTIONtitle,
+.lcDEN.ned .lcBODY p.lcMOD,
+.lcDEN.ned .lcBODY .lcREFblock,
+.lcDEN.ned .lcBODY .lcVPEblock {
+  border-color: var(--farba-ned);
+}
+.lcDEN.ned .lcHEAD h2 {
+  background-color: var(--farba-ned-p);
+  color: var(--farba-biela);
+}
+div#lcCalendar a.lcDEN.ned {
+  background-color: var(--farba-ned);
+  border-color: var(--farba-ned);
+  color: var(--farba-biela);
+}
+
+/* PSV/PSL *********************************** */
+.lcDEN.psv .lcHEAD,
+.lcDEN.psv .lcBODY .lcSECTIONtitle,
+.lcDEN.psv .lcBODY p.lcMOD,
+.lcDEN.psv .lcBODY .lcREFblock,
+.lcDEN.psv .lcBODY .lcVPEblock,
+
+.lcDEN.psl .lcHEAD,
+.lcDEN.psl .lcBODY .lcSECTIONtitle,
+.lcDEN.psl .lcBODY p.lcMOD,
+.lcDEN.psl .lcBODY .lcREFblock,
+.lcDEN.psl .lcBODY .lcVPEblock {
+  border-color: var(--farba-psv);
+  border-width: .2rem .2rem .2rem inherit;
+}
+.lcDENalt.psv .lcHEAD {
+  padding: 0 .5rem .5rem .5rem;
+  border: .5rem solid var(--farba-psv);
+  /* border-style: solid; */
+  /* border-width: .5rem; */
+}
+/* .lcDEN.psv .lcHEAD h2 { */
+  /* background-color: var(--farba-psv); */
+/* } */
+.lcDENalt.psv .lcHEAD h2 {
+  margin-top:  0;
+  margin-right: -.5rem;
+  background-color: var(--farba-psv);
+}
+div#lcCalendar a.lcDEN.psv {
+  background-color: var(--farba-psv);
+  border-color: var(--farba-psv);
+  color: var(--farba-biela);
+}
+
+
+
+
+
+/********************************************************/
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.lcCITANIE h4 p.lcINFO {
+  display: inline;
+  padding-left: 2rem;
+  font-weight: normal;
+  font-size: 85%;
+}
+
+
+@media print {
+  .noPrint,
+  .lcNAVIG,
+  .lcPREV, .lcNEXT {
+    display: none;
+  }
+}
+
+
+
+/**************************/
+/**************************/
+
+.lcHEAD .grp {
+	margin-left: 0;
+}
+
+/* ///////////////// Liturgicke farby ///////////// */
+#lc .lcHEAD span.lcFARBA {
+	display: inline-block;
+	font-size: 90%;
+	font-family: monospace;
+	padding: 1px 5px 1px 5px /*!important*/;
+	margin: 0 4px 4px 4px;
+/*	border: 1px solid black; */
+	vertical-align: middle;
+	border-radius: 3px;
+}
+
+#lc .W { background-color: white; color: black /*!important*/; }
+.G { background-color: green; color: white; }
+.V { background-color: purple; color: white; }
+.R { background-color: red; color: white; }
+#lc .P { background-color: #FFC0CB /*pink*/; color: black /*!important*/; }
+/*.GOLD { background-color: gold; color: black !important; }*/
+.B { background-color: black; color: white; }
+
+
+
+/* Tmavý režim *********************/
+body.dark {
+  --farba-pozadie: #222;
+  --farba-pismo: white;
+
+  background-color: var(--farba-pozadie);
+  color: var(--farba-pismo);
+}
+.dark #lcCalendar a.lcDEN {
+  color: var(--farba-cierna);
+}
+
+/**********************************/
+.lcGEN {
+  font-size: 90%;
+  color: var(--farba-seda);
+}
+
+#lcCalendar .lcGEN::after {
+  content: "?";
+  position: absolute;
+  font-size: 200%;
+  color: black;
+  opacity: .15;
+  border: none;
+  margin-top: -.2em;
+  margin-left: -.1em;
+}
+
+
+/********************************************************/
+
+
+/********** Mesačný kalendár ***************/
+
+#lcCalendar {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    'm m m m m m m m'
+    'tyz po ut str stv pi so ne';
+  gap: 3px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+  /* height: 80vh; */
+  margin: auto;
+  min-width: 30%;
+  /* max-width: 100%; */
+  text-align: center;
+  cursor: default;
+  --hoverScale: 120%;
+}
+#lcCalendar h1.lcMonthTITLE .lcDATUM {
+  width: 100%;
+  order: -1;
+}
+
+#lcCalendar span.lcMD {
+  display: block;
+  text-align: center;
+}
+
+#lcCalendar .lcWEEKnum,
+#lcCalendar .lcDEN {
+  /* text-align: center; */
+  display: block;
+
+  /* background-color: var(--farba-n); */
+  /* border-radius: 1rem; */
+  border: 2px solid transparent;
+  padding: .5rem;
+  font-size: 150%;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2em;
+}
+#lcCalendar .lcWEEKnum {
+  font-weight: normal;
+  background-color: transparent;
+  cursor: default;
+}
+
+#lcCalendar a.lcDEN:hover {
+  /* border-color: var(--farba-cierna); */
+  /* cursor: pointer; */
+  border-color: var(--farba-seda);
+}
+/*#lcCalendar a.lcDEN.psv:hover {
+  background-color: red;
+  color: white;
+}*/
+
+#lcCalendar h1 {
+  grid-area: 1 / span 8;
+  text-align: center;
+  display: flex;
+  margin: 0;
+}
+#lcCalendar div.lcWEEKnum {
+  white-space: nowrap;
+}
+#lcCalendar p { /* Hlavička */
+  text-align: center;
+  font-size: 120%;
+}
+/*#lcCalendar*/ .lcDATUM span.lcY {
+  margin-left: .3em;
+  color: var(--farba-seda);
+  font-size: 80%;
+}
+/* #lcCalendar hr.lcGEN { */
+  /* position: absolute; */
+  /* background-color: var(--farba-gen); */
+  /* margin: -0.4em 0 0 0; */
+  /* width: 0.3em; */
+  /* height: 0.3em; */
+  /* border: 0.08em solid white; */
+/* } */
+a.lcDEN.out {
+  opacity: .5;
+}
+
+
+/* Umiestnenie čísiel týždňov v prevom stĺpci */
+#lcCalendar > .lcWEEKnum { grid-column: 1; }
+#lcCalendar > .lcWEEKnum:nth-of-type(1) { grid-row: 3; }
+#lcCalendar > .lcWEEKnum:nth-of-type(2) { grid-row: 4; }
+#lcCalendar > .lcWEEKnum:nth-of-type(3) { grid-row: 5; }
+#lcCalendar > .lcWEEKnum:nth-of-type(4) { grid-row: 6; }
+#lcCalendar > .lcWEEKnum:nth-of-type(5) { grid-row: 7; }
+
+/* Umiestnenie prvého dňa (11-ty element) mesiaca v tabuľke */
+#lcCalendar .lcDEN:nth-of-type(1).wd1 { grid-column-start:2; }
+#lcCalendar .lcDEN:nth-of-type(1).wd2 { grid-column-start:3; }
+#lcCalendar .lcDEN:nth-of-type(1).wd3 { grid-column-start:4; }
+#lcCalendar .lcDEN:nth-of-type(1).wd4 { grid-column-start:5; }
+#lcCalendar .lcDEN:nth-of-type(1).wd5 { grid-column-start:6; }
+#lcCalendar .lcDEN:nth-of-type(1).wd6 { grid-column-start:7; }
+#lcCalendar .lcDEN:nth-of-type(1).wd7 { grid-column-start:8; }
+
+
+
+.s-105 { --hoverScale: 105%; }
+.s-110 { --hoverScale: 110%; }
+.s-120 { --hoverScale: 120%; }
+.hvr-scl-chldrn-a a:hover,
+.hvr-scl-chldrn-a .h-as-a:hover,
+.hvr-scl-chldrn-lcDEN .lcDEN:hover,
+.hvr-scl:hover {
+  z-index: 99;
+  transform: scale( var( --hoverScale ));
+  border-color: var(--farba-pismo);
+}
+
+
+#offlineMenu {
+  margin-bottom: 1em;
+  display: flex;
+  position: sticky;
+  top: 0;
+  gap: .5em;
+  font-size: 100%;
+  /* justify-content: space-between; */
+}
+#lcFontSize {
+  opacity: .5;
+  text-align: center;
+  font-size: 100%;
+  width: 5em;
+}
+#offlineMenu button {
+  opacity: .5;
+  flex-grow: 1;
+  height: 2rem;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: bold;
+  /* display: block; */
+}
+#offlineMenu button:hover {
+  cursor: pointer;
+}
+#offlineMenu button:hover,
+#lcFontSize:hover {
+  opacity:.8;
+}
+#lcFontSizeSmaller::first-letter {
+  font-size: 80%;
+}
+#lcFontSizeBigger::first-letter {
+  font-size: 120%;
+}
+
+
+/******* Home *********/
+body.home {
+  display: grid;
+  gap: .5em;
+}
+.home h2,
+.home h3 {
+  text-align: center;
+  margin:.2em;
+}
+.home a {
+  padding: .7em; border: 1px solid black;
+  text-align: center;
+}
+.home a:hover {
+  background-color: lightgray;
+}
+
+/* pridávam: */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3rem; */ 
+}
+
+td {
+  padding: 1rem;
+  /* white-space: nowrap; */
+}
+
+.lcDMY {
+  white-space: nowrap;
+}

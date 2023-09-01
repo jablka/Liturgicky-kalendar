@@ -44,14 +44,7 @@ function naDnes(){
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-  const day = String(currentDate.getDate()).padStart(2, '0'); // 
-
-  // dva dni pred
-  const prev_date = new Date();
-  prev_date.setDate(prev_date.getDate() - 2); // Subtract 
-  const pyear = prev_date.getFullYear();
-  const pmonth = String(prev_date.getMonth() + 1).padStart(2, '0');
-  const pday = String(prev_date.getDate()).padStart(2, '0'); // 
+  const day = String(currentDate.getDate()).padStart(2, '0');
 
   // výhybka:
   // zisťujeme názov súboru, odkiaľ je funkcia volaná:
@@ -59,25 +52,16 @@ function naDnes(){
   if (my_title==='kalendár 2023, tabuľka') {
     console.log(my_title)
     var formattedDate = `${year}-${month}`; // iba rok-mesiac
-    var pformattedDate = `${pyear}-${pmonth}`;
-    let elem = document.getElementById(formattedDate)
-    elem.scrollIntoView({behavior: 'smooth'});
   }
   else if (my_title==='kalendár 2023') {
     console.log(my_title)
     var formattedDate = `${year}-${month}-${day}`; // rok-mesiac-deň
-    var pformattedDate = `${pyear}-${pmonth}-${pday}`;
-    
-      // window.location.hash = formattedDate; 
-    let elem = document.getElementById(formattedDate)
-    elem.style = 'outline: DodgerBlue solid 3px;'
-
-    let pelem = document.getElementById(pformattedDate) // previous elements
-    pelem.scrollIntoView({behavior: 'smooth'});
   }
 
-  console.log(pformattedDate)
   console.log(formattedDate);
+
+  // window.location.hash = formattedDate; 
+  document.getElementById(formattedDate).scrollIntoView({behavior: 'smooth'});
 
 }
 
