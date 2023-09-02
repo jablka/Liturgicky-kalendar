@@ -2,1463 +2,1463 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:moje
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230207
-SUMMARY:Utorok 5. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230312
-SUMMARY:3. pôstna nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231103
-SUMMARY:Piatok 30. týždňa v Cezročnom období\nalebo\nSvätého Martina de Porres\, rehoľníka (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230627
-SUMMARY:Utorok 12. týždňa v Cezročnom období\nalebo\nSvätého Cyrila Alexandrijského\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)\nTRNAVA\, NITRA\, BANSKÁ BYSTRICA\, ROŽŇAVA: alebo Svätého Ladislava (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230320
-SUMMARY:Svätého Jozefa\, ženícha Panny Márie (slávnosť preložená z nedele)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231215
-SUMMARY:Piatok po 2. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231130
-SUMMARY:Svätého Ondreja\, apoštola (sviatok)\nKOŠICE: Svätého Ondreja\, apoštola – hlavného patróna arcidiecézy (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230307
-SUMMARY:Utorok po 2. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230928
-SUMMARY:Štvrtok 25. týždňa v Cezročnom období\nalebo\nSvätého Václava\, mučeníka\nalebo\nSvätých Vavrinca Ruiza a spoločníkov\, mučeníkov (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230205
-SUMMARY:5. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230818
-SUMMARY:Piatok 19. týždňa v Cezročnom období\nalebo\nSvätej Heleny (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230626
-SUMMARY:Pondelok 12. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230528
-SUMMARY:Zoslanie Ducha Svätého (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230113
-SUMMARY:Piatok 1. týždňa v Cezročnom období\nalebo\nSvätého Hilára\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230201
-SUMMARY:Streda 4. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231211
-SUMMARY:Pondelok po 2. adventnej nedeli\nalebo\nSvätého Damaza I.\, pápeža (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230527
-SUMMARY:Sobota po 7. veľkonočnej nedeli\nalebo\nSvätého Augustína z Canterbury\, biskupa (ľubovoľná spomienka)\nZoslanie Ducha Svätého (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230304
-SUMMARY:Sobota po 1. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230411
-SUMMARY:Utorok vo Veľkonočnej oktáve
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230911
-SUMMARY:Pondelok 23. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230728
-SUMMARY:Piatok 16. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230831
-SUMMARY:Štvrtok 21. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230501
-SUMMARY:Pondelok po 4. veľkonočnej nedeli\nalebo\nSvätého Jozefa\, robotníka (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230415
-SUMMARY:Sobota vo Veľkonočnej oktáve
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230313
-SUMMARY:Pondelok po 3. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230404
-SUMMARY:Utorok Svätého týždňa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231113
-SUMMARY:Pondelok 32. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230102
-SUMMARY:Svätých Bazila Veľkého a Gregora Nazianzského\, biskupov a učiteľov Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230204
-SUMMARY:Sobota 4. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230226
-SUMMARY:1. pôstna nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230828
-SUMMARY:Svätého Augustína\, biskupa a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230921
-SUMMARY:Svätého Matúša\, apoštola a evanjelistu (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230910
-SUMMARY:23. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230306
-SUMMARY:Pondelok po 2. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230819
-SUMMARY:Sobota 19. týždňa v Cezročnom období\nalebo\nSvätého Jána Eudesa\, kňaza\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230409
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nVeľkonočná nedeľa Pánovho zmŕtvychvstania (slávnosť s oktávou)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231122
-SUMMARY:Svätej Cecílie\, panny a mučenice (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230906
-SUMMARY:Streda 22. týždňa v Cezročnom období\nKOŠICE: Výročie posviacky katedrálneho chrámu svätej Alžbety Uhorskej v Košiciach (v diecéze sviatok\; v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230311
-SUMMARY:Sobota po 2. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230403
-SUMMARY:Pondelok Svätého týždňa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230219
-SUMMARY:7. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231124
-SUMMARY:Svätých Ondreja Dung-Laka\, kňaza\, a spoločníkov\, mučeníkov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231010
-SUMMARY:Utorok 27. týždňa v Cezročnom období\nŽILINA: Výročie posviacky katedrálneho chrámu Najvätejšej Trojice v Žiline (v diecéze sviatok\; v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231012
-SUMMARY:Štvrtok 27. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231218
-SUMMARY:Pondelok po 3. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230915
-SUMMARY:Sedembolestnej Panny Márie\, patrónky Slovenska (slávnosť)\nPOPRAD: Sedembolestnej Panny Márie\, patrónky Slovenska – titul konkatedrály (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230216
-SUMMARY:Štvrtok 6. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230524
-SUMMARY:Streda po 7. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230213
-SUMMARY:Pondelok 6. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231226
-SUMMARY:Svätého Štefana\, prvého mučeníka (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230416
-SUMMARY:2. Veľkonočná nedeľa alebo Nedeľa Božieho milosrdenstva
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230210
-SUMMARY:Svätej Školastiky\, panny (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231015
-SUMMARY:28. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231023
-SUMMARY:Pondelok 29. týždňa v Cezročnom období\nalebo\nSvätého Jána Kapistránskeho\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230107
-SUMMARY:Sobota po Zjavení Pána\nalebo\nSvätého Rajmunda z Peňafortu\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230616
-SUMMARY:Najsvätejšieho Srdca Ježišovho (slávnosť)\nROŽŇAVA (len v katedrále): Svätého Neita\, mučeníka (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230902
-SUMMARY:Sobota 21. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231116
-SUMMARY:Štvrtok 32. týždňa v Cezročnom období\nalebo\nSvätej Margity Škótskej\nalebo\nSvätej Gertrúdy\, panny (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230329
-SUMMARY:Streda po 5. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230922
-SUMMARY:Piatok 24. týždňa v Cezročnom období\nNITRA: Svätého Emeráma\, biskupa a mučeníka – titul katedrály (v diecéze spomienka\; v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230814
-SUMMARY:Svätého Maximiliána Máriu Kolbeho\, kňaza a mučeníka (spomienka)\nPRIKÁZANÁ SLÁVNOSŤ:\nNanebovzatie Preblahoslavenej Panny Márie (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230421
-SUMMARY:Piatok po 2. veľkonočnej nedeli\nalebo\nSvätého Anzelma\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230601
-SUMMARY:Nášho Pána Ježiša Krista\, najvyššieho a večného kňaza (sviatok)
+DTSTART;VALUE=DATE:20230118
+SUMMARY:Streda 2. týždňa v Cezročnom období
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20230612
 SUMMARY:Pondelok 10. týždňa v Cezročnom období
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230706
-SUMMARY:Štvrtok 13. týždňa v Cezročnom období\nalebo\nSvätej Márie Goretti\, panny a mučenice (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231209
-SUMMARY:Sobota po 1. adventnej nedeli\nalebo\nSvätého Jána Diega Cuauhtlatoatzina (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230607
-SUMMARY:Streda 9. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231001
-SUMMARY:26. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230109
-SUMMARY:Pondelok 1. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231009
-SUMMARY:Pondelok 27. týždňa v Cezročnom období\nalebo\nSvätých Dionýza\, biskupa\, a spoločníkov\, mučeníkov\nalebo\nSvätého Jána Leonardiho\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230716
-SUMMARY:15. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230318
-SUMMARY:Sobota po 3. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231029
-SUMMARY:30. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231205
-SUMMARY:Utorok po 1. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230430
-SUMMARY:4. veľkonočná nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231201
-SUMMARY:Piatok 34. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230520
-SUMMARY:Sobota po 6. veľkonočnej nedeli\nalebo\nSvätého Bernardína Sienského\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231219
-SUMMARY:Utorok po 3. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230913
-SUMMARY:Svätého Jána Zlatoústeho\, biskupa a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231115
-SUMMARY:Streda 32. týždňa v Cezročnom období\nalebo\nSvätého Alberta Veľkého\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230816
-SUMMARY:Streda 19. týždňa v Cezročnom období\nalebo\nSvätého Štefana Uhorského (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230328
-SUMMARY:Utorok po 5. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230704
-SUMMARY:Utorok 13. týždňa v Cezročnom období\nalebo\nSvätej Alžbety Portugalskej (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230727
-SUMMARY:Svätých Gorazda a spoločníkov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230802
-SUMMARY:Streda 17. týždňa v Cezročnom období\nalebo\nSvätého Euzébia Vercellského\, biskupa\nalebo\nSvätého Petra Juliána Eymarda\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230804
-SUMMARY:Svätého Jána Máriu Vianneya\, kňaza (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231225
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNarodenie Pána (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230807
-SUMMARY:Pondelok 18. týždňa v Cezročnom období\nalebo\nSvätých Sixta II.\, pápeža\, a jeho spoločníkov\, mučeníkov\nalebo\nSvätého Kajetána\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230830
-SUMMARY:Streda 21. týždňa v Cezročnom období\nTRNAVA: Výročie posviacky katedrálneho chrámu svätého Jána Krstiteľa v Trnave (v diecéze sviatok\; v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230429
-SUMMARY:Svätej Kataríny Sienskej\, panny a učiteľky Cirkvi\, patrónky Európy (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231008
-SUMMARY:27. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231003
-SUMMARY:Utorok 26. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231027
-SUMMARY:Piatok 29. týždňa v Cezročnom období\nROŽŇAVA: Výročie posviacky katedrálneho chrámu Nanebovzatia Panny Márie v Rožňave (v diecéze sviatok\; v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230629
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nSvätých Petra a Pavla\, apoštolov (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230513
-SUMMARY:Sobota po 5. veľkonočnej nedeli\nalebo\nBlahoslavenej Panny Márie Fatimskej (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230301
-SUMMARY:Streda po 1. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230221
-SUMMARY:Utorok 7. týždňa v Cezročnom období\nalebo\nSvätého Petra Damianiho\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230517
-SUMMARY:Streda po 6. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231210
-SUMMARY:2. adventná nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230715
-SUMMARY:Svätého Bonaventúru\, biskupa a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230710
-SUMMARY:Pondelok 14. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230712
-SUMMARY:Streda 14. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231006
-SUMMARY:Piatok 26. týždňa v Cezročnom období\nalebo\nSvätého Bruna\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230125
-SUMMARY:Obrátenie svätého Pavla\, apoštola (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230525
-SUMMARY:Štvrtok po 7. veľkonočnej nedeli\nalebo\nSvätého Bédu Ctihodného\, kňaza a učiteľa Cirkvi\nalebo\nSvätého Gregora VII.\, pápeža\nalebo\nSvätej Márie Magdalény de’ Pazzi\, panny (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230128
-SUMMARY:Svätého Tomáša Akvinského\, kňaza a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230610
-SUMMARY:Sobota 9. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231109
-SUMMARY:Výročie posviacky Lateránskej baziliky (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230327
-SUMMARY:Pondelok po 5. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230809
-SUMMARY:Svätej Terézie Benedikty od Kríža\, panny a mučenice\, patrónky Európy (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230718
-SUMMARY:Utorok 15. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230605
-SUMMARY:Svätého Bonifáca\, biskupa a mučeníka (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230929
-SUMMARY:Svätých Michala\, Gabriela a Rafaela\, archanjelov (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231121
-SUMMARY:Obetovanie preblahoslavenej Panny Márie (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230810
-SUMMARY:Svätého Vavrinca\, diakona a mučeníka (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230701
-SUMMARY:Sobota 12. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230322
-SUMMARY:Streda po 4. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231019
-SUMMARY:Štvrtok 28. týždňa v Cezročnom období\nalebo\nSvätých Jána de Brébeuf a Izáka Jogues\, kňazov\, a ich spoločníkov\, mučeníkov\nalebo\nSvätého Pavla od Kríža\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230222
-SUMMARY:Popolcová streda (Pôst a zdržovanie sa mäsitého pokrmu. Je deň pokánia v celej Cirkvi.)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230422
-SUMMARY:Sobota po 2. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230104
-SUMMARY:Streda vo Vianočnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230924
-SUMMARY:25. nedeľa v Cezročnom období\nBANSKÁ BYSTRICA: Výročie posviacky katedrálneho chrámu svätého Františka Xaverského v Banskej Bystrici (slávnosť\; iba v katedrále)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231018
-SUMMARY:Svätého Lukáša\, evanjelistu (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230324
-SUMMARY:Piatok po 4. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230114
-SUMMARY:Sobota 1. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230308
-SUMMARY:Streda po 2. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230619
-SUMMARY:Pondelok 11. týždňa v Cezročnom období\nalebo\nSvätého Romualda\, opáta (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230509
-SUMMARY:Utorok po 5. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231112
-SUMMARY:32. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230824
-SUMMARY:Svätého Bartolomeja\, apoštola (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231125
-SUMMARY:Sobota 33. týždňa v Cezročnom období\nalebo\nSvätej Kataríny Alexandrijskej\, panny a mučenice\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231217
-SUMMARY:3. adventná nedeľa [Fialová]
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230117
-SUMMARY:Svätého Antona\, opáta (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230410
-SUMMARY:Pondelok vo Veľkonočnej oktáve
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230622
-SUMMARY:Štvrtok 11. týždňa v Cezročnom období\nalebo\nSvätého Pavlína z Noly\, biskupa\nalebo\nSvätých Jána Fišera\, biskupa\, a Tomáša Morusa\, mučeníkov (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231107
-SUMMARY:Utorok 31. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231119
-SUMMARY:33. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230925
-SUMMARY:Pondelok 25. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231002
-SUMMARY:Svätých anjelov strážcov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231123
-SUMMARY:Štvrtok 33. týždňa v Cezročnom období\nalebo\nSvätého Klementa I.\, pápeža a mučeníka\nalebo\nSvätého Kolumbána\, opáta (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230419
-SUMMARY:Streda po 2. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230918
-SUMMARY:Pondelok 24. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230427
-SUMMARY:Štvrtok po 3. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230829
-SUMMARY:Mučenícka smrť svätého Jána Krstiteľa (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230530
-SUMMARY:Utorok 8. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230729
-SUMMARY:Svätých Marty\, Márie a Lazára (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230116
-SUMMARY:Pondelok 2. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230413
-SUMMARY:Štvrtok vo Veľkonočnej oktáve
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231213
-SUMMARY:Svätej Lucie\, panny a mučenice (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230625
-SUMMARY:12. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230901
-SUMMARY:Piatok 21. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231013
-SUMMARY:Piatok 27. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230316
-SUMMARY:Štvrtok po 3. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230812
-SUMMARY:Sobota 18. týždňa v Cezročnom období\nalebo\nSvätej Jany Františky de Chantal\, rehoľníčky\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231005
-SUMMARY:Štvrtok 26. týždňa v Cezročnom období\nalebo\nSvätej Faustíny Kowalskej\, panny (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230408
-SUMMARY:Biela sobota\nPRIKÁZANÁ SLÁVNOSŤ:\nVeľkonočná nedeľa Pánovho zmŕtvychvstania (slávnosť s oktávou)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230811
-SUMMARY:Svätej Kláry\, panny (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230122
-SUMMARY:3. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230303
-SUMMARY:Piatok po 1. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230717
-SUMMARY:Svätých Andreja-Svorada a Benedikta\, pustovníkov (spomienka)\nNITRA: Svätých Andreja-Svorada a Benedikta\, pustovníkov – hlavných patrónov diecézy (sviatok)\nMesto Nitra: Svätého Andreja-Svorada – patróna mesta (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230507
-SUMMARY:5. veľkonočná nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230821
-SUMMARY:Svätého Pia X.\, pápeža (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230218
-SUMMARY:Sobota 6. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231104
-SUMMARY:Svätého Karola Boromejského\, biskupa (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231128
-SUMMARY:Utorok 34. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230420
-SUMMARY:Štvrtok po 2. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230711
-SUMMARY:Svätého Benedikta\, opáta\, patróna Európy (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230105
-SUMMARY:Štvrtok vo Vianočnom období\nPRIKÁZANÁ SLÁVNOSŤ:\nZjavenie Pána (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230726
-SUMMARY:Svätých Joachima a Anny\, rodičov preblahoslavenej Panny Márie (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231223
-SUMMARY:Sobota po 3. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230423
-SUMMARY:3. veľkonočná nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230725
-SUMMARY:Svätého Jakuba\, apoštola (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230923
-SUMMARY:Svätého Pia z Pietrelciny\, kňaza (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230330
-SUMMARY:Štvrtok po 5. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230930
-SUMMARY:Svätého Hieronyma\, kňaza a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230319
-SUMMARY:4. pôstna nedeľa [Fialová]
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230702
-SUMMARY:13. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231126
-SUMMARY:34. nedeľa v Cezročnom období – Nášho Pána Ježiša Krista\, Kráľa neba i zeme (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230331
-SUMMARY:Piatok po 5. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230806
-SUMMARY:Premenenie Pána (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231224
-SUMMARY:4. adventná nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230920
-SUMMARY:Svätých Ondreja Kima Taegona\, kňaza\, Pavla Chonga Hasanga a spoločníkov\, mučeníkov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230217
-SUMMARY:Piatok 6. týždňa v Cezročnom období\nalebo\nSiedmich svätých zakladateľov Rehole služobníkov preblahoslavenej Panny Márie (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230823
-SUMMARY:Streda 20. týždňa v Cezročnom období\nalebo\nSvätej Ruženy Limskej\, panny (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231020
-SUMMARY:Piatok 28. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230302
-SUMMARY:Štvrtok po 1. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230630
-SUMMARY:Piatok 12. týždňa v Cezročnom období\nalebo\nPrvých svätých mučeníkov Cirkvi v Ríme (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230428
-SUMMARY:Piatok po 3. veľkonočnej nedeli\nalebo\nSvätého Petra Chanela\, kňaza a mučeníka\nalebo\nSvätého Ľudovíta Máriu Grigniona z Montfortu\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230912
-SUMMARY:Utorok 23. týždňa v Cezročnom období\nalebo\nNajsvätejšieho mena Panny Márie (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230719
-SUMMARY:Streda 15. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231106
-SUMMARY:Pondelok 31. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230203
-SUMMARY:Piatok 4. týždňa v Cezročnom období\nalebo\nSvätého Blažeja\, biskupa a mučeníka\nalebo\nSvätého Oskára\, biskupa (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231229
-SUMMARY:Piaty deň v oktáve narodenia Pána
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230618
-SUMMARY:11. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230119
-SUMMARY:Štvrtok 2. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230424
-SUMMARY:Pondelok po 3. veľkonočnej nedeli\nalebo\nSvätého Juraja\, mučeníka\nalebo\nSvätého Fidéla zo Sigmaringenu\, kňaza a mučeníka (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230504
-SUMMARY:Štvrtok po 4. veľkonočnej nedeli\nalebo\nSvätého Floriána\, mučeníka (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231101
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nVšetkých svätých (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230927
-SUMMARY:Svätého Vincenta de Paul\, kňaza (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231022
-SUMMARY:29. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230909
-SUMMARY:Sobota 22. týždňa v Cezročnom období\nalebo\nSvätého Petra Clavera\, kňaza\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230401
-SUMMARY:Sobota po 5. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231031
-SUMMARY:Utorok 30. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230209
-SUMMARY:Štvrtok 5. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230926
-SUMMARY:Utorok 25. týždňa v Cezročnom období\nalebo\nSvätých Kozmu a Damiána\, mučeníkov (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231016
-SUMMARY:Pondelok 28. týždňa v Cezročnom období\nalebo\nSvätej Hedvigy\, rehoľníčky\nalebo\nSvätej Margity Márie Alacoque\, panny\nalebo\nSvätého Gála\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230523
-SUMMARY:Utorok po 7. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230606
-SUMMARY:Utorok 9. týždňa v Cezročnom období\nalebo\nSvätého Norberta\, biskupa (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230723
-SUMMARY:16. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230611
-SUMMARY:10. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230914
-SUMMARY:Povýšenie Svätého kríža (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231216
-SUMMARY:Sobota po 2. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230127
-SUMMARY:Piatok 3. týždňa v Cezročnom období\nalebo\nSvätej Angely Merici\, panny (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230514
-SUMMARY:6. veľkonočná nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230703
-SUMMARY:Svätého Tomáša\, apoštola (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230402
-SUMMARY:Palmová (Kvetná) nedeľa – Nedeľa utrpenia Pána
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230724
-SUMMARY:Pondelok 16. týždňa v Cezročnom období\nalebo\nSvätého Šarbela Machlúfa\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230620
-SUMMARY:Utorok 11. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230206
-SUMMARY:Svätého Pavla Mikiho a spoločníkov\, mučeníkov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230220
-SUMMARY:Pondelok 7. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230325
-SUMMARY:Zvestovanie Pána (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230103
-SUMMARY:Utorok vo Vianočnom období\nalebo\nNajsvätejšieho mena Ježiš (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230522
-SUMMARY:Pondelok po 7. veľkonočnej nedeli\nalebo\nSvätej Rity z Cascie\, rehoľníčky (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231026
-SUMMARY:Štvrtok 29. týždňa v Cezročnom období\nVýročie posviacky chrámov\, ktorých deň posviacky je neznámy (slávnosť - len v konsekrovaných kostoloch)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230111
-SUMMARY:Streda 1. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230211
-SUMMARY:Sobota 5. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie Lurdskej (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230813
-SUMMARY:19. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231030
-SUMMARY:Pondelok 30. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231111
-SUMMARY:Svätého Martina z Tours\, biskupa (spomienka)\nBRATISLAVA a SPIŠ: Svätého Martina z Tours\, biskupa – hlavného patróna diecéz a titul katedrál (sviatok\; v katedrálach slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231212
-SUMMARY:Utorok po 2. adventnej nedeli\nalebo\nPreblahoslavenej Panny Márie Guadalupskej (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230628
-SUMMARY:Svätého Ireneja\, biskupa a učiteľa Cirkvi\, mučeníka (spomienka)\nPRIKÁZANÁ SLÁVNOSŤ:\nSvätých Petra a Pavla\, apoštolov (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230803
-SUMMARY:Štvrtok 17. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230202
-SUMMARY:Obetovanie Pána (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230508
-SUMMARY:Pondelok po 5. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230502
-SUMMARY:Svätého Atanáza\, biskupa a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230721
-SUMMARY:Piatok 15. týždňa v Cezročnom období\nalebo\nSvätého Vavrinca z Brindisi\, kňaza a učiteľa Cirkvi (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230613
-SUMMARY:Svätého Antona Paduánskeho\, kňaza a učiteľa Cirkvi (spomienka)\nORDINARIÁT OS a OZ SR: Výročie posviacky katedrálneho chrámu svätého Šebastiána v Bratislave (v ordinariáte sviatok\; v katedrále slávnosť)
+DTSTART;VALUE=DATE:20230418
+SUMMARY:Utorok po 2. veľkonočnej nedeli
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20230526
 SUMMARY:Svätého Filipa Neriho\, kňaza (spomienka)
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231206
-SUMMARY:Streda po 1. adventnej nedeli\nalebo\nSvätého Mikuláša\, biskupa (ľubovoľná spomienka)\nPREŠOV: Svätého Mikuláša\, biskupa – titul konkatedrály (slávnosť - iba v konkatedrále)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230825
-SUMMARY:Piatok 20. týždňa v Cezročnom období\nalebo\nSvätého Ľudovíta\nalebo\nSvätého Jozefa Kalazanského\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230208
-SUMMARY:Streda 5. týždňa v Cezročnom období\nalebo\nSvätého Hieronyma Emilianiho\nalebo\nSvätej Jozefíny Bakhity\, panny (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230414
-SUMMARY:Piatok vo Veľkonočnej oktáve
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231214
-SUMMARY:Svätého Jána od Kríža\, kňaza a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230120
-SUMMARY:Piatok 2. týždňa v Cezročnom období\nalebo\nSvätého Fabiána\, pápeža a mučeníka\nalebo\nSvätého Šebastiána\, mučeníka (ľubovoľná spomienka)\nORDINARIÁT OS a OZ SR: Svätého Šebastiána\, mučeníka – hlavného patróna ordinariátu a titul katedrály (v ordinariáte sviatok\, v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230916
-SUMMARY:Svätých Kornélia\, pápeža\, a Cypriána\, biskupa\, mučeníkov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231114
-SUMMARY:Utorok 32. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230407
-SUMMARY:Piatok utrpenia Pána (Veľký piatok) – slávenie utrpenia a smrti Pána
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231102
-SUMMARY:Spomienka na Všetkých zosnulých veriacich (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230529
-SUMMARY:Preblahoslavenej Panny Márie\, Matky Cirkvi (spomienka)\nVotívna omša o Duchu svätom
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230321
-SUMMARY:Utorok po 4. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231221
-SUMMARY:Štvrtok po 3. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230820
-SUMMARY:20. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231117
-SUMMARY:Svätej Alžbety Uhorskej\, rehoľníčky (spomienka)\nKOŠICE: Svätej Alžbety Uhorskej\, rehoľníčky – titul katedrály a patrónky mesta Košice (slávnosť iba v katedrále)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230512
-SUMMARY:Piatok po 5. veľkonočnej nedeli\nalebo\nSvätých Nerea a Achila\, mučeníkov\nalebo\nSvätého Pankráca\, mučeníka (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230223
-SUMMARY:Štvrtok po Popolcovej strede
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230130
-SUMMARY:Pondelok 4. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230215
-SUMMARY:Streda 6. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230317
-SUMMARY:Piatok po 3. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231129
-SUMMARY:Streda 34. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231004
-SUMMARY:Svätého Františka Assiského (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230227
-SUMMARY:Pondelok po 1. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230426
-SUMMARY:Streda po 3. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230515
-SUMMARY:Pondelok po 6. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231202
-SUMMARY:Sobota 34. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230801
-SUMMARY:Svätého Alfonza Máriu de’ Liguori\, biskupa a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230604
-SUMMARY:Najsvätejšej Trojice (slávnosť)\nŽILINA: Najsvätejšej Trojice – titul katedrály (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230602
-SUMMARY:Piatok 8. týždňa v Cezročnom období\nalebo\nSvätých Marcelína a Petra\, mučeníkov (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230919
-SUMMARY:Utorok 24. týždňa v Cezročnom období\nalebo\nSvätého Januára\, biskupa a mučeníka (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231230
-SUMMARY:Šiesty deň v oktáve narodenia Pána
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231203
-SUMMARY:1. adventná nedeľa [rok B\, cyklus II.]
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230129
-SUMMARY:4. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231021
-SUMMARY:Sobota 28. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230126
-SUMMARY:Svätých Timoteja a Títa\, biskupov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231207
-SUMMARY:Svätého Ambróza\, biskupa a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230709
-SUMMARY:14. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231127
-SUMMARY:Pondelok 34. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230903
-SUMMARY:22. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230425
-SUMMARY:Svätého Marka\, evanjelistu (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230822
-SUMMARY:Preblahoslavenej Panny Márie Kráľovnej (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230131
-SUMMARY:Svätého Jána Bosca\, kňaza (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230516
-SUMMARY:Svätého Jána Nepomuckého\, kňaza a mučeníka (spomienka)\nROŽŇAVA: Svätého Jána Nepomuckého\, kňaza a mučeníka – hlavného patróna diecézy (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230707
-SUMMARY:Piatok 13. týždňa v Cezročnom období\nalebo\nSvätého Antona Máriu Zaccariu\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230506
-SUMMARY:Sobota po 4. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230511
-SUMMARY:Štvrtok po 5. veľkonočnej nedeli\nalebo\nBlahoslavenej Sáry Salkaháziovej\, panny a mučenice (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230310
-SUMMARY:Piatok po 2. pôstnej nedeli\nBRATISLAVA: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Bratislave (v diecéze sviatok\; v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230908
-SUMMARY:Narodenie Preblahoslavenej Panny Márie (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230224
-SUMMARY:Piatok po Popolcovej strede
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231017
-SUMMARY:Svätého Ignáca Antiochijského\, biskupa a mučeníka (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230608
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNajsvätejšieho Kristovho Tela a Krvi (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230624
-SUMMARY:Narodenie svätého Jána Krstiteľa (slávnosť)\nTRNAVA: Narodenie svätého Jána Krstiteľa – hlavného patróna diecézy a titul katedrály (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230603
-SUMMARY:Svätých Karola Lwangu a spoločníkov\, mučeníkov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231208
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNepoškvrnené počatie Preblahoslavenej Panny Márie (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230827
-SUMMARY:21. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230617
-SUMMARY:Nepoškvrneného Srdca Preblahoslavenej Panny Márie (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230314
-SUMMARY:Utorok po 3. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231028
-SUMMARY:Svätých Šimona a Júdu\, apoštolov (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230519
-SUMMARY:Piatok po 6. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231228
-SUMMARY:Svätých Neviniatok\, mučeníkov (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230917
-SUMMARY:24. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231220
-SUMMARY:Streda po 3. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231222
-SUMMARY:Piatok po 3. adventnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230505
-SUMMARY:Piatok po 4. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230623
-SUMMARY:Piatok 11. týždňa v Cezročnom období\nNarodenie svätého Jána Krstiteľa (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230907
-SUMMARY:Svätých Marka Križina\, Melichara Grodzieckého a Štefana Pongrácza\, kňazov a mučeníkov (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230731
-SUMMARY:Svätého Ignáca z Loyoly\, kňaza (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230112
-SUMMARY:Štvrtok 1. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230418
-SUMMARY:Utorok po 2. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230417
-SUMMARY:Pondelok po 2. veľkonočnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230722
-SUMMARY:Svätej Márie Magdalény (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230503
-SUMMARY:Svätých Filipa a Jakuba\, apoštolov (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230305
-SUMMARY:2. pôstna nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230412
-SUMMARY:Streda vo Veľkonočnej oktáve
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231231
-SUMMARY:Svätej rodiny – Ježiša\, Márie a Jozefa (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230118
-SUMMARY:Streda 2. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230720
-SUMMARY:Štvrtok 15. týždňa v Cezročnom období\nalebo\nSvätého Apolinára\, biskupa a mučeníka (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231204
-SUMMARY:Pondelok po 1. adventnej nedeli\nalebo\nSvätého Jána Damascénskeho\, kňaza a učiteľa Cirkvi\nalebo\nSvätej Barbory\, panny a mučenice (ľubovoľná spomienka)\nBANSKÁ BYSTRICA (len v katedrále): Svätého Františka Xaverského\, kňaza – hlavného patróna diecézy a titul katedrály (slávnosť presunutá z nedele)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230101
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nPanny Márie Bohorodičky (slávnosť)
+DTSTART;VALUE=DATE:20230713
+SUMMARY:Štvrtok 14. týždňa v Cezročnom období\nalebo\nSvätého Henricha (ľubovoľná spomienka)
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20230212
 SUMMARY:6. nedeľa v Cezročnom období
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230713
-SUMMARY:Štvrtok 14. týždňa v Cezročnom období\nalebo\nSvätého Henricha (ľubovoľná spomienka)
+DTSTART;VALUE=DATE:20231029
+SUMMARY:30. nedeľa v Cezročnom období
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230904
-SUMMARY:Pondelok 22. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230615
-SUMMARY:Štvrtok 10. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230609
-SUMMARY:Piatok 9. týždňa v Cezročnom období\nalebo\nSvätého Efréma\, diakona a učiteľa Cirkvi (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230108
-SUMMARY:Krst Krista Pána (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230326
-SUMMARY:5. pôstna nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230106
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nZjavenie Pána (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231011
-SUMMARY:Streda 27. týždňa v Cezročnom období\nalebo\nSvätého Jána XXIII.\, pápeža (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230124
-SUMMARY:Svätého Františka Saleského\, biskupa a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230730
-SUMMARY:17. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230405
-SUMMARY:Streda Svätého týždňa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230323
-SUMMARY:Štvrtok po 4. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230406
-SUMMARY:Štvrtok Svätého týždňa – Zelený štvrtok\nVečer Zelený štvrtok Pánovej večere
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231007
-SUMMARY:Ružencovej Panny Márie (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230805
-SUMMARY:Sobota 17. týždňa v Cezročnom období\nalebo\nVýročie posviacky hlavnej mariánskej baziliky v Ríme\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230826
-SUMMARY:Sobota 20. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231024
-SUMMARY:Utorok 29. týždňa v Cezročnom období\nalebo\nSvätého Antona Máriu Clareta\, biskupa (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230531
-SUMMARY:Streda 8. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230214
-SUMMARY:Utorok 6. týždňa v Cezročnom období\nalebo\nvotívna svätá omša o svätých Cyrilovi\, mníchovi\, a Metodovi\, biskupovi\, patrónoch Európy\nŽILINA: Svätých Cyrila\, mnícha\, a Metoda\, biskupa – hlavní patróni diecézy (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230714
-SUMMARY:Piatok 14. týždňa v Cezročnom období\nalebo\nSvätého Kamila z Lellisu\, kňaza (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230808
-SUMMARY:Svätého Dominika\, kňaza (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231118
-SUMMARY:Sobota 32. týždňa v Cezročnom období\nalebo\nVýročie posviacky bazilík svätých Petra a Pavla\, apoštolov\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231108
-SUMMARY:Streda 31. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230228
-SUMMARY:Utorok po 1. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231227
-SUMMARY:Svätého Jána\, apoštola a evanjelistu (sviatok)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231014
-SUMMARY:Sobota 27. týždňa v Cezročnom období\nalebo\nSvätého Kalixta I.\, pápeža a mučeníka\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230510
-SUMMARY:Streda po 5. veľkonočnej nedeli\nalebo\nSvätého Jána z Avily\, kňaza a učiteľa Cirkvi (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231110
-SUMMARY:Svätého Leva Veľkého\, pápeža a učiteľa Cirkvi (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231120
-SUMMARY:Pondelok 33. týždňa v Cezročnom období\nKOŠICE: alebo Blahoslavenej Anny Kolesárovej\, panny a mučenice (ľubovoľná spomienka)\nNITRA: Výročie posviacky katedrálneho chrámu svätého Emeráma\, biskupa a mučeníka (v diecéze sviatok\; v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230225
-SUMMARY:Sobota po Popolcovej strede
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231025
-SUMMARY:Streda 29. týždňa v Cezročnom období\nalebo\nSvätého Maura\, biskupa (ľubovoľná spomienka)\nSPIŠ: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Spišskom Podhradí (v diecéze sviatok\; v katedrále slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230815
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNanebovzatie Preblahoslavenej Panny Márie (slávnosť)\nPRIKÁZANÁ SLÁVNOSŤ:\nROŽŇAVA: Nanebovzatie Preblahoslavenej Panny Márie – titul katedrály (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230905
-SUMMARY:Utorok 22. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230115
-SUMMARY:2. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230110
-SUMMARY:Utorok 1. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230121
-SUMMARY:Svätej Agnesy\, panny a mučenice (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230315
-SUMMARY:Streda po 3. pôstnej nedeli
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20231105
-SUMMARY:31. nedeľa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230708
-SUMMARY:Sobota 13. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230705
-SUMMARY:Svätých Cyrila a Metoda\, slovanských vierozvestov (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230518
-SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNanebovstúpenie Pána (slávnosť)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230621
-SUMMARY:Svätého Alojza Gonzágu\, rehoľníka (spomienka)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230521
-SUMMARY:7. veľkonočná nedeľa
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230817
-SUMMARY:Štvrtok 19. týždňa v Cezročnom období
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20230614
-SUMMARY:Streda 10. týždňa v Cezročnom období
+DTSTART;VALUE=DATE:20231218
+SUMMARY:Pondelok po 3. adventnej nedeli
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20230123
 SUMMARY:Pondelok 3. týždňa v Cezročnom období\nBRATISLAVA (len v katedrále): Svätého Jána Almužníka\, biskupa (spomienka)
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230326
+SUMMARY:5. pôstna nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230621
+SUMMARY:Svätého Alojza Gonzágu\, rehoľníka (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230616
+SUMMARY:Najsvätejšieho Srdca Ježišovho (slávnosť)\nROŽŇAVA (len v katedrále): Svätého Neita\, mučeníka (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231119
+SUMMARY:33. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230815
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNanebovzatie Preblahoslavenej Panny Márie (slávnosť)\nPRIKÁZANÁ SLÁVNOSŤ:\nROŽŇAVA: Nanebovzatie Preblahoslavenej Panny Márie – titul katedrály (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230503
+SUMMARY:Svätých Filipa a Jakuba\, apoštolov (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231210
+SUMMARY:2. adventná nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231223
+SUMMARY:Sobota po 3. adventnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230320
+SUMMARY:Svätého Jozefa\, ženícha Panny Márie (slávnosť preložená z nedele)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231225
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNarodenie Pána (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230919
+SUMMARY:Utorok 24. týždňa v Cezročnom období\nalebo\nSvätého Januára\, biskupa a mučeníka (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230625
+SUMMARY:12. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230222
+SUMMARY:Popolcová streda (Pôst a zdržovanie sa mäsitého pokrmu. Je deň pokánia v celej Cirkvi.)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230928
+SUMMARY:Štvrtok 25. týždňa v Cezročnom období\nalebo\nSvätého Václava\, mučeníka\nalebo\nSvätých Vavrinca Ruiza a spoločníkov\, mučeníkov (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230829
+SUMMARY:Mučenícka smrť svätého Jána Krstiteľa (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230308
+SUMMARY:Streda po 2. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231108
+SUMMARY:Streda 31. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230724
+SUMMARY:Pondelok 16. týždňa v Cezročnom období\nalebo\nSvätého Šarbela Machlúfa\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231007
+SUMMARY:Ružencovej Panny Márie (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230216
+SUMMARY:Štvrtok 6. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231213
+SUMMARY:Svätej Lucie\, panny a mučenice (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230723
+SUMMARY:16. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230923
+SUMMARY:Svätého Pia z Pietrelciny\, kňaza (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230910
+SUMMARY:23. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230221
+SUMMARY:Utorok 7. týždňa v Cezročnom období\nalebo\nSvätého Petra Damianiho\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231222
+SUMMARY:Piatok po 3. adventnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230417
+SUMMARY:Pondelok po 2. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230507
+SUMMARY:5. veľkonočná nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230413
+SUMMARY:Štvrtok vo Veľkonočnej oktáve
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230110
+SUMMARY:Utorok 1. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230305
+SUMMARY:2. pôstna nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231004
+SUMMARY:Svätého Františka Assiského (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230419
+SUMMARY:Streda po 2. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230817
+SUMMARY:Štvrtok 19. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230814
+SUMMARY:Svätého Maximiliána Máriu Kolbeho\, kňaza a mučeníka (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230914
+SUMMARY:Povýšenie Svätého kríža (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231124
+SUMMARY:Svätých Ondreja Dung-Laka\, kňaza\, a spoločníkov\, mučeníkov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230718
+SUMMARY:Utorok 15. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230208
+SUMMARY:Streda 5. týždňa v Cezročnom období\nalebo\nSvätého Hieronyma Emilianiho\nalebo\nSvätej Jozefíny Bakhity\, panny (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230408
+SUMMARY:Biela sobota
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230608
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNajsvätejšieho Kristovho Tela a Krvi (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230909
+SUMMARY:Sobota 22. týždňa v Cezročnom období\nalebo\nSvätého Petra Clavera\, kňaza\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230226
+SUMMARY:1. pôstna nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230529
+SUMMARY:Preblahoslavenej Panny Márie\, Matky Cirkvi (spomienka)\nVotívna omša o Duchu svätom
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230701
+SUMMARY:Sobota 12. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230129
+SUMMARY:4. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230513
+SUMMARY:Sobota po 5. veľkonočnej nedeli\nalebo\nBlahoslavenej Panny Márie Fatimskej (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231111
+SUMMARY:Svätého Martina z Tours\, biskupa (spomienka)\nBRATISLAVA a SPIŠ: Svätého Martina z Tours\, biskupa – hlavného patróna diecéz a titul katedrál (sviatok\; v katedrálach slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231128
+SUMMARY:Utorok 34. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230921
+SUMMARY:Svätého Matúša\, apoštola a evanjelistu (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230501
+SUMMARY:Pondelok po 4. veľkonočnej nedeli\nalebo\nSvätého Jozefa\, robotníka (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231126
+SUMMARY:34. nedeľa v Cezročnom období – Nášho Pána Ježiša Krista\, Kráľa neba i zeme (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230620
+SUMMARY:Utorok 11. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231001
+SUMMARY:26. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230725
+SUMMARY:Svätého Jakuba\, apoštola (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230902
+SUMMARY:Sobota 21. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230628
+SUMMARY:Svätého Ireneja\, biskupa a učiteľa Cirkvi\, mučeníka (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231127
+SUMMARY:Pondelok 34. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231217
+SUMMARY:3. adventná nedeľa [Fialová]
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230329
+SUMMARY:Streda po 5. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230816
+SUMMARY:Streda 19. týždňa v Cezročnom období\nalebo\nSvätého Štefana Uhorského (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231102
+SUMMARY:Spomienka na Všetkých zosnulých veriacich (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230524
+SUMMARY:Streda po 7. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231017
+SUMMARY:Svätého Ignáca Antiochijského\, biskupa a mučeníka (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230316
+SUMMARY:Štvrtok po 3. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231009
+SUMMARY:Pondelok 27. týždňa v Cezročnom období\nalebo\nSvätých Dionýza\, biskupa\, a spoločníkov\, mučeníkov\nalebo\nSvätého Jána Leonardiho\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230315
+SUMMARY:Streda po 3. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230323
+SUMMARY:Štvrtok po 4. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230702
+SUMMARY:13. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230809
+SUMMARY:Svätej Terézie Benedikty od Kríža\, panny a mučenice\, patrónky Európy (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230427
+SUMMARY:Štvrtok po 3. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230117
+SUMMARY:Svätého Antona\, opáta (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230520
+SUMMARY:Sobota po 6. veľkonočnej nedeli\nalebo\nSvätého Bernardína Sienského\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230518
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNanebovstúpenie Pána (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230730
+SUMMARY:17. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230131
+SUMMARY:Svätého Jána Bosca\, kňaza (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230302
+SUMMARY:Štvrtok po 1. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230107
+SUMMARY:Sobota po Zjavení Pána\nalebo\nSvätého Rajmunda z Peňafortu\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230818
+SUMMARY:Piatok 19. týždňa v Cezročnom období\nalebo\nSvätej Heleny (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230525
+SUMMARY:Štvrtok po 7. veľkonočnej nedeli\nalebo\nSvätého Bédu Ctihodného\, kňaza a učiteľa Cirkvi\nalebo\nSvätého Gregora VII.\, pápeža\nalebo\nSvätej Márie Magdalény de’ Pazzi\, panny (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230709
+SUMMARY:14. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230722
+SUMMARY:Svätej Márie Magdalény (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230721
+SUMMARY:Piatok 15. týždňa v Cezročnom období\nalebo\nSvätého Vavrinca z Brindisi\, kňaza a učiteľa Cirkvi (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231113
+SUMMARY:Pondelok 32. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231117
+SUMMARY:Svätej Alžbety Uhorskej\, rehoľníčky (spomienka)\nKOŠICE: Svätej Alžbety Uhorskej\, rehoľníčky – titul katedrály a patrónky mesta Košice (slávnosť iba v katedrále)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230225
+SUMMARY:Sobota po Popolcovej strede
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230528
+SUMMARY:Zoslanie Ducha Svätého (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230615
+SUMMARY:Štvrtok 10. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231121
+SUMMARY:Obetovanie preblahoslavenej Panny Márie (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230830
+SUMMARY:Streda 21. týždňa v Cezročnom období\nTRNAVA: Výročie posviacky katedrálneho chrámu svätého Jána Krstiteľa v Trnave (v diecéze sviatok\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230603
+SUMMARY:Svätých Karola Lwangu a spoločníkov\, mučeníkov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231015
+SUMMARY:28. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230607
+SUMMARY:Streda 9. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230410
+SUMMARY:Pondelok vo Veľkonočnej oktáve
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230924
+SUMMARY:25. nedeľa v Cezročnom období\nBANSKÁ BYSTRICA: Výročie posviacky katedrálneho chrámu svätého Františka Xaverského v Banskej Bystrici (slávnosť\; iba v katedrále)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230406
+SUMMARY:Štvrtok Svätého týždňa – Zelený štvrtok\nVečer Zelený štvrtok Pánovej večere
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230310
+SUMMARY:Piatok po 2. pôstnej nedeli\nBRATISLAVA: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Bratislave (v diecéze sviatok\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231018
+SUMMARY:Svätého Lukáša\, evanjelistu (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230926
+SUMMARY:Utorok 25. týždňa v Cezročnom období\nalebo\nSvätých Kozmu a Damiána\, mučeníkov (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230731
+SUMMARY:Svätého Ignáca z Loyoly\, kňaza (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230831
+SUMMARY:Štvrtok 21. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230420
+SUMMARY:Štvrtok po 2. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230321
+SUMMARY:Utorok po 4. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230821
+SUMMARY:Svätého Pia X.\, pápeža (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231212
+SUMMARY:Utorok po 2. adventnej nedeli\nalebo\nPreblahoslavenej Panny Márie Guadalupskej (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230705
+SUMMARY:Svätých Cyrila a Metoda\, slovanských vierozvestov (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230715
+SUMMARY:Svätého Bonaventúru\, biskupa a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230331
+SUMMARY:Piatok po 5. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230601
+SUMMARY:Nášho Pána Ježiša Krista\, najvyššieho a večného kňaza (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230202
+SUMMARY:Obetovanie Pána (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230826
+SUMMARY:Sobota 20. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230706
+SUMMARY:Štvrtok 13. týždňa v Cezročnom období\nalebo\nSvätej Márie Goretti\, panny a mučenice (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230130
+SUMMARY:Pondelok 4. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230915
+SUMMARY:Sedembolestnej Panny Márie\, patrónky Slovenska (slávnosť)\nPOPRAD: Sedembolestnej Panny Márie\, patrónky Slovenska – titul konkatedrály (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230925
+SUMMARY:Pondelok 25. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230712
+SUMMARY:Streda 14. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230108
+SUMMARY:Krst Krista Pána (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230512
+SUMMARY:Piatok po 5. veľkonočnej nedeli\nalebo\nSvätých Nerea a Achila\, mučeníkov\nalebo\nSvätého Pankráca\, mučeníka (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230124
+SUMMARY:Svätého Františka Saleského\, biskupa a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230211
+SUMMARY:Sobota 5. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie Lurdskej (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231130
+SUMMARY:Svätého Ondreja\, apoštola (sviatok)\nKOŠICE: Svätého Ondreja\, apoštola – hlavného patróna arcidiecézy (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231116
+SUMMARY:Štvrtok 32. týždňa v Cezročnom období\nalebo\nSvätej Margity Škótskej\nalebo\nSvätej Gertrúdy\, panny (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231201
+SUMMARY:Piatok 34. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230517
+SUMMARY:Streda po 6. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231226
+SUMMARY:Svätého Štefana\, prvého mučeníka (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230113
+SUMMARY:Piatok 1. týždňa v Cezročnom období\nalebo\nSvätého Hilára\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230414
+SUMMARY:Piatok vo Veľkonočnej oktáve
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231224
+SUMMARY:4. adventná nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230415
+SUMMARY:Sobota vo Veľkonočnej oktáve
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230102
+SUMMARY:Svätých Bazila Veľkého a Gregora Nazianzského\, biskupov a učiteľov Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230327
+SUMMARY:Pondelok po 5. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230306
+SUMMARY:Pondelok po 2. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230604
+SUMMARY:Najsvätejšej Trojice (slávnosť)\nŽILINA: Najsvätejšej Trojice – titul katedrály (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230405
+SUMMARY:Streda Svätého týždňa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231231
+SUMMARY:Svätej rodiny – Ježiša\, Márie a Jozefa (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230617
+SUMMARY:Nepoškvrneného Srdca Preblahoslavenej Panny Márie (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230228
+SUMMARY:Utorok po 1. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231030
+SUMMARY:Pondelok 30. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230505
+SUMMARY:Piatok po 4. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230630
+SUMMARY:Piatok 12. týždňa v Cezročnom období\nalebo\nPrvých svätých mučeníkov Cirkvi v Ríme (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231003
+SUMMARY:Utorok 26. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231129
+SUMMARY:Streda 34. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230303
+SUMMARY:Piatok po 1. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230325
+SUMMARY:Zvestovanie Pána (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230912
+SUMMARY:Utorok 23. týždňa v Cezročnom období\nalebo\nNajsvätejšieho mena Panny Márie (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231020
+SUMMARY:Piatok 28. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230504
+SUMMARY:Štvrtok po 4. veľkonočnej nedeli\nalebo\nSvätého Floriána\, mučeníka (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231008
+SUMMARY:27. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230125
+SUMMARY:Obrátenie svätého Pavla\, apoštola (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230922
+SUMMARY:Piatok 24. týždňa v Cezročnom období\nNITRA: Svätého Emeráma\, biskupa a mučeníka – titul katedrály (v diecéze spomienka\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230810
+SUMMARY:Svätého Vavrinca\, diakona a mučeníka (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230421
+SUMMARY:Piatok po 2. veľkonočnej nedeli\nalebo\nSvätého Anzelma\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230328
+SUMMARY:Utorok po 5. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230711
+SUMMARY:Svätého Benedikta\, opáta\, patróna Európy (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230120
+SUMMARY:Piatok 2. týždňa v Cezročnom období\nalebo\nSvätého Fabiána\, pápeža a mučeníka\nalebo\nSvätého Šebastiána\, mučeníka (ľubovoľná spomienka)\nORDINARIÁT OS a OZ SR: Svätého Šebastiána\, mučeníka – hlavného patróna ordinariátu a titul katedrály (v ordinariáte sviatok\, v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230429
+SUMMARY:Svätej Kataríny Sienskej\, panny a učiteľky Cirkvi\, patrónky Európy (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231005
+SUMMARY:Štvrtok 26. týždňa v Cezročnom období\nalebo\nSvätej Faustíny Kowalskej\, panny (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230111
+SUMMARY:Streda 1. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230720
+SUMMARY:Štvrtok 15. týždňa v Cezročnom období\nalebo\nSvätého Apolinára\, biskupa a mučeníka (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231024
+SUMMARY:Utorok 29. týždňa v Cezročnom období\nalebo\nSvätého Antona Máriu Clareta\, biskupa (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231216
+SUMMARY:Sobota po 2. adventnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230116
+SUMMARY:Pondelok 2. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230727
+SUMMARY:Svätých Gorazda a spoločníkov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230918
+SUMMARY:Pondelok 24. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230223
+SUMMARY:Štvrtok po Popolcovej strede
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230619
+SUMMARY:Pondelok 11. týždňa v Cezročnom období\nalebo\nSvätého Romualda\, opáta (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230728
+SUMMARY:Piatok 16. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230311
+SUMMARY:Sobota po 2. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231013
+SUMMARY:Piatok 27. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230804
+SUMMARY:Svätého Jána Máriu Vianneya\, kňaza (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231228
+SUMMARY:Svätých Neviniatok\, mučeníkov (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230105
+SUMMARY:Štvrtok vo Vianočnom období\nPRIKÁZANÁ SLÁVNOSŤ:\nZjavenie Pána (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230610
+SUMMARY:Sobota 9. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230808
+SUMMARY:Svätého Dominika\, kňaza (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231002
+SUMMARY:Svätých anjelov strážcov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231023
+SUMMARY:Pondelok 29. týždňa v Cezročnom období\nalebo\nSvätého Jána Kapistránskeho\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230104
+SUMMARY:Streda vo Vianočnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230920
+SUMMARY:Svätých Ondreja Kima Taegona\, kňaza\, Pavla Chonga Hasanga a spoločníkov\, mučeníkov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230509
+SUMMARY:Utorok po 5. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230416
+SUMMARY:2. Veľkonočná nedeľa alebo Nedeľa Božieho milosrdenstva
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230203
+SUMMARY:Piatok 4. týždňa v Cezročnom období\nalebo\nSvätého Blažeja\, biskupa a mučeníka\nalebo\nSvätého Oskára\, biskupa (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230115
+SUMMARY:2. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230422
+SUMMARY:Sobota po 2. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231115
+SUMMARY:Streda 32. týždňa v Cezročnom období\nalebo\nSvätého Alberta Veľkého\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230307
+SUMMARY:Utorok po 2. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231010
+SUMMARY:Utorok 27. týždňa v Cezročnom období\nŽILINA: Výročie posviacky katedrálneho chrámu Najvätejšej Trojice v Žiline (v diecéze sviatok\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230122
+SUMMARY:3. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230424
+SUMMARY:Pondelok po 3. veľkonočnej nedeli\nalebo\nSvätého Juraja\, mučeníka\nalebo\nSvätého Fidéla zo Sigmaringenu\, kňaza a mučeníka (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230930
+SUMMARY:Svätého Hieronyma\, kňaza a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230802
+SUMMARY:Streda 17. týždňa v Cezročnom období\nalebo\nSvätého Euzébia Vercellského\, biskupa\nalebo\nSvätého Petra Juliána Eymarda\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230426
+SUMMARY:Streda po 3. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231028
+SUMMARY:Svätých Šimona a Júdu\, apoštolov (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230527
+SUMMARY:Sobota po 7. veľkonočnej nedeli\nalebo\nSvätého Augustína z Canterbury\, biskupa (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230324
+SUMMARY:Piatok po 4. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230916
+SUMMARY:Svätých Kornélia\, pápeža\, a Cypriána\, biskupa\, mučeníkov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230322
+SUMMARY:Streda po 4. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230318
+SUMMARY:Sobota po 3. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231207
+SUMMARY:Svätého Ambróza\, biskupa a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230112
+SUMMARY:Štvrtok 1. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231011
+SUMMARY:Streda 27. týždňa v Cezročnom období\nalebo\nSvätého Jána XXIII.\, pápeža (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231122
+SUMMARY:Svätej Cecílie\, panny a mučenice (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230827
+SUMMARY:21. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230708
+SUMMARY:Sobota 13. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230801
+SUMMARY:Svätého Alfonza Máriu de’ Liguori\, biskupa a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231220
+SUMMARY:Streda po 3. adventnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230214
+SUMMARY:Utorok 6. týždňa v Cezročnom období\nalebo\nvotívna svätá omša o svätých Cyrilovi\, mníchovi\, a Metodovi\, biskupovi\, patrónoch Európy\nŽILINA: Svätých Cyrila\, mnícha\, a Metoda\, biskupa – hlavní patróni diecézy (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231227
+SUMMARY:Svätého Jána\, apoštola a evanjelistu (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230906
+SUMMARY:Streda 22. týždňa v Cezročnom období\nKOŠICE: Výročie posviacky katedrálneho chrámu svätej Alžbety Uhorskej v Košiciach (v diecéze sviatok\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230605
+SUMMARY:Svätého Bonifáca\, biskupa a mučeníka (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231031
+SUMMARY:Utorok 30. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231025
+SUMMARY:Streda 29. týždňa v Cezročnom období\nalebo\nSvätého Maura\, biskupa (ľubovoľná spomienka)\nSPIŠ: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Spišskom Podhradí (v diecéze sviatok\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230614
+SUMMARY:Streda 10. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230622
+SUMMARY:Štvrtok 11. týždňa v Cezročnom období\nalebo\nSvätého Pavlína z Noly\, biskupa\nalebo\nSvätých Jána Fišera\, biskupa\, a Tomáša Morusa\, mučeníkov (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230618
+SUMMARY:11. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230714
+SUMMARY:Piatok 14. týždňa v Cezročnom období\nalebo\nSvätého Kamila z Lellisu\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230220
+SUMMARY:Pondelok 7. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230423
+SUMMARY:3. veľkonočná nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230411
+SUMMARY:Utorok vo Veľkonočnej oktáve
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230822
+SUMMARY:Preblahoslavenej Panny Márie Kráľovnej (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230114
+SUMMARY:Sobota 1. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230425
+SUMMARY:Svätého Marka\, evanjelistu (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230824
+SUMMARY:Svätého Bartolomeja\, apoštola (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230403
+SUMMARY:Pondelok Svätého týždňa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230707
+SUMMARY:Piatok 13. týždňa v Cezročnom období\nalebo\nSvätého Antona Máriu Zaccariu\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230213
+SUMMARY:Pondelok 6. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231118
+SUMMARY:Sobota 32. týždňa v Cezročnom období\nalebo\nVýročie posviacky bazilík svätých Petra a Pavla\, apoštolov\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230227
+SUMMARY:Pondelok po 1. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230312
+SUMMARY:3. pôstna nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230927
+SUMMARY:Svätého Vincenta de Paul\, kňaza (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230611
+SUMMARY:10. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230823
+SUMMARY:Streda 20. týždňa v Cezročnom období\nalebo\nSvätej Ruženy Limskej\, panny (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230904
+SUMMARY:Pondelok 22. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230623
+SUMMARY:Piatok 11. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230710
+SUMMARY:Pondelok 14. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231109
+SUMMARY:Výročie posviacky Lateránskej baziliky (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230515
+SUMMARY:Pondelok po 6. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230109
+SUMMARY:Pondelok 1. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231221
+SUMMARY:Štvrtok po 3. adventnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231206
+SUMMARY:Streda po 1. adventnej nedeli\nalebo\nSvätého Mikuláša\, biskupa (ľubovoľná spomienka)\nPREŠOV: Svätého Mikuláša\, biskupa – titul konkatedrály (slávnosť - iba v konkatedrále)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230813
+SUMMARY:19. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231215
+SUMMARY:Piatok po 2. adventnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230913
+SUMMARY:Svätého Jána Zlatoústeho\, biskupa a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231204
+SUMMARY:Pondelok po 1. adventnej nedeli\nalebo\nSvätého Jána Damascénskeho\, kňaza a učiteľa Cirkvi\nalebo\nSvätej Barbory\, panny a mučenice (ľubovoľná spomienka)\nBANSKÁ BYSTRICA (len v katedrále): Svätého Františka Xaverského\, kňaza – hlavného patróna diecézy a titul katedrály (slávnosť presunutá z nedele)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230209
+SUMMARY:Štvrtok 5. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230521
+SUMMARY:7. veľkonočná nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230807
+SUMMARY:Pondelok 18. týždňa v Cezročnom období\nalebo\nSvätých Sixta II.\, pápeža\, a jeho spoločníkov\, mučeníkov\nalebo\nSvätého Kajetána\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230126
+SUMMARY:Svätých Timoteja a Títa\, biskupov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231219
+SUMMARY:Utorok po 3. adventnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230609
+SUMMARY:Piatok 9. týždňa v Cezročnom období\nalebo\nSvätého Efréma\, diakona a učiteľa Cirkvi (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230703
+SUMMARY:Svätého Tomáša\, apoštola (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230729
+SUMMARY:Svätých Marty\, Márie a Lazára (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230901
+SUMMARY:Piatok 21. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230301
+SUMMARY:Streda po 1. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230530
+SUMMARY:Utorok 8. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231019
+SUMMARY:Štvrtok 28. týždňa v Cezročnom období\nalebo\nSvätých Jána de Brébeuf a Izáka Jogues\, kňazov\, a ich spoločníkov\, mučeníkov\nalebo\nSvätého Pavla od Kríža\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230207
+SUMMARY:Utorok 5. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230313
+SUMMARY:Pondelok po 3. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230908
+SUMMARY:Narodenie Preblahoslavenej Panny Márie (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230820
+SUMMARY:20. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230626
+SUMMARY:Pondelok 12. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231026
+SUMMARY:Štvrtok 29. týždňa v Cezročnom období\nVýročie posviacky chrámov\, ktorých deň posviacky je neznámy (slávnosť - len v konsekrovaných kostoloch)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231105
+SUMMARY:31. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230519
+SUMMARY:Piatok po 6. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230128
+SUMMARY:Svätého Tomáša Akvinského\, kňaza a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230929
+SUMMARY:Svätých Michala\, Gabriela a Rafaela\, archanjelov (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230726
+SUMMARY:Svätých Joachima a Anny\, rodičov preblahoslavenej Panny Márie (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231114
+SUMMARY:Utorok 32. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230606
+SUMMARY:Utorok 9. týždňa v Cezročnom období\nalebo\nSvätého Norberta\, biskupa (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231106
+SUMMARY:Pondelok 31. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230402
+SUMMARY:Palmová (Kvetná) nedeľa – Nedeľa utrpenia Pána
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230407
+SUMMARY:Piatok utrpenia Pána (Veľký piatok) – slávenie utrpenia a smrti Pána
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230624
+SUMMARY:Narodenie svätého Jána Krstiteľa (slávnosť)\nTRNAVA: Narodenie svätého Jána Krstiteľa – hlavného patróna diecézy a titul katedrály (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231229
+SUMMARY:Piaty deň v oktáve narodenia Pána
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230409
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nVeľkonočná nedeľa Pánovho zmŕtvychvstania (slávnosť s oktávou)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230119
+SUMMARY:Štvrtok 2. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230828
+SUMMARY:Svätého Augustína\, biskupa a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230224
+SUMMARY:Piatok po Popolcovej strede
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230917
+SUMMARY:24. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230911
+SUMMARY:Pondelok 23. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231202
+SUMMARY:Sobota 34. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230522
+SUMMARY:Pondelok po 7. veľkonočnej nedeli\nalebo\nSvätej Rity z Cascie\, rehoľníčky (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230127
+SUMMARY:Piatok 3. týždňa v Cezročnom období\nalebo\nSvätej Angely Merici\, panny (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230819
+SUMMARY:Sobota 19. týždňa v Cezročnom období\nalebo\nSvätého Jána Eudesa\, kňaza\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231022
+SUMMARY:29. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230502
+SUMMARY:Svätého Atanáza\, biskupa a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230412
+SUMMARY:Streda vo Veľkonočnej oktáve
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230317
+SUMMARY:Piatok po 3. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230401
+SUMMARY:Sobota po 5. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231012
+SUMMARY:Štvrtok 27. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230106
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nZjavenie Pána (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230704
+SUMMARY:Utorok 13. týždňa v Cezročnom období\nalebo\nSvätej Alžbety Portugalskej (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230719
+SUMMARY:Streda 15. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230205
+SUMMARY:5. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230511
+SUMMARY:Štvrtok po 5. veľkonočnej nedeli\nalebo\nBlahoslavenej Sáry Salkaháziovej\, panny a mučenice (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230204
+SUMMARY:Sobota 4. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230516
+SUMMARY:Svätého Jána Nepomuckého\, kňaza a mučeníka (spomienka)\nROŽŇAVA: Svätého Jána Nepomuckého\, kňaza a mučeníka – hlavného patróna diecézy (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231014
+SUMMARY:Sobota 27. týždňa v Cezročnom období\nalebo\nSvätého Kalixta I.\, pápeža a mučeníka\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231211
+SUMMARY:Pondelok po 2. adventnej nedeli\nalebo\nSvätého Damaza I.\, pápeža (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230101
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nPanny Márie Bohorodičky (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230103
+SUMMARY:Utorok vo Vianočnom období\nalebo\nNajsvätejšieho mena Ježiš (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231027
+SUMMARY:Piatok 29. týždňa v Cezročnom období\nROŽŇAVA: Výročie posviacky katedrálneho chrámu Nanebovzatia Panny Márie v Rožňave (v diecéze sviatok\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231104
+SUMMARY:Svätého Karola Boromejského\, biskupa (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230812
+SUMMARY:Sobota 18. týždňa v Cezročnom období\nalebo\nSvätej Jany Františky de Chantal\, rehoľníčky\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230206
+SUMMARY:Svätého Pavla Mikiho a spoločníkov\, mučeníkov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230330
+SUMMARY:Štvrtok po 5. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230716
+SUMMARY:15. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230803
+SUMMARY:Štvrtok 17. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230219
+SUMMARY:7. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230314
+SUMMARY:Utorok po 3. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230201
+SUMMARY:Streda 4. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230905
+SUMMARY:Utorok 22. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231214
+SUMMARY:Svätého Jána od Kríža\, kňaza a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230215
+SUMMARY:Streda 6. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230218
+SUMMARY:Sobota 6. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231123
+SUMMARY:Štvrtok 33. týždňa v Cezročnom období\nalebo\nSvätého Klementa I.\, pápeža a mučeníka\nalebo\nSvätého Kolumbána\, opáta (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230506
+SUMMARY:Sobota po 4. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230304
+SUMMARY:Sobota po 1. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231208
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nNepoškvrnené počatie Preblahoslavenej Panny Márie (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231203
+SUMMARY:1. adventná nedeľa [rok B\, cyklus II.]
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230121
+SUMMARY:Svätej Agnesy\, panny a mučenice (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230806
+SUMMARY:Premenenie Pána (sviatok)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231209
+SUMMARY:Sobota po 1. adventnej nedeli\nalebo\nSvätého Jána Diega Cuauhtlatoatzina (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231101
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nVšetkých svätých (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230523
+SUMMARY:Utorok po 7. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231205
+SUMMARY:Utorok po 1. adventnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231112
+SUMMARY:32. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231120
+SUMMARY:Pondelok 33. týždňa v Cezročnom období\nKOŠICE: alebo Blahoslavenej Anny Kolesárovej\, panny a mučenice (ľubovoľná spomienka)\nNITRA: Výročie posviacky katedrálneho chrámu svätého Emeráma\, biskupa a mučeníka (v diecéze sviatok\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230510
+SUMMARY:Streda po 5. veľkonočnej nedeli\nalebo\nSvätého Jána z Avily\, kňaza a učiteľa Cirkvi (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230217
+SUMMARY:Piatok 6. týždňa v Cezročnom období\nalebo\nSiedmich svätých zakladateľov Rehole služobníkov preblahoslavenej Panny Márie (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231016
+SUMMARY:Pondelok 28. týždňa v Cezročnom období\nalebo\nSvätej Hedvigy\, rehoľníčky\nalebo\nSvätej Margity Márie Alacoque\, panny\nalebo\nSvätého Gála\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230613
+SUMMARY:Svätého Antona Paduánskeho\, kňaza a učiteľa Cirkvi (spomienka)\nORDINARIÁT OS a OZ SR: Výročie posviacky katedrálneho chrámu svätého Šebastiána v Bratislave (v ordinariáte sviatok\; v katedrále slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231107
+SUMMARY:Utorok 31. týždňa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231230
+SUMMARY:Šiesty deň v oktáve narodenia Pána
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231103
+SUMMARY:Piatok 30. týždňa v Cezročnom období\nalebo\nSvätého Martina de Porres\, rehoľníka (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230514
+SUMMARY:6. veľkonočná nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230825
+SUMMARY:Piatok 20. týždňa v Cezročnom období\nalebo\nSvätého Ľudovíta\nalebo\nSvätého Jozefa Kalazanského\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230627
+SUMMARY:Utorok 12. týždňa v Cezročnom období\nalebo\nSvätého Cyrila Alexandrijského\, biskupa a učiteľa Cirkvi (ľubovoľná spomienka)\nTRNAVA\, NITRA\, BANSKÁ BYSTRICA\, ROŽŇAVA: alebo Svätého Ladislava (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231110
+SUMMARY:Svätého Leva Veľkého\, pápeža a učiteľa Cirkvi (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230430
+SUMMARY:4. veľkonočná nedeľa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230805
+SUMMARY:Sobota 17. týždňa v Cezročnom období\nalebo\nVýročie posviacky hlavnej mariánskej baziliky v Ríme\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230811
+SUMMARY:Svätej Kláry\, panny (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230319
+SUMMARY:4. pôstna nedeľa [Fialová]
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230404
+SUMMARY:Utorok Svätého týždňa
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230907
+SUMMARY:Svätých Marka Križina\, Melichara Grodzieckého a Štefana Pongrácza\, kňazov a mučeníkov (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230508
+SUMMARY:Pondelok po 5. veľkonočnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231125
+SUMMARY:Sobota 33. týždňa v Cezročnom období\nalebo\nSvätej Kataríny Alexandrijskej\, panny a mučenice\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230602
+SUMMARY:Piatok 8. týždňa v Cezročnom období\nalebo\nSvätých Marcelína a Petra\, mučeníkov (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230717
+SUMMARY:Svätých Andreja-Svorada a Benedikta\, pustovníkov (spomienka)\nNITRA: Svätých Andreja-Svorada a Benedikta\, pustovníkov – hlavných patrónov diecézy (sviatok)\nMesto Nitra: Svätého Andreja-Svorada – patróna mesta (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230903
+SUMMARY:22. nedeľa v Cezročnom období
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231006
+SUMMARY:Piatok 26. týždňa v Cezročnom období\nalebo\nSvätého Bruna\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230428
+SUMMARY:Piatok po 3. veľkonočnej nedeli\nalebo\nSvätého Petra Chanela\, kňaza a mučeníka\nalebo\nSvätého Ľudovíta Máriu Grigniona z Montfortu\, kňaza (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;VALUE=DATE:20230309
 SUMMARY:Štvrtok po 2. pôstnej nedeli
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230629
+SUMMARY:PRIKÁZANÁ SLÁVNOSŤ:\nSvätých Petra a Pavla\, apoštolov (slávnosť)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230210
+SUMMARY:Svätej Školastiky\, panny (spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231021
+SUMMARY:Sobota 28. týždňa v Cezročnom období\nalebo\nPreblahoslavenej Panny Márie v sobotu (ľubovoľná spomienka)
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230531
+SUMMARY:Streda 8. týždňa v Cezročnom období
 END:VEVENT
 END:VCALENDAR
