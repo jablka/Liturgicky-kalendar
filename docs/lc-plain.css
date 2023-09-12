@@ -13,13 +13,6 @@
   margin-right: auto;
 }
 
-#lcFontSize {
-  opacity: .5;
-  text-align: center;
-  font-size: 100%;
-  width: 5em;
-}
-
 #offlineMenu button {
   opacity: .5;
   /* flex-grow: 1; ruším */
@@ -36,17 +29,5 @@
 
 #offlineMenu button:hover {
   cursor: pointer;
-}
-
-#offlineMenu button:hover,
-#lcFontSize:hover {
   opacity: .8;
-}
-
-#lcFontSizeSmaller::first-letter {
-  font-size: 80%;
-}
-
-#lcFontSizeBigger::first-letter {
-  font-size: 120%;
 }
