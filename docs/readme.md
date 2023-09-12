@@ -1,8 +1,16 @@
 Prejdite na:  
-- NOVÉ: [one page](https://jablka.github.io/Liturgicky-kalendar/onepage.html) alebo [one page tabuľka](https://jablka.github.io/Liturgicky-kalendar/onepage_tabulka.html)  
-- stará verzia: [obsahuje](https://jablka.github.io/Liturgicky-kalendar/old/onepage.html) aj súradnice liturgických čítaní, ale je menej prehľadná  
-- [ics (iCalendar)](https://calendar.google.com/calendar/embed?src=dd47cdc1e47fc7b866ff1ebc2d4711a75fd40fcc91cf46f71ff8ede76026926a%40group.calendar.google.com&ctz=Europe%2FPrague)
- po importovaní do Google Calendar prostredia
+1. [Plain](https://jablka.github.io/Liturgicky-kalendar/onepage_plain.html)  
+(najjednoduchšie zobrazenie, bez farebného štýlovania)
+
+2. [Štýl](https://jablka.github.io/Liturgicky-kalendar/onepage.html) a [štýl_mesiace](https://jablka.github.io/Liturgicky-kalendar/onepage_tabulka.html)  
+(zobrazenie so štýlovaním)  
+
+3. [Kalendár .ics]( https://jablka.github.io/Liturgicky-kalendar/kalendarLC2023.ics)  
+(vo forme .ics iCalendar súboru)
+
+4. archív: [staršia verzia](https://jablka.github.io/Liturgicky-kalendar/old/onepage.html)  
+(obsahuje aj súradnice liturgických čítaní, ale je menej prehľadná, a môže obsahovať chyby, lebo nie je aktualizovaná)  
+
 
 Podkladom boli predgenerované html súbory dostupné na [https://lc.kbs.sk/](https://lc.kbs.sk/) ako zip archív.
 
