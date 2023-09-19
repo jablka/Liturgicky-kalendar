@@ -70,7 +70,7 @@ function naDnes(){
     
       // window.location.hash = formattedDate; 
     let elem = document.getElementById(formattedDate)
-    elem.style = 'outline: DodgerBlue solid 3px;'
+    elem.style = 'outline: DodgerBlue solid 4px;'
 
     let pelem = document.getElementById(pformattedDate) // previous elements
     pelem.scrollIntoView({behavior: 'smooth'});
