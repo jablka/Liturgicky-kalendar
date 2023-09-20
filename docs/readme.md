@@ -2,7 +2,7 @@ Prejdite na:
 1. [Plain](https://jablka.github.io/Liturgicky-kalendar/onepage_plain.html)  
 (zobrazenie bez farebného štýlovania)
 
-2. [Štýl](https://jablka.github.io/Liturgicky-kalendar/onepage.html) a [štýl_mesiace](https://jablka.github.io/Liturgicky-kalendar/onepage_tabulka.html)  
+2. [Štýl](https://jablka.github.io/Liturgicky-kalendar/onepage.html)  
 (zobrazenie so štýlovaním)  
 
 3. [Kalendár .ics]( https://jablka.github.io/Liturgicky-kalendar/kalendarLC2023.ics)  
