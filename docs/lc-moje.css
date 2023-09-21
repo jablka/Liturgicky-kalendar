@@ -166,9 +166,6 @@ body.dark {
   background-color: var(--farba-pozadie);
   color: var(--farba-pismo);
 }
-.dark #lcCalendar a.lcDEN {
-  color: var(--farba-cierna);
-}
 
 /**********************************/
 

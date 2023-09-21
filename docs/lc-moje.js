@@ -15,30 +15,22 @@ function init(){
   setFontSize(getFontSize());
 }
 
-
 function applyRezim(){
   if(jeTmavy())
     document.body.classList.add('dark');
   else document.body.classList.remove('dark');
-  
 }
+
 function jeTmavy() {
 	return localStorage.getItem('rezim')=='dark';
 }
+
 function zmenRezim(){
   localStorage.setItem('rezim', ((jeTmavy())   ?   ''   :   'dark'));
   applyRezim();
 }
 
-
-
-function dig2(num){
-  return (num < 10)    ?   "0" + num   :   num;
-}
-
 function naDnes(){
-  // window.location = dnes()[0]; // pôvodné
-
   // moje:
   // zisťujeme súčasný dátum:
   const currentDate = new Date();
@@ -76,22 +68,9 @@ function naDnes(){
     pelem.scrollIntoView({behavior: 'smooth'});
   }
 
-  console.log(pformattedDate)
+  console.log(pformattedDate);
   console.log(formattedDate);
-
 }
-
-function dnes() {
-  var now = new Date(),
-      d = dig2(now.getDate()),
-      m = dig2(now.getMonth()+1),
-      r = now.getFullYear(),
-      ref = r+"-"+m+"-"+d+".html",
-      datum = d+"."+m+"."+r;
-
-  return [ref, datum];
-}
-
 
 var font_size_min = 40,   // percentá
     font_size_max = 500,
@@ -116,7 +95,7 @@ function setFontSize(font_size) {
   localStorage.setItem('fontSize', font_size);
   root.style.setProperty('--zoom', font_size+'%');
   document.getElementById('lcFontSize').value = font_size+'%';
-console.log('font_size',font_size);
+  console.log('font_size',font_size);
 
   return font_size;
 }
