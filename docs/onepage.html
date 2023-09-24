@@ -327,10 +327,15 @@ body.home {
   background-color: lightgray;
 }
 
-/* pridávam moje: */
-hr {
-  margin-top: 3rem;
-  margin-bottom: 3rem; 
+/* pridávam moje, minimal style: */
+.lcDMY {
+  white-space: nowrap;
+}
+
+table,
+td {
+    border: 1px solid gray; 
+    border-collapse: collapse; 
 }
 
 td {
@@ -338,40 +343,15 @@ td {
   /* white-space: nowrap; */
 }
 
-.lcDMY {
-  white-space: nowrap;
+tbody {
+    border-style: ridge;
+    border-width: 5px;
+    border-color: coral
 }
 
-    table {
-        /* width: 75%; 
-        margin-left: auto; 
-        margin-right: auto;
-        font-family: Arial, Helvetica, sans-serif; 
-        line-height: 1.5; */
-        border: 1px solid gray; 
-        border-collapse: collapse; 
-        /* padding: 1rem;     */
-    }
-    td {
-        /* white-space: pre-wrap; */
-        border: 1px solid gray;
-        border-collapse: collapse;
-        /* padding: 1rem;         */
-    }
-    th {
-        /* font-size: 1.1rem; */
-        border: 1px solid gray;
-        border-collapse: collapse;
-        /* padding: 1rem;           */
-    }
-    tbody {
-        border-style: ridge;
-        border-width: 5px;
-        border-color: coral
-    }
-    tr td:first-child {
-        text-align: center;
-    }    
+tr td:first-child {
+    text-align: center;
+}    
 </style>
 </head>
 <body id="lc"><script>init();</script><table><tbody><tr><td id="2023-01-01"><span class="lcDMY">
