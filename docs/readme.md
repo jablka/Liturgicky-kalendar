@@ -1,6 +1,6 @@
 Prejdite na:  
 1. [Štýl report](https://jablka.github.io/Liturgicky-kalendar/onepage_report.html) [NOVÉ]  
-(jeden stĺpec, ideálne pre mobilné zariadenia) 
+(jeden stĺpec, optimalizované pre mobilné zariadenia) 
 
 2. [Štýl](https://jablka.github.io/Liturgicky-kalendar/onepage.html)  
 (dva stĺpce)  
