@@ -1,12 +1,12 @@
 Prejdite na:  
-1. [Plain](https://jablka.github.io/Liturgicky-kalendar/onepage_plain.html)  
-(zobrazenie bez farebného štýlovania)
+1. [Štýl report](https://jablka.github.io/Liturgicky-kalendar/onepage_report.html) [NOVÉ]  
+(jeden stĺpec, ideálne pre mobilné zariadenia) 
 
 2. [Štýl](https://jablka.github.io/Liturgicky-kalendar/onepage.html)  
-(zobrazenie so štýlovaním)  
+(dva stĺpce)  
 
-3. [Štýl report](https://jablka.github.io/Liturgicky-kalendar/onepage_report.html) [NOVÉ]  
-(jeden stĺpec, ideálne pre mobilné zariadenia)  
+3. [Plain](https://jablka.github.io/Liturgicky-kalendar/onepage_plain.html)  
+(tri stĺpce, bez farebného štýlovania)
 
 4. [Kalendár .ics]( https://jablka.github.io/Liturgicky-kalendar/kalendarLC2023.ics)  
 (vo forme .ics iCalendar súboru)
