@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<title>Liturgický kalendár 2023, skúšobná verzia</title>
+<script>
+    function init() {
+    document.write(
+        "<div id='offlineMenu'>"
+        + "    <button id='lcToday' onclick='naDnes()' title='Prechod na dnešný deň'>&gt;&gt; Naviguj na Dnes &lt;&lt;</button>"
+        + "</div>");
+    }
+
+    function naDnes() {
+    // moje:
+    // zisťujeme súčasný dátum:
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0'); // 
+
+    // dva dni pred
+    const prev_date = new Date();
+    prev_date.setDate(prev_date.getDate() - 2); // Subtract 
+    const pyear = prev_date.getFullYear();
+    const pmonth = String(prev_date.getMonth() + 1).padStart(2, '0');
+    const pday = String(prev_date.getDate()).padStart(2, '0'); // 
+
+    var formattedDate = `${year}-${month}-${day}`; // rok-mesiac-deň
+    var pformattedDate = `${pyear}-${pmonth}-${pday}`;
+
+    let elem = document.getElementById(formattedDate)
+    elem.style = 'outline: DodgerBlue solid 4px;'
+
+    let pelem = document.getElementById(pformattedDate) // previous elements
+    pelem.scrollIntoView({ behavior: 'smooth' });
+
+    console.log(pformattedDate)
+    console.log(formattedDate);
+    }
+</script>
+<style>
+    #offlineMenu {
+        margin-bottom: 1em;
+        display: flex;
+        position: sticky;
+        top: 0;
+        gap: .5em;
+        font-size: 100%;
+        /* justify-content: space-between; */
+
+        /* nasledovné tri pridávam */
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #offlineMenu button {
+        opacity: .5;
+        /* flex-grow: 1; ruším */
+        height: 2rem;
+        vertical-align: middle;
+        font-size: 1.1rem;
+        font-weight: bold;
+        /* display: block; */
+        width: 20rem; /*pridavam*/
+        height: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #offlineMenu button:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+    
+    table {
+        width: 75%; 
+        margin: auto; 
+        font-family: Arial, Helvetica, sans-serif; 
+        border: 1px solid gray; 
+        border-collapse: collapse; 
+        padding: 1rem;     
+        margin-bottom: 100px;              
+    }
+
+    td {
+        white-space: pre-wrap;
+        border: 1px solid gray;
+        border-collapse: collapse;
+        padding: 1rem;         
+    }
+
+    th {
+        font-size: 1.1rem;    
+        border: 1px solid gray;
+        border-collapse: collapse;
+        padding: 1rem;           
+    }
+    
+    .meniny {
+        text-wrap: nowrap;
+        text-align: center
+    }
+
+    tbody {
+        border-style: ridge;
+        border-width: 5px;
+        border-color: coral
+    }
+
+    tr td:last-child {
+        /* text-align: center; */
+        font-size: 0.75rem;
+    }      
+
+    .middle {
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+    <script>init();</script>
+<table>
+<thead>
+<th>deň</th>
+<th>v liturgii</th>
+<th>poznámka</th>
+</thead>
+</table>
+</body>
+<script>
+    naDnes();
+</script>
+</html>

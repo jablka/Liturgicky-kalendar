@@ -3,16 +3,84 @@
 <head>
 <meta charset="utf-8"/>
 <title>Liturgický kalendár 2023, skúšobná verzia</title>
+<script>
+    function init() {
+    document.write(
+        "<div id='offlineMenu'>"
+        + "    <button id='lcToday' onclick='naDnes()' title='Prechod na dnešný deň'>&gt;&gt; Naviguj na Dnes &lt;&lt;</button>"
+        + "</div>");
+    }
+
+    function naDnes() {
+    // moje:
+    // zisťujeme súčasný dátum:
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0'); // 
+
+    // dva dni pred
+    const prev_date = new Date();
+    prev_date.setDate(prev_date.getDate() - 2); // Subtract 
+    const pyear = prev_date.getFullYear();
+    const pmonth = String(prev_date.getMonth() + 1).padStart(2, '0');
+    const pday = String(prev_date.getDate()).padStart(2, '0'); // 
+
+    var formattedDate = `${year}-${month}-${day}`; // rok-mesiac-deň
+    var pformattedDate = `${pyear}-${pmonth}-${pday}`;
+
+    let elem = document.getElementById(formattedDate)
+    elem.style = 'outline: DodgerBlue solid 4px;'
+
+    let pelem = document.getElementById(pformattedDate) // previous elements
+    pelem.scrollIntoView({ behavior: 'smooth' });
+
+    console.log(pformattedDate)
+    console.log(formattedDate);
+    }
+</script>
 <style>
+    #offlineMenu {
+        margin-bottom: 1em;
+        display: flex;
+        position: sticky;
+        top: 0;
+        gap: .5em;
+        font-size: 100%;
+        /* justify-content: space-between; */
+
+        /* nasledovné tri pridávam */
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #offlineMenu button {
+        opacity: .5;
+        /* flex-grow: 1; ruším */
+        height: 2rem;
+        vertical-align: middle;
+        font-size: 1.1rem;
+        font-weight: bold;
+        /* display: block; */
+        width: 20rem; /*pridavam*/
+        height: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #offlineMenu button:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+    
     table {
         width: 75%; 
-        margin-left: auto; 
-        margin-right: auto;
+        margin: auto; 
         font-family: Arial, Helvetica, sans-serif; 
-        line-height: 1.5;
         border: 1px solid gray; 
         border-collapse: collapse; 
-        padding: 1rem;    
+        padding: 1rem;     
         margin-bottom: 100px;              
     }
 
@@ -20,14 +88,14 @@
         white-space: pre-wrap;
         border: 1px solid gray;
         border-collapse: collapse;
-        padding: 1rem;        
+        padding: 1rem;         
     }
 
     th {
         font-size: 1.1rem;    
         border: 1px solid gray;
         border-collapse: collapse;
-        padding: 1rem;          
+        padding: 1rem;           
     }
     
     .meniny {
@@ -45,9 +113,14 @@
         /* text-align: center; */
         font-size: 0.75rem;
     }      
+
+    .middle {
+        font-size: 0.9rem;
+    }
 </style>
 </head>
 <body>
+<script>init();</script>
 <table>
 <thead>
 <th>deň</th>
@@ -56,417 +129,417 @@
 </thead>
 <tbody><tr><td class="meniny" id="2023-01-01">1. január
 Nedeľa
-<i>Nový rok</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Nový rok</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Panny Márie Bohorodičky [Biela]
 (slávnosť)</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-01-02">2. január
 Pondelok
-<i>Alexandra, Karina</i></td><td>Svätých Bazila Veľkého a Gregora Nazianzského, biskupov a učiteľov Cirkvi [Biela]
+<small><i>Alexandra, Karina</i></small></td><td class="middle">Svätých Bazila Veľkého a Gregora Nazianzského, biskupov a učiteľov Cirkvi [Biela]
 (spomienka)</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-03">3. január
 Utorok
-<i>Daniela</i></td><td>Utorok vo Vianočnom období [Biela]
+<small><i>Daniela</i></small></td><td class="middle">Utorok vo Vianočnom období [Biela]
 alebo
 Najsvätejšieho mena Ježiš [Biela]
 (ľubovoľná spomienka)</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-04">4. január
 Streda
-<i>Drahoslav</i></td><td>Streda vo Vianočnom období [Biela]</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-05">5. január
+<small><i>Drahoslav</i></small></td><td class="middle">Streda vo Vianočnom období [Biela]</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-05">5. január
 Štvrtok
-<i>Andrea</i></td><td>Štvrtok vo Vianočnom období [Biela]</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-06">6. január
+<small><i>Andrea</i></small></td><td class="middle">Štvrtok vo Vianočnom období [Biela]</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-06">6. január
 Piatok
-<i>Antónia</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Antónia</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Zjavenie Pána [Biela]
 (slávnosť)</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-07">7. január
 Sobota
-<i>Bohuslava</i></td><td>Sobota po Zjavení Pána [Biela]
+<small><i>Bohuslava</i></small></td><td class="middle">Sobota po Zjavení Pána [Biela]
 alebo
 Svätého Rajmunda z Peňafortu, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-08">8. január
 Nedeľa
-<i>Severín</i></td><td>Krst Krista Pána [Biela]
+<small><i>Severín</i></small></td><td class="middle">Krst Krista Pána [Biela]
 (sviatok)</td><td>Vianočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-01-09">9. január
 Pondelok
-<i>Alexej</i></td><td>Pondelok 1. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-10">10. január
+<small><i>Alexej</i></small></td><td class="middle">Pondelok 1. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-10">10. január
 Utorok
-<i>Daša</i></td><td>Utorok 1. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-11">11. január
+<small><i>Daša</i></small></td><td class="middle">Utorok 1. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-11">11. január
 Streda
-<i>Malvína</i></td><td>Streda 1. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-12">12. január
+<small><i>Malvína</i></small></td><td class="middle">Streda 1. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-12">12. január
 Štvrtok
-<i>Ernest</i></td><td>Štvrtok 1. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-13">13. január
+<small><i>Ernest</i></small></td><td class="middle">Štvrtok 1. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-13">13. január
 Piatok
-<i>Rastislav</i></td><td>Piatok 1. týždňa v Cezročnom období [Zelená]
+<small><i>Rastislav</i></small></td><td class="middle">Piatok 1. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Hilára, biskupa a učiteľa Cirkvi [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-14">14. január
 Sobota
-<i>Radovan</i></td><td>Sobota 1. týždňa v Cezročnom období [Zelená]
+<small><i>Radovan</i></small></td><td class="middle">Sobota 1. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-15">15. január
 Nedeľa
-<i>Dobroslav</i></td><td>2. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-01-16">16. január
+<small><i>Dobroslav</i></small></td><td class="middle">2. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-01-16">16. január
 Pondelok
-<i>Kristína</i></td><td>Pondelok 2. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-17">17. január
+<small><i>Kristína</i></small></td><td class="middle">Pondelok 2. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-17">17. január
 Utorok
-<i>Nataša</i></td><td>Svätého Antona, opáta [Biela]
+<small><i>Nataša</i></small></td><td class="middle">Svätého Antona, opáta [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-18">18. január
 Streda
-<i>Bohdana</i></td><td>Streda 2. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-19">19. január
+<small><i>Bohdana</i></small></td><td class="middle">Streda 2. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-19">19. január
 Štvrtok
-<i>Drahomíra, Mário</i></td><td>Štvrtok 2. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-20" rowspan="2">20. január
+<small><i>Drahomíra, Mário</i></small></td><td class="middle">Štvrtok 2. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-20" rowspan="2">20. január
 Piatok
-<i>Dalibor</i></td><td>Piatok 2. týždňa v Cezročnom období [Zelená]
+<small><i>Dalibor</i></small></td><td class="middle">Piatok 2. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Fabiána, pápeža a mučeníka [Červená]
 alebo
 Svätého Šebastiána, mučeníka [Červená]
-(ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>ORDINARIÁT OS a OZ SR: Svätého Šebastiána, mučeníka – hlavného patróna ordinariátu a titul katedrály [Červená]
+(ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">ORDINARIÁT OS a OZ SR: Svätého Šebastiána, mučeníka – hlavného patróna ordinariátu a titul katedrály [Červená]
 (v ordinariáte sviatok, v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-01-21">21. január
 Sobota
-<i>Vincent</i></td><td>Svätej Agnesy, panny a mučenice [Červená]
+<small><i>Vincent</i></small></td><td class="middle">Svätej Agnesy, panny a mučenice [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-22">22. január
 Nedeľa
-<i>Zora</i></td><td>3. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-01-23" rowspan="2">23. január
+<small><i>Zora</i></small></td><td class="middle">3. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-01-23" rowspan="2">23. január
 Pondelok
-<i>Miloš</i></td><td>Pondelok 3. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>BRATISLAVA (len v katedrále): Svätého Jána Almužníka, biskupa [Biela]
+<small><i>Miloš</i></small></td><td class="middle">Pondelok 3. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">BRATISLAVA (len v katedrále): Svätého Jána Almužníka, biskupa [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-01-24">24. január
 Utorok
-<i>Timotej</i></td><td>Svätého Františka Saleského, biskupa a učiteľa Cirkvi [Biela]
+<small><i>Timotej</i></small></td><td class="middle">Svätého Františka Saleského, biskupa a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-25">25. január
 Streda
-<i>Gejza</i></td><td>Obrátenie svätého Pavla, apoštola [Biela]
+<small><i>Gejza</i></small></td><td class="middle">Obrátenie svätého Pavla, apoštola [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-26">26. január
 Štvrtok
-<i>Tamara</i></td><td>Svätých Timoteja a Títa, biskupov [Biela]
+<small><i>Tamara</i></small></td><td class="middle">Svätých Timoteja a Títa, biskupov [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-27">27. január
 Piatok
-<i>Bohuš</i></td><td>Piatok 3. týždňa v Cezročnom období [Zelená]
+<small><i>Bohuš</i></small></td><td class="middle">Piatok 3. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Angely Merici, panny [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-28">28. január
 Sobota
-<i>Alfonz</i></td><td>Svätého Tomáša Akvinského, kňaza a učiteľa Cirkvi [Biela]
+<small><i>Alfonz</i></small></td><td class="middle">Svätého Tomáša Akvinského, kňaza a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-29">29. január
 Nedeľa
-<i>Gašpar</i></td><td>4. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-01-30">30. január
+<small><i>Gašpar</i></small></td><td class="middle">4. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-01-30">30. január
 Pondelok
-<i>Ema</i></td><td>Pondelok 4. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-31">31. január
+<small><i>Ema</i></small></td><td class="middle">Pondelok 4. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-01-31">31. január
 Utorok
-<i>Emil</i></td><td>Svätého Jána Bosca, kňaza [Biela]
+<small><i>Emil</i></small></td><td class="middle">Svätého Jána Bosca, kňaza [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-01">1. február
 Streda
-<i>Tatiana</i></td><td>Streda 4. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-02">2. február
+<small><i>Tatiana</i></small></td><td class="middle">Streda 4. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-02">2. február
 Štvrtok
-<i>Erika, Erik</i></td><td>Obetovanie Pána [Biela]
+<small><i>Erika, Erik</i></small></td><td class="middle">Obetovanie Pána [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-03">3. február
 Piatok
-<i>Blažej</i></td><td>Piatok 4. týždňa v Cezročnom období [Zelená]
+<small><i>Blažej</i></small></td><td class="middle">Piatok 4. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Blažeja, biskupa a mučeníka [Červená]
 alebo
 Svätého Oskára, biskupa [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-04">4. február
 Sobota
-<i>Veronika</i></td><td>Sobota 4. týždňa v Cezročnom období [Zelená]
+<small><i>Veronika</i></small></td><td class="middle">Sobota 4. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-05">5. február
 Nedeľa
-<i>Agáta</i></td><td>5. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-02-06">6. február
+<small><i>Agáta</i></small></td><td class="middle">5. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-02-06">6. február
 Pondelok
-<i>Dorota</i></td><td>Svätého Pavla Mikiho a spoločníkov, mučeníkov [Červená]
+<small><i>Dorota</i></small></td><td class="middle">Svätého Pavla Mikiho a spoločníkov, mučeníkov [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-07">7. február
 Utorok
-<i>Vanda</i></td><td>Utorok 5. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-08">8. február
+<small><i>Vanda</i></small></td><td class="middle">Utorok 5. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-08">8. február
 Streda
-<i>Zoja</i></td><td>Streda 5. týždňa v Cezročnom období [Zelená]
+<small><i>Zoja</i></small></td><td class="middle">Streda 5. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Hieronyma Emilianiho [Biela]
 alebo
 Svätej Jozefíny Bakhity, panny [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-09">9. február
 Štvrtok
-<i>Zdenko</i></td><td>Štvrtok 5. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-10">10. február
+<small><i>Zdenko</i></small></td><td class="middle">Štvrtok 5. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-10">10. február
 Piatok
-<i>Gabriela</i></td><td>Svätej Školastiky, panny [Biela]
+<small><i>Gabriela</i></small></td><td class="middle">Svätej Školastiky, panny [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-11">11. február
 Sobota
-<i>Dezider</i></td><td>Sobota 5. týždňa v Cezročnom období [Zelená]
+<small><i>Dezider</i></small></td><td class="middle">Sobota 5. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie Lurdskej [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-12">12. február
 Nedeľa
-<i>Perla</i></td><td>6. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-02-13">13. február
+<small><i>Perla</i></small></td><td class="middle">6. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-02-13">13. február
 Pondelok
-<i>Arpád</i></td><td>Pondelok 6. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-14" rowspan="2">14. február
+<small><i>Arpád</i></small></td><td class="middle">Pondelok 6. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-14" rowspan="2">14. február
 Utorok
-<i>Valentín</i></td><td>Utorok 6. týždňa v Cezročnom období [Zelená]
+<small><i>Valentín</i></small></td><td class="middle">Utorok 6. týždňa v Cezročnom období [Zelená]
 alebo
-votívna svätá omša o svätých Cyrilovi, mníchovi, a Metodovi, biskupovi, patrónoch Európy [Biela]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>ŽILINA: Svätých Cyrila, mnícha, a Metoda, biskupa – hlavní patróni diecézy [Biela]
+votívna svätá omša o svätých Cyrilovi, mníchovi, a Metodovi, biskupovi, patrónoch Európy [Biela]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">ŽILINA: Svätých Cyrila, mnícha, a Metoda, biskupa – hlavní patróni diecézy [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-02-15">15. február
 Streda
-<i>Pravoslav</i></td><td>Streda 6. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-16">16. február
+<small><i>Pravoslav</i></small></td><td class="middle">Streda 6. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-16">16. február
 Štvrtok
-<i>Ida, Liana</i></td><td>Štvrtok 6. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-17">17. február
+<small><i>Ida, Liana</i></small></td><td class="middle">Štvrtok 6. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-17">17. február
 Piatok
-<i>Miloslava</i></td><td>Piatok 6. týždňa v Cezročnom období [Zelená]
+<small><i>Miloslava</i></small></td><td class="middle">Piatok 6. týždňa v Cezročnom období [Zelená]
 alebo
 Siedmich svätých zakladateľov Rehole služobníkov preblahoslavenej Panny Márie [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-18">18. február
 Sobota
-<i>Jaromír</i></td><td>Sobota 6. týždňa v Cezročnom období [Zelená]
+<small><i>Jaromír</i></small></td><td class="middle">Sobota 6. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-19">19. február
 Nedeľa
-<i>Vlasta</i></td><td>7. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-02-20">20. február
+<small><i>Vlasta</i></small></td><td class="middle">7. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-02-20">20. február
 Pondelok
-<i>Lívia</i></td><td>Pondelok 7. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-21">21. február
+<small><i>Lívia</i></small></td><td class="middle">Pondelok 7. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-21">21. február
 Utorok
-<i>Eleonóra</i></td><td>Utorok 7. týždňa v Cezročnom období [Zelená]
+<small><i>Eleonóra</i></small></td><td class="middle">Utorok 7. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Petra Damianiho, biskupa a učiteľa Cirkvi [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-22">22. február
 Streda
-<i>Etela</i></td><td>Popolcová streda [Fialová]
+<small><i>Etela</i></small></td><td class="middle">Popolcová streda [Fialová]
 (Pôst a zdržovanie sa mäsitého pokrmu. Je deň pokánia v celej Cirkvi.)</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-23">23. február
 Štvrtok
-<i>Roman, Romana</i></td><td>Štvrtok po Popolcovej strede [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-24">24. február
+<small><i>Roman, Romana</i></small></td><td class="middle">Štvrtok po Popolcovej strede [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-24">24. február
 Piatok
-<i>Matej</i></td><td>Piatok po Popolcovej strede [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-25">25. február
+<small><i>Matej</i></small></td><td class="middle">Piatok po Popolcovej strede [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-25">25. február
 Sobota
-<i>Frederik, Frederika</i></td><td>Sobota po Popolcovej strede [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-26">26. február
+<small><i>Frederik, Frederika</i></small></td><td class="middle">Sobota po Popolcovej strede [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-26">26. február
 Nedeľa
-<i>Viktor</i></td><td>1. pôstna nedeľa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-02-27">27. február
+<small><i>Viktor</i></small></td><td class="middle">1. pôstna nedeľa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-02-27">27. február
 Pondelok
-<i>Alexander</i></td><td>Pondelok po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-28">28. február
+<small><i>Alexander</i></small></td><td class="middle">Pondelok po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-02-28">28. február
 Utorok
-<i>Zlatica</i></td><td>Utorok po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-01">1. marec
+<small><i>Zlatica</i></small></td><td class="middle">Utorok po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-01">1. marec
 Streda
-<i>Albín</i></td><td>Streda po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-02">2. marec
+<small><i>Albín</i></small></td><td class="middle">Streda po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-02">2. marec
 Štvrtok
-<i>Anežka</i></td><td>Štvrtok po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-03">3. marec
+<small><i>Anežka</i></small></td><td class="middle">Štvrtok po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-03">3. marec
 Piatok
-<i>Bohumil, Bohumila</i></td><td>Piatok po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-04">4. marec
+<small><i>Bohumil, Bohumila</i></small></td><td class="middle">Piatok po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-04">4. marec
 Sobota
-<i>Kazimír</i></td><td>Sobota po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-05">5. marec
+<small><i>Kazimír</i></small></td><td class="middle">Sobota po 1. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-05">5. marec
 Nedeľa
-<i>Fridrich</i></td><td>2. pôstna nedeľa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-03-06">6. marec
+<small><i>Fridrich</i></small></td><td class="middle">2. pôstna nedeľa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-03-06">6. marec
 Pondelok
-<i>Radoslav, Radoslava</i></td><td>Pondelok po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-07">7. marec
+<small><i>Radoslav, Radoslava</i></small></td><td class="middle">Pondelok po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-07">7. marec
 Utorok
-<i>Tomáš</i></td><td>Utorok po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-08">8. marec
+<small><i>Tomáš</i></small></td><td class="middle">Utorok po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-08">8. marec
 Streda
-<i>Alan, Alana</i></td><td>Streda po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-09">9. marec
+<small><i>Alan, Alana</i></small></td><td class="middle">Streda po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-09">9. marec
 Štvrtok
-<i>Františka</i></td><td>Štvrtok po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-10" rowspan="2">10. marec
+<small><i>Františka</i></small></td><td class="middle">Štvrtok po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-10" rowspan="2">10. marec
 Piatok
-<i>Branislav, Bruno</i></td><td>Piatok po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>BRATISLAVA: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Bratislave [Biela]
+<small><i>Branislav, Bruno</i></small></td><td class="middle">Piatok po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">BRATISLAVA: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Bratislave [Biela]
 (v diecéze sviatok; v katedrále slávnosť)</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-03-11">11. marec
 Sobota
-<i>Angela, Angelika</i></td><td>Sobota po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-12">12. marec
+<small><i>Angela, Angelika</i></small></td><td class="middle">Sobota po 2. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-12">12. marec
 Nedeľa
-<i>Gregor</i></td><td>3. pôstna nedeľa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-03-13">13. marec
+<small><i>Gregor</i></small></td><td class="middle">3. pôstna nedeľa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-03-13">13. marec
 Pondelok
-<i>Vlastimil</i></td><td>Pondelok po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-14">14. marec
+<small><i>Vlastimil</i></small></td><td class="middle">Pondelok po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-14">14. marec
 Utorok
-<i>Matilda</i></td><td>Utorok po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-15">15. marec
+<small><i>Matilda</i></small></td><td class="middle">Utorok po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-15">15. marec
 Streda
-<i>Svetlana</i></td><td>Streda po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-16">16. marec
+<small><i>Svetlana</i></small></td><td class="middle">Streda po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-16">16. marec
 Štvrtok
-<i>Boleslav</i></td><td>Štvrtok po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-17">17. marec
+<small><i>Boleslav</i></small></td><td class="middle">Štvrtok po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-17">17. marec
 Piatok
-<i>Ľubica</i></td><td>Piatok po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-18">18. marec
+<small><i>Ľubica</i></small></td><td class="middle">Piatok po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-18">18. marec
 Sobota
-<i>Eduard</i></td><td>Sobota po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-19">19. marec
+<small><i>Eduard</i></small></td><td class="middle">Sobota po 3. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-19">19. marec
 Nedeľa
-<i>Jozef</i></td><td>4. pôstna nedeľa [Ružová] [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-03-20">20. marec
+<small><i>Jozef</i></small></td><td class="middle">4. pôstna nedeľa [Ružová] [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-03-20">20. marec
 Pondelok
-<i>Víťazoslav, Klaudius</i></td><td>Svätého Jozefa, ženícha Panny Márie [Biela]
+<small><i>Víťazoslav, Klaudius</i></small></td><td class="middle">Svätého Jozefa, ženícha Panny Márie [Biela]
 (slávnosť preložená z nedele)</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-21">21. marec
 Utorok
-<i>Blahoslav</i></td><td>Utorok po 4. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-22">22. marec
+<small><i>Blahoslav</i></small></td><td class="middle">Utorok po 4. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-22">22. marec
 Streda
-<i>Beňadik</i></td><td>Streda po 4. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-23">23. marec
+<small><i>Beňadik</i></small></td><td class="middle">Streda po 4. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-23">23. marec
 Štvrtok
-<i>Adrián</i></td><td>Štvrtok po 4. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-24">24. marec
+<small><i>Adrián</i></small></td><td class="middle">Štvrtok po 4. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-24">24. marec
 Piatok
-<i>Gabriel</i></td><td>Piatok po 4. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-25">25. marec
+<small><i>Gabriel</i></small></td><td class="middle">Piatok po 4. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-25">25. marec
 Sobota
-<i>Marián</i></td><td>Zvestovanie Pána [Biela]
+<small><i>Marián</i></small></td><td class="middle">Zvestovanie Pána [Biela]
 (slávnosť)</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-26">26. marec
 Nedeľa
-<i>Emanuel</i></td><td>5. pôstna nedeľa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-03-27">27. marec
+<small><i>Emanuel</i></small></td><td class="middle">5. pôstna nedeľa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-03-27">27. marec
 Pondelok
-<i>Alena</i></td><td>Pondelok po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-28">28. marec
+<small><i>Alena</i></small></td><td class="middle">Pondelok po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-28">28. marec
 Utorok
-<i>Soňa</i></td><td>Utorok po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-29">29. marec
+<small><i>Soňa</i></small></td><td class="middle">Utorok po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-29">29. marec
 Streda
-<i>Miroslav</i></td><td>Streda po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-30">30. marec
+<small><i>Miroslav</i></small></td><td class="middle">Streda po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-30">30. marec
 Štvrtok
-<i>Vieroslava</i></td><td>Štvrtok po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-31">31. marec
+<small><i>Vieroslava</i></small></td><td class="middle">Štvrtok po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-03-31">31. marec
 Piatok
-<i>Benjamín</i></td><td>Piatok po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-01">1. apríl
+<small><i>Benjamín</i></small></td><td class="middle">Piatok po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-01">1. apríl
 Sobota
-<i>Hugo</i></td><td>Sobota po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-02">2. apríl
+<small><i>Hugo</i></small></td><td class="middle">Sobota po 5. pôstnej nedeli [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-02">2. apríl
 Nedeľa
-<i>Zita</i></td><td>Palmová (Kvetná) nedeľa – Nedeľa utrpenia Pána [Červená]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-04-03">3. apríl
+<small><i>Zita</i></small></td><td class="middle">Palmová (Kvetná) nedeľa – Nedeľa utrpenia Pána [Červená]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-04-03">3. apríl
 Pondelok
-<i>Richard</i></td><td>Pondelok Svätého týždňa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-04">4. apríl
+<small><i>Richard</i></small></td><td class="middle">Pondelok Svätého týždňa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-04">4. apríl
 Utorok
-<i>Izidor</i></td><td>Utorok Svätého týždňa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-05">5. apríl
+<small><i>Izidor</i></small></td><td class="middle">Utorok Svätého týždňa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-05">5. apríl
 Streda
-<i>Miroslava</i></td><td>Streda Svätého týždňa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-06" rowspan="2">6. apríl
+<small><i>Miroslava</i></small></td><td class="middle">Streda Svätého týždňa [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-06" rowspan="2">6. apríl
 Štvrtok
-<i>Irena</i></td><td>Štvrtok Svätého týždňa – Zelený štvrtok [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>Večer
+<small><i>Irena</i></small></td><td class="middle">Štvrtok Svätého týždňa – Zelený štvrtok [Fialová]</td><td>Pôstne obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">Večer
 Zelený štvrtok Pánovej večere [Biela]</td><td>Veľkonočné trojdnie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-04-07">7. apríl
 Piatok
-<i>Zoltán</i></td><td>Piatok utrpenia Pána (Veľký piatok) – slávenie utrpenia a smrti Pána [Červená]</td><td>Veľkonočné trojdnie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-08">8. apríl
+<small><i>Zoltán</i></small></td><td class="middle">Piatok utrpenia Pána (Veľký piatok) – slávenie utrpenia a smrti Pána [Červená]</td><td>Veľkonočné trojdnie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-08">8. apríl
 Sobota
-<i>Albert</i></td><td>Biela sobota</td><td>Veľkonočné trojdnie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-09">9. apríl
+<small><i>Albert</i></small></td><td class="middle">Biela sobota</td><td>Veľkonočné trojdnie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-09">9. apríl
 Nedeľa
-<i>Milena</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Milena</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Veľkonočná nedeľa Pánovho zmŕtvychvstania [Biela]
 (slávnosť s oktávou)</td><td>Veľkonočné trojdnie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-04-10">10. apríl
 Pondelok
-<i>Igor</i></td><td>Pondelok vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-11">11. apríl
+<small><i>Igor</i></small></td><td class="middle">Pondelok vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-11">11. apríl
 Utorok
-<i>Július</i></td><td>Utorok vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-12">12. apríl
+<small><i>Július</i></small></td><td class="middle">Utorok vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-12">12. apríl
 Streda
-<i>Estera</i></td><td>Streda vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-13">13. apríl
+<small><i>Estera</i></small></td><td class="middle">Streda vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-13">13. apríl
 Štvrtok
-<i>Aleš</i></td><td>Štvrtok vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-14">14. apríl
+<small><i>Aleš</i></small></td><td class="middle">Štvrtok vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-14">14. apríl
 Piatok
-<i>Justína</i></td><td>Piatok vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-15">15. apríl
+<small><i>Justína</i></small></td><td class="middle">Piatok vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-15">15. apríl
 Sobota
-<i>Fedor</i></td><td>Sobota vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-16">16. apríl
+<small><i>Fedor</i></small></td><td class="middle">Sobota vo Veľkonočnej oktáve [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-16">16. apríl
 Nedeľa
-<i>Dana, Danica</i></td><td>2. Veľkonočná nedeľa
+<small><i>Dana, Danica</i></small></td><td class="middle">2. Veľkonočná nedeľa
 alebo
 Nedeľa Božieho milosrdenstva [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-04-17">17. apríl
 Pondelok
-<i>Rudolf</i></td><td>Pondelok po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-18">18. apríl
+<small><i>Rudolf</i></small></td><td class="middle">Pondelok po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-18">18. apríl
 Utorok
-<i>Valér</i></td><td>Utorok po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-19">19. apríl
+<small><i>Valér</i></small></td><td class="middle">Utorok po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-19">19. apríl
 Streda
-<i>Jela</i></td><td>Streda po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-20">20. apríl
+<small><i>Jela</i></small></td><td class="middle">Streda po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-20">20. apríl
 Štvrtok
-<i>Marcel</i></td><td>Štvrtok po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-21">21. apríl
+<small><i>Marcel</i></small></td><td class="middle">Štvrtok po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-21">21. apríl
 Piatok
-<i>Ervín</i></td><td>Piatok po 2. veľkonočnej nedeli [Biela]
+<small><i>Ervín</i></small></td><td class="middle">Piatok po 2. veľkonočnej nedeli [Biela]
 alebo
 Svätého Anzelma, biskupa a učiteľa Cirkvi [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-22">22. apríl
 Sobota
-<i>Slavomír</i></td><td>Sobota po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-23">23. apríl
+<small><i>Slavomír</i></small></td><td class="middle">Sobota po 2. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-23">23. apríl
 Nedeľa
-<i>Vojtech</i></td><td>3. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-04-24">24. apríl
+<small><i>Vojtech</i></small></td><td class="middle">3. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-04-24">24. apríl
 Pondelok
-<i>Juraj</i></td><td>Pondelok po 3. veľkonočnej nedeli [Biela]
+<small><i>Juraj</i></small></td><td class="middle">Pondelok po 3. veľkonočnej nedeli [Biela]
 alebo
 Svätého Juraja, mučeníka [Červená]
 alebo
 Svätého Fidéla zo Sigmaringenu, kňaza a mučeníka [Červená]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-25">25. apríl
 Utorok
-<i>Marek</i></td><td>Svätého Marka, evanjelistu [Červená]
+<small><i>Marek</i></small></td><td class="middle">Svätého Marka, evanjelistu [Červená]
 (sviatok)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-26">26. apríl
 Streda
-<i>Jaroslava</i></td><td>Streda po 3. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-27">27. apríl
+<small><i>Jaroslava</i></small></td><td class="middle">Streda po 3. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-27">27. apríl
 Štvrtok
-<i>Jaroslav</i></td><td>Štvrtok po 3. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-28">28. apríl
+<small><i>Jaroslav</i></small></td><td class="middle">Štvrtok po 3. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-28">28. apríl
 Piatok
-<i>Jarmila</i></td><td>Piatok po 3. veľkonočnej nedeli [Biela]
+<small><i>Jarmila</i></small></td><td class="middle">Piatok po 3. veľkonočnej nedeli [Biela]
 alebo
 Svätého Petra Chanela, kňaza a mučeníka [Červená]
 alebo
 Svätého Ľudovíta Máriu Grigniona z Montfortu, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-29">29. apríl
 Sobota
-<i>Lea</i></td><td>Svätej Kataríny Sienskej, panny a učiteľky Cirkvi, patrónky Európy [Biela]
+<small><i>Lea</i></small></td><td class="middle">Svätej Kataríny Sienskej, panny a učiteľky Cirkvi, patrónky Európy [Biela]
 (sviatok)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-04-30">30. apríl
 Nedeľa
-<i>Anastázia</i></td><td>4. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-01">1. máj
+<small><i>Anastázia</i></small></td><td class="middle">4. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-01">1. máj
 Pondelok
-<i>Sviatok práce</i></td><td>Pondelok po 4. veľkonočnej nedeli [Biela]
+<small><i>Sviatok práce</i></small></td><td class="middle">Pondelok po 4. veľkonočnej nedeli [Biela]
 alebo
 Svätého Jozefa, robotníka [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-02">2. máj
 Utorok
-<i>Žigmund</i></td><td>Svätého Atanáza, biskupa a učiteľa Cirkvi [Biela]
+<small><i>Žigmund</i></small></td><td class="middle">Svätého Atanáza, biskupa a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-03">3. máj
 Streda
-<i>Galina</i></td><td>Svätých Filipa a Jakuba, apoštolov [Červená]
+<small><i>Galina</i></small></td><td class="middle">Svätých Filipa a Jakuba, apoštolov [Červená]
 (sviatok)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-04">4. máj
 Štvrtok
-<i>Florián</i></td><td>Štvrtok po 4. veľkonočnej nedeli [Biela]
+<small><i>Florián</i></small></td><td class="middle">Štvrtok po 4. veľkonočnej nedeli [Biela]
 alebo
 Svätého Floriána, mučeníka [Červená]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-05">5. máj
 Piatok
-<i>Lesana, Lesia</i></td><td>Piatok po 4. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-06">6. máj
+<small><i>Lesana, Lesia</i></small></td><td class="middle">Piatok po 4. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-06">6. máj
 Sobota
-<i>Hermína</i></td><td>Sobota po 4. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-07">7. máj
+<small><i>Hermína</i></small></td><td class="middle">Sobota po 4. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-07">7. máj
 Nedeľa
-<i>Monika</i></td><td>5. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-08">8. máj
+<small><i>Monika</i></small></td><td class="middle">5. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-08">8. máj
 Pondelok
-<i>Ingrida</i></td><td>Pondelok po 5. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-09">9. máj
+<small><i>Ingrida</i></small></td><td class="middle">Pondelok po 5. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-09">9. máj
 Utorok
-<i>Roland</i></td><td>Utorok po 5. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-10">10. máj
+<small><i>Roland</i></small></td><td class="middle">Utorok po 5. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-10">10. máj
 Streda
-<i>Viktória</i></td><td>Streda po 5. veľkonočnej nedeli [Biela]
+<small><i>Viktória</i></small></td><td class="middle">Streda po 5. veľkonočnej nedeli [Biela]
 alebo
 Svätého Jána z Avily, kňaza a učiteľa Cirkvi [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-11">11. máj
 Štvrtok
-<i>Blažena</i></td><td>Štvrtok po 5. veľkonočnej nedeli [Biela]
+<small><i>Blažena</i></small></td><td class="middle">Štvrtok po 5. veľkonočnej nedeli [Biela]
 alebo
 Blahoslavenej Sáry Salkaháziovej, panny a mučenice [Červená]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-12">12. máj
 Piatok
-<i>Pankrác</i></td><td>Piatok po 5. veľkonočnej nedeli [Biela]
+<small><i>Pankrác</i></small></td><td class="middle">Piatok po 5. veľkonočnej nedeli [Biela]
 alebo
 Svätých Nerea a Achila, mučeníkov [Červená]
 alebo
 Svätého Pankráca, mučeníka [Červená]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-13">13. máj
 Sobota
-<i>Servác</i></td><td>Sobota po 5. veľkonočnej nedeli [Biela]
+<small><i>Servác</i></small></td><td class="middle">Sobota po 5. veľkonočnej nedeli [Biela]
 alebo
 Blahoslavenej Panny Márie Fatimskej [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-14">14. máj
 Nedeľa
-<i>Bonifác</i></td><td>6. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-15">15. máj
+<small><i>Bonifác</i></small></td><td class="middle">6. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-15">15. máj
 Pondelok
-<i>Žofia</i></td><td>Pondelok po 6. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-16" rowspan="2">16. máj
+<small><i>Žofia</i></small></td><td class="middle">Pondelok po 6. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-16" rowspan="2">16. máj
 Utorok
-<i>Svetozár</i></td><td>Svätého Jána Nepomuckého, kňaza a mučeníka [Červená]
-(spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>ROŽŇAVA: Svätého Jána Nepomuckého, kňaza a mučeníka – hlavného patróna diecézy [Červená]
+<small><i>Svetozár</i></small></td><td class="middle">Svätého Jána Nepomuckého, kňaza a mučeníka [Červená]
+(spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">ROŽŇAVA: Svätého Jána Nepomuckého, kňaza a mučeníka – hlavného patróna diecézy [Červená]
 (sviatok)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-05-17">17. máj
 Streda
-<i>Gizela</i></td><td>Streda po 6. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-18">18. máj
+<small><i>Gizela</i></small></td><td class="middle">Streda po 6. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-18">18. máj
 Štvrtok
-<i>Viola</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Viola</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Nanebovstúpenie Pána [Biela]
 (slávnosť)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-19">19. máj
 Piatok
-<i>Gertrúda</i></td><td>Piatok po 6. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-20">20. máj
+<small><i>Gertrúda</i></small></td><td class="middle">Piatok po 6. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-20">20. máj
 Sobota
-<i>Bernard</i></td><td>Sobota po 6. veľkonočnej nedeli [Biela]
+<small><i>Bernard</i></small></td><td class="middle">Sobota po 6. veľkonočnej nedeli [Biela]
 alebo
 Svätého Bernardína Sienského, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-21">21. máj
 Nedeľa
-<i>Zina</i></td><td>7. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-22">22. máj
+<small><i>Zina</i></small></td><td class="middle">7. veľkonočná nedeľa [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-22">22. máj
 Pondelok
-<i>Júlia, Juliana</i></td><td>Pondelok po 7. veľkonočnej nedeli [Biela]
+<small><i>Júlia, Juliana</i></small></td><td class="middle">Pondelok po 7. veľkonočnej nedeli [Biela]
 alebo
 Svätej Rity z Cascie, rehoľníčky [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-23">23. máj
 Utorok
-<i>Želmíra</i></td><td>Utorok po 7. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-24">24. máj
+<small><i>Želmíra</i></small></td><td class="middle">Utorok po 7. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-24">24. máj
 Streda
-<i>Ela</i></td><td>Streda po 7. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-25">25. máj
+<small><i>Ela</i></small></td><td class="middle">Streda po 7. veľkonočnej nedeli [Biela]</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-25">25. máj
 Štvrtok
-<i>Urban</i></td><td>Štvrtok po 7. veľkonočnej nedeli [Biela]
+<small><i>Urban</i></small></td><td class="middle">Štvrtok po 7. veľkonočnej nedeli [Biela]
 alebo
 Svätého Bédu Ctihodného, kňaza a učiteľa Cirkvi [Biela]
 alebo
@@ -475,510 +548,510 @@ alebo
 Svätej Márie Magdalény de’ Pazzi, panny [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-26">26. máj
 Piatok
-<i>Dušan</i></td><td>Svätého Filipa Neriho, kňaza [Biela]
+<small><i>Dušan</i></small></td><td class="middle">Svätého Filipa Neriho, kňaza [Biela]
 (spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-27">27. máj
 Sobota
-<i>Iveta</i></td><td>Sobota po 7. veľkonočnej nedeli [Biela]
+<small><i>Iveta</i></small></td><td class="middle">Sobota po 7. veľkonočnej nedeli [Biela]
 alebo
 Svätého Augustína z Canterbury, biskupa [Biela]
 (ľubovoľná spomienka)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-28">28. máj
 Nedeľa
-<i>Viliam</i></td><td>Zoslanie Ducha Svätého [Červená]
+<small><i>Viliam</i></small></td><td class="middle">Zoslanie Ducha Svätého [Červená]
 (slávnosť)</td><td>Veľkonočné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-05-29" rowspan="2">29. máj
 Pondelok
-<i>Vilma</i></td><td>Preblahoslavenej Panny Márie, Matky Cirkvi [Biela]
-(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>Votívna omša o Duchu svätom [Červená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-05-30">30. máj
+<small><i>Vilma</i></small></td><td class="middle">Preblahoslavenej Panny Márie, Matky Cirkvi [Biela]
+(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">Votívna omša o Duchu svätom [Červená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-05-30">30. máj
 Utorok
-<i>Ferdinand</i></td><td>Utorok 8. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-31">31. máj
+<small><i>Ferdinand</i></small></td><td class="middle">Utorok 8. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-05-31">31. máj
 Streda
-<i>Petrana, Petronela</i></td><td>Streda 8. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-01">1. jún
+<small><i>Petrana, Petronela</i></small></td><td class="middle">Streda 8. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-01">1. jún
 Štvrtok
-<i>Žaneta</i></td><td>Nášho Pána Ježiša Krista, najvyššieho a večného kňaza [Biela]
+<small><i>Žaneta</i></small></td><td class="middle">Nášho Pána Ježiša Krista, najvyššieho a večného kňaza [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-02">2. jún
 Piatok
-<i>Xénia, Oxana</i></td><td>Piatok 8. týždňa v Cezročnom období [Zelená]
+<small><i>Xénia, Oxana</i></small></td><td class="middle">Piatok 8. týždňa v Cezročnom období [Zelená]
 alebo
 Svätých Marcelína a Petra, mučeníkov [Červená]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-03">3. jún
 Sobota
-<i>Karolína</i></td><td>Svätých Karola Lwangu a spoločníkov, mučeníkov [Červená]
+<small><i>Karolína</i></small></td><td class="middle">Svätých Karola Lwangu a spoločníkov, mučeníkov [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-04" rowspan="2">4. jún
 Nedeľa
-<i>Lenka</i></td><td>Najsvätejšej Trojice [Biela]
-(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>ŽILINA: Najsvätejšej Trojice – titul katedrály [Biela]
+<small><i>Lenka</i></small></td><td class="middle">Najsvätejšej Trojice [Biela]
+(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">ŽILINA: Najsvätejšej Trojice – titul katedrály [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr></tbody><tbody><tr><td class="meniny" id="2023-06-05">5. jún
 Pondelok
-<i>Laura</i></td><td>Svätého Bonifáca, biskupa a mučeníka [Červená]
+<small><i>Laura</i></small></td><td class="middle">Svätého Bonifáca, biskupa a mučeníka [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-06">6. jún
 Utorok
-<i>Norbert</i></td><td>Utorok 9. týždňa v Cezročnom období [Zelená]
+<small><i>Norbert</i></small></td><td class="middle">Utorok 9. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Norberta, biskupa [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-07">7. jún
 Streda
-<i>Róbert</i></td><td>Streda 9. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-08">8. jún
+<small><i>Róbert</i></small></td><td class="middle">Streda 9. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-08">8. jún
 Štvrtok
-<i>Medard</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Medard</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Najsvätejšieho Kristovho Tela a Krvi [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-09">9. jún
 Piatok
-<i>Stanislava</i></td><td>Piatok 9. týždňa v Cezročnom období [Zelená]
+<small><i>Stanislava</i></small></td><td class="middle">Piatok 9. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Efréma, diakona a učiteľa Cirkvi [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-10">10. jún
 Sobota
-<i>Margaréta</i></td><td>Sobota 9. týždňa v Cezročnom období [Zelená]
+<small><i>Margaréta</i></small></td><td class="middle">Sobota 9. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-11">11. jún
 Nedeľa
-<i>Dobroslava</i></td><td>10. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-06-12">12. jún
+<small><i>Dobroslava</i></small></td><td class="middle">10. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-06-12">12. jún
 Pondelok
-<i>Zlatko</i></td><td>Pondelok 10. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-13" rowspan="2">13. jún
+<small><i>Zlatko</i></small></td><td class="middle">Pondelok 10. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-13" rowspan="2">13. jún
 Utorok
-<i>Anton</i></td><td>Svätého Antona Paduánskeho, kňaza a učiteľa Cirkvi [Biela]
-(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>ORDINARIÁT OS a OZ SR: Výročie posviacky katedrálneho chrámu svätého Šebastiána v Bratislave [Biela]
+<small><i>Anton</i></small></td><td class="middle">Svätého Antona Paduánskeho, kňaza a učiteľa Cirkvi [Biela]
+(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">ORDINARIÁT OS a OZ SR: Výročie posviacky katedrálneho chrámu svätého Šebastiána v Bratislave [Biela]
 (v ordinariáte sviatok; v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-06-14">14. jún
 Streda
-<i>Vasil</i></td><td>Streda 10. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-15">15. jún
+<small><i>Vasil</i></small></td><td class="middle">Streda 10. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-15">15. jún
 Štvrtok
-<i>Vit</i></td><td>Štvrtok 10. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-16" rowspan="2">16. jún
+<small><i>Vit</i></small></td><td class="middle">Štvrtok 10. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-16" rowspan="2">16. jún
 Piatok
-<i>Blanka, Bianka</i></td><td>Najsvätejšieho Srdca Ježišovho [Biela]
-(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>ROŽŇAVA (len v katedrále): Svätého Neita, mučeníka [Červená]
+<small><i>Blanka, Bianka</i></small></td><td class="middle">Najsvätejšieho Srdca Ježišovho [Biela]
+(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">ROŽŇAVA (len v katedrále): Svätého Neita, mučeníka [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-06-17">17. jún
 Sobota
-<i>Adolf</i></td><td>Nepoškvrneného Srdca Preblahoslavenej Panny Márie [Biela]
+<small><i>Adolf</i></small></td><td class="middle">Nepoškvrneného Srdca Preblahoslavenej Panny Márie [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-18">18. jún
 Nedeľa
-<i>Vratislav</i></td><td>11. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-06-19">19. jún
+<small><i>Vratislav</i></small></td><td class="middle">11. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-06-19">19. jún
 Pondelok
-<i>Alfréd</i></td><td>Pondelok 11. týždňa v Cezročnom období [Zelená]
+<small><i>Alfréd</i></small></td><td class="middle">Pondelok 11. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Romualda, opáta [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-20">20. jún
 Utorok
-<i>Valéria</i></td><td>Utorok 11. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-21">21. jún
+<small><i>Valéria</i></small></td><td class="middle">Utorok 11. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-21">21. jún
 Streda
-<i>Alojz</i></td><td>Svätého Alojza Gonzágu, rehoľníka [Biela]
+<small><i>Alojz</i></small></td><td class="middle">Svätého Alojza Gonzágu, rehoľníka [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-22">22. jún
 Štvrtok
-<i>Paulína</i></td><td>Štvrtok 11. týždňa v Cezročnom období [Zelená]
+<small><i>Paulína</i></small></td><td class="middle">Štvrtok 11. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Pavlína z Noly, biskupa [Biela]
 alebo
 Svätých Jána Fišera, biskupa, a Tomáša Morusa, mučeníkov [Červená]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-23">23. jún
 Piatok
-<i>Sidónia</i></td><td>Piatok 11. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-24" rowspan="2">24. jún
+<small><i>Sidónia</i></small></td><td class="middle">Piatok 11. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-24" rowspan="2">24. jún
 Sobota
-<i>Ján</i></td><td>Narodenie svätého Jána Krstiteľa [Biela]
-(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>TRNAVA: Narodenie svätého Jána Krstiteľa – hlavného patróna diecézy a titul katedrály [Biela]
+<small><i>Ján</i></small></td><td class="middle">Narodenie svätého Jána Krstiteľa [Biela]
+(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">TRNAVA: Narodenie svätého Jána Krstiteľa – hlavného patróna diecézy a titul katedrály [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-06-25">25. jún
 Nedeľa
-<i>Olívia, Tadeáš</i></td><td>12. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-06-26">26. jún
+<small><i>Olívia, Tadeáš</i></small></td><td class="middle">12. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-06-26">26. jún
 Pondelok
-<i>Adriána</i></td><td>Pondelok 12. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-27" rowspan="2">27. jún
+<small><i>Adriána</i></small></td><td class="middle">Pondelok 12. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-27" rowspan="2">27. jún
 Utorok
-<i>Ladislav, Ladislava</i></td><td>Utorok 12. týždňa v Cezročnom období [Zelená]
+<small><i>Ladislav, Ladislava</i></small></td><td class="middle">Utorok 12. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Cyrila Alexandrijského, biskupa a učiteľa Cirkvi [Biela]
-(ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>TRNAVA, NITRA, BANSKÁ BYSTRICA, ROŽŇAVA:
+(ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">TRNAVA, NITRA, BANSKÁ BYSTRICA, ROŽŇAVA:
 alebo
 Svätého Ladislava [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-06-28">28. jún
 Streda
-<i>Beáta</i></td><td>Svätého Ireneja, biskupa a učiteľa Cirkvi, mučeníka [Červená]
+<small><i>Beáta</i></small></td><td class="middle">Svätého Ireneja, biskupa a učiteľa Cirkvi, mučeníka [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-29">29. jún
 Štvrtok
-<i>Peter a Pavol, Petra</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Peter a Pavol, Petra</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Svätých Petra a Pavla, apoštolov [Červená]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-06-30">30. jún
 Piatok
-<i>Melánia</i></td><td>Piatok 12. týždňa v Cezročnom období [Zelená]
+<small><i>Melánia</i></small></td><td class="middle">Piatok 12. týždňa v Cezročnom období [Zelená]
 alebo
 Prvých svätých mučeníkov Cirkvi v Ríme [Červená]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-01">1. júl
 Sobota
-<i>Diana</i></td><td>Sobota 12. týždňa v Cezročnom období [Zelená]
+<small><i>Diana</i></small></td><td class="middle">Sobota 12. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-02">2. júl
 Nedeľa
-<i>Berta</i></td><td>13. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-03">3. júl
+<small><i>Berta</i></small></td><td class="middle">13. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-03">3. júl
 Pondelok
-<i>Miloslav</i></td><td>Svätého Tomáša, apoštola [Červená]
+<small><i>Miloslav</i></small></td><td class="middle">Svätého Tomáša, apoštola [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-04">4. júl
 Utorok
-<i>Prokop</i></td><td>Utorok 13. týždňa v Cezročnom období [Zelená]
+<small><i>Prokop</i></small></td><td class="middle">Utorok 13. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Alžbety Portugalskej [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-05">5. júl
 Streda
-<i>Cyril a Metod</i></td><td>Svätých Cyrila a Metoda, slovanských vierozvestov [Biela]
+<small><i>Cyril a Metod</i></small></td><td class="middle">Svätých Cyrila a Metoda, slovanských vierozvestov [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-06">6. júl
 Štvrtok
-<i>Patrik, Patrícia</i></td><td>Štvrtok 13. týždňa v Cezročnom období [Zelená]
+<small><i>Patrik, Patrícia</i></small></td><td class="middle">Štvrtok 13. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Márie Goretti, panny a mučenice [Červená]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-07">7. júl
 Piatok
-<i>Oliver</i></td><td>Piatok 13. týždňa v Cezročnom období [Zelená]
+<small><i>Oliver</i></small></td><td class="middle">Piatok 13. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Antona Máriu Zaccariu, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-08">8. júl
 Sobota
-<i>Ivan</i></td><td>Sobota 13. týždňa v Cezročnom období [Zelená]
+<small><i>Ivan</i></small></td><td class="middle">Sobota 13. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-09">9. júl
 Nedeľa
-<i>Lujza</i></td><td>14. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-10">10. júl
+<small><i>Lujza</i></small></td><td class="middle">14. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-10">10. júl
 Pondelok
-<i>Amália</i></td><td>Pondelok 14. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-11">11. júl
+<small><i>Amália</i></small></td><td class="middle">Pondelok 14. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-11">11. júl
 Utorok
-<i>Milota</i></td><td>Svätého Benedikta, opáta, patróna Európy [Biela]
+<small><i>Milota</i></small></td><td class="middle">Svätého Benedikta, opáta, patróna Európy [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-12">12. júl
 Streda
-<i>Nina</i></td><td>Streda 14. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-13">13. júl
+<small><i>Nina</i></small></td><td class="middle">Streda 14. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-13">13. júl
 Štvrtok
-<i>Margita</i></td><td>Štvrtok 14. týždňa v Cezročnom období [Zelená]
+<small><i>Margita</i></small></td><td class="middle">Štvrtok 14. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Henricha [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-14">14. júl
 Piatok
-<i>Kamil</i></td><td>Piatok 14. týždňa v Cezročnom období [Zelená]
+<small><i>Kamil</i></small></td><td class="middle">Piatok 14. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Kamila z Lellisu, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-15">15. júl
 Sobota
-<i>Henrich</i></td><td>Svätého Bonaventúru, biskupa a učiteľa Cirkvi [Biela]
+<small><i>Henrich</i></small></td><td class="middle">Svätého Bonaventúru, biskupa a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-16">16. júl
 Nedeľa
-<i>Drahomír</i></td><td>15. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-17" rowspan="3">17. júl
+<small><i>Drahomír</i></small></td><td class="middle">15. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-17" rowspan="3">17. júl
 Pondelok
-<i>Bohuslav</i></td><td>Svätých Andreja-Svorada a Benedikta, pustovníkov [Biela]
-(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>NITRA: Svätých Andreja-Svorada a Benedikta, pustovníkov – hlavných patrónov diecézy [Biela]
-(sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>Mesto Nitra: Svätého Andreja-Svorada – patróna mesta [Biela]
+<small><i>Bohuslav</i></small></td><td class="middle">Svätých Andreja-Svorada a Benedikta, pustovníkov [Biela]
+(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">NITRA: Svätých Andreja-Svorada a Benedikta, pustovníkov – hlavných patrónov diecézy [Biela]
+(sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">Mesto Nitra: Svätého Andreja-Svorada – patróna mesta [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-07-18">18. júl
 Utorok
-<i>Kamila</i></td><td>Utorok 15. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-19">19. júl
+<small><i>Kamila</i></small></td><td class="middle">Utorok 15. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-19">19. júl
 Streda
-<i>Dušana</i></td><td>Streda 15. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-20">20. júl
+<small><i>Dušana</i></small></td><td class="middle">Streda 15. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-20">20. júl
 Štvrtok
-<i>Iľja, Eliáš</i></td><td>Štvrtok 15. týždňa v Cezročnom období [Zelená]
+<small><i>Iľja, Eliáš</i></small></td><td class="middle">Štvrtok 15. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Apolinára, biskupa a mučeníka [Červená]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-21">21. júl
 Piatok
-<i>Daniel</i></td><td>Piatok 15. týždňa v Cezročnom období [Zelená]
+<small><i>Daniel</i></small></td><td class="middle">Piatok 15. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Vavrinca z Brindisi, kňaza a učiteľa Cirkvi [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-22">22. júl
 Sobota
-<i>Magdaléna</i></td><td>Svätej Márie Magdalény [Biela]
+<small><i>Magdaléna</i></small></td><td class="middle">Svätej Márie Magdalény [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-23">23. júl
 Nedeľa
-<i>Oľga</i></td><td>16. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-24">24. júl
+<small><i>Oľga</i></small></td><td class="middle">16. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-24">24. júl
 Pondelok
-<i>Vladimír</i></td><td>Pondelok 16. týždňa v Cezročnom období [Zelená]
+<small><i>Vladimír</i></small></td><td class="middle">Pondelok 16. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Šarbela Machlúfa, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-25">25. júl
 Utorok
-<i>Jakub</i></td><td>Svätého Jakuba, apoštola [Červená]
+<small><i>Jakub</i></small></td><td class="middle">Svätého Jakuba, apoštola [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-26">26. júl
 Streda
-<i>Anna, Hana</i></td><td>Svätých Joachima a Anny, rodičov preblahoslavenej Panny Márie [Biela]
+<small><i>Anna, Hana</i></small></td><td class="middle">Svätých Joachima a Anny, rodičov preblahoslavenej Panny Márie [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-27">27. júl
 Štvrtok
-<i>Božena</i></td><td>Svätých Gorazda a spoločníkov [Biela]
+<small><i>Božena</i></small></td><td class="middle">Svätých Gorazda a spoločníkov [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-28">28. júl
 Piatok
-<i>Krištof</i></td><td>Piatok 16. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-29">29. júl
+<small><i>Krištof</i></small></td><td class="middle">Piatok 16. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-29">29. júl
 Sobota
-<i>Marta</i></td><td>Svätých Marty, Márie a Lazára [Biela]
+<small><i>Marta</i></small></td><td class="middle">Svätých Marty, Márie a Lazára [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-07-30">30. júl
 Nedeľa
-<i>Libuša</i></td><td>17. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-31">31. júl
+<small><i>Libuša</i></small></td><td class="middle">17. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-07-31">31. júl
 Pondelok
-<i>Ignác</i></td><td>Svätého Ignáca z Loyoly, kňaza [Biela]
+<small><i>Ignác</i></small></td><td class="middle">Svätého Ignáca z Loyoly, kňaza [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-01">1. august
 Utorok
-<i>Božidara</i></td><td>Svätého Alfonza Máriu de’ Liguori, biskupa a učiteľa Cirkvi [Biela]
+<small><i>Božidara</i></small></td><td class="middle">Svätého Alfonza Máriu de’ Liguori, biskupa a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-02">2. august
 Streda
-<i>Gustáv</i></td><td>Streda 17. týždňa v Cezročnom období [Zelená]
+<small><i>Gustáv</i></small></td><td class="middle">Streda 17. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Euzébia Vercellského, biskupa [Biela]
 alebo
 Svätého Petra Juliána Eymarda, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-03">3. august
 Štvrtok
-<i>Jerguš</i></td><td>Štvrtok 17. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-04">4. august
+<small><i>Jerguš</i></small></td><td class="middle">Štvrtok 17. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-04">4. august
 Piatok
-<i>Dominik, Dominika</i></td><td>Svätého Jána Máriu Vianneya, kňaza [Biela]
+<small><i>Dominik, Dominika</i></small></td><td class="middle">Svätého Jána Máriu Vianneya, kňaza [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-05">5. august
 Sobota
-<i>Hortenzia</i></td><td>Sobota 17. týždňa v Cezročnom období [Zelená]
+<small><i>Hortenzia</i></small></td><td class="middle">Sobota 17. týždňa v Cezročnom období [Zelená]
 alebo
 Výročie posviacky hlavnej mariánskej baziliky v Ríme [Biela]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-06">6. august
 Nedeľa
-<i>Jozefína</i></td><td>Premenenie Pána [Biela]
+<small><i>Jozefína</i></small></td><td class="middle">Premenenie Pána [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-08-07">7. august
 Pondelok
-<i>Štefánia</i></td><td>Pondelok 18. týždňa v Cezročnom období [Zelená]
+<small><i>Štefánia</i></small></td><td class="middle">Pondelok 18. týždňa v Cezročnom období [Zelená]
 alebo
 Svätých Sixta II., pápeža, a jeho spoločníkov, mučeníkov [Červená]
 alebo
 Svätého Kajetána, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-08">8. august
 Utorok
-<i>Oskar</i></td><td>Svätého Dominika, kňaza [Biela]
+<small><i>Oskar</i></small></td><td class="middle">Svätého Dominika, kňaza [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-09">9. august
 Streda
-<i>Ľubomíra</i></td><td>Svätej Terézie Benedikty od Kríža, panny a mučenice, patrónky Európy [Červená]
+<small><i>Ľubomíra</i></small></td><td class="middle">Svätej Terézie Benedikty od Kríža, panny a mučenice, patrónky Európy [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-10">10. august
 Štvrtok
-<i>Vavrinec</i></td><td>Svätého Vavrinca, diakona a mučeníka [Červená]
+<small><i>Vavrinec</i></small></td><td class="middle">Svätého Vavrinca, diakona a mučeníka [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-11">11. august
 Piatok
-<i>Zuzana</i></td><td>Svätej Kláry, panny [Biela]
+<small><i>Zuzana</i></small></td><td class="middle">Svätej Kláry, panny [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-12">12. august
 Sobota
-<i>Darina</i></td><td>Sobota 18. týždňa v Cezročnom období [Zelená]
+<small><i>Darina</i></small></td><td class="middle">Sobota 18. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Jany Františky de Chantal, rehoľníčky [Biela]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-13">13. august
 Nedeľa
-<i>Ľubomír</i></td><td>19. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-08-14">14. august
+<small><i>Ľubomír</i></small></td><td class="middle">19. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-08-14">14. august
 Pondelok
-<i>Mojmír</i></td><td>Svätého Maximiliána Máriu Kolbeho, kňaza a mučeníka [Červená]
+<small><i>Mojmír</i></small></td><td class="middle">Svätého Maximiliána Máriu Kolbeho, kňaza a mučeníka [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-15" rowspan="2">15. august
 Utorok
-<i>Marcela</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Marcela</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Nanebovzatie Preblahoslavenej Panny Márie [Biela]
-(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>PRIKÁZANÁ SLÁVNOSŤ:
+(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 ROŽŇAVA: Nanebovzatie Preblahoslavenej Panny Márie – titul katedrály [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-08-16">16. august
 Streda
-<i>Leonard</i></td><td>Streda 19. týždňa v Cezročnom období [Zelená]
+<small><i>Leonard</i></small></td><td class="middle">Streda 19. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Štefana Uhorského [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-17">17. august
 Štvrtok
-<i>Milica</i></td><td>Štvrtok 19. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-18">18. august
+<small><i>Milica</i></small></td><td class="middle">Štvrtok 19. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-18">18. august
 Piatok
-<i>Elena, Helena</i></td><td>Piatok 19. týždňa v Cezročnom období [Zelená]
+<small><i>Elena, Helena</i></small></td><td class="middle">Piatok 19. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Heleny [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-19">19. august
 Sobota
-<i>Lýdia</i></td><td>Sobota 19. týždňa v Cezročnom období [Zelená]
+<small><i>Lýdia</i></small></td><td class="middle">Sobota 19. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Jána Eudesa, kňaza [Biela]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-20">20. august
 Nedeľa
-<i>Anabela</i></td><td>20. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-08-21">21. august
+<small><i>Anabela</i></small></td><td class="middle">20. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-08-21">21. august
 Pondelok
-<i>Jana</i></td><td>Svätého Pia X., pápeža [Biela]
+<small><i>Jana</i></small></td><td class="middle">Svätého Pia X., pápeža [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-22">22. august
 Utorok
-<i>Tichomír</i></td><td>Preblahoslavenej Panny Márie Kráľovnej [Biela]
+<small><i>Tichomír</i></small></td><td class="middle">Preblahoslavenej Panny Márie Kráľovnej [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-23">23. august
 Streda
-<i>Filip</i></td><td>Streda 20. týždňa v Cezročnom období [Zelená]
+<small><i>Filip</i></small></td><td class="middle">Streda 20. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Ruženy Limskej, panny [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-24">24. august
 Štvrtok
-<i>Bartolomej</i></td><td>Svätého Bartolomeja, apoštola [Červená]
+<small><i>Bartolomej</i></small></td><td class="middle">Svätého Bartolomeja, apoštola [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-25">25. august
 Piatok
-<i>Ľudovít</i></td><td>Piatok 20. týždňa v Cezročnom období [Zelená]
+<small><i>Ľudovít</i></small></td><td class="middle">Piatok 20. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Ľudovíta [Biela]
 alebo
 Svätého Jozefa Kalazanského, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-26">26. august
 Sobota
-<i>Samuel</i></td><td>Sobota 20. týždňa v Cezročnom období [Zelená]
+<small><i>Samuel</i></small></td><td class="middle">Sobota 20. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-27">27. august
 Nedeľa
-<i>Silvia</i></td><td>21. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-08-28">28. august
+<small><i>Silvia</i></small></td><td class="middle">21. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-08-28">28. august
 Pondelok
-<i>Augustín</i></td><td>Svätého Augustína, biskupa a učiteľa Cirkvi [Biela]
+<small><i>Augustín</i></small></td><td class="middle">Svätého Augustína, biskupa a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-29">29. august
 Utorok
-<i>Nikola, Nikolaj</i></td><td>Mučenícka smrť svätého Jána Krstiteľa [Červená]
+<small><i>Nikola, Nikolaj</i></small></td><td class="middle">Mučenícka smrť svätého Jána Krstiteľa [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-08-30" rowspan="2">30. august
 Streda
-<i>Ružena</i></td><td>Streda 21. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>TRNAVA: Výročie posviacky katedrálneho chrámu svätého Jána Krstiteľa v Trnave [Biela]
+<small><i>Ružena</i></small></td><td class="middle">Streda 21. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">TRNAVA: Výročie posviacky katedrálneho chrámu svätého Jána Krstiteľa v Trnave [Biela]
 (v diecéze sviatok; v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-08-31">31. august
 Štvrtok
-<i>Nora</i></td><td>Štvrtok 21. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-01">1. september
+<small><i>Nora</i></small></td><td class="middle">Štvrtok 21. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-01">1. september
 Piatok
-<i>Drahoslava</i></td><td>Piatok 21. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-02">2. september
+<small><i>Drahoslava</i></small></td><td class="middle">Piatok 21. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-02">2. september
 Sobota
-<i>Linda</i></td><td>Sobota 21. týždňa v Cezročnom období [Zelená]
+<small><i>Linda</i></small></td><td class="middle">Sobota 21. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-03">3. september
 Nedeľa
-<i>Belo</i></td><td>22. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-09-04">4. september
+<small><i>Belo</i></small></td><td class="middle">22. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-09-04">4. september
 Pondelok
-<i>Rozália</i></td><td>Pondelok 22. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-05">5. september
+<small><i>Rozália</i></small></td><td class="middle">Pondelok 22. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-05">5. september
 Utorok
-<i>Regina</i></td><td>Utorok 22. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-06" rowspan="2">6. september
+<small><i>Regina</i></small></td><td class="middle">Utorok 22. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-06" rowspan="2">6. september
 Streda
-<i>Alica</i></td><td>Streda 22. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>KOŠICE: Výročie posviacky katedrálneho chrámu svätej Alžbety Uhorskej v Košiciach [Biela]
+<small><i>Alica</i></small></td><td class="middle">Streda 22. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">KOŠICE: Výročie posviacky katedrálneho chrámu svätej Alžbety Uhorskej v Košiciach [Biela]
 (v diecéze sviatok; v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-09-07">7. september
 Štvrtok
-<i>Marianna</i></td><td>Svätých Marka Križina, Melichara Grodzieckého a Štefana Pongrácza, kňazov a mučeníkov [Červená]
+<small><i>Marianna</i></small></td><td class="middle">Svätých Marka Križina, Melichara Grodzieckého a Štefana Pongrácza, kňazov a mučeníkov [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-08">8. september
 Piatok
-<i>Miriama</i></td><td>Narodenie Preblahoslavenej Panny Márie [Biela]
+<small><i>Miriama</i></small></td><td class="middle">Narodenie Preblahoslavenej Panny Márie [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-09">9. september
 Sobota
-<i>Martina</i></td><td>Sobota 22. týždňa v Cezročnom období [Zelená]
+<small><i>Martina</i></small></td><td class="middle">Sobota 22. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Petra Clavera, kňaza [Biela]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-10">10. september
 Nedeľa
-<i>Oleg</i></td><td>23. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-09-11">11. september
+<small><i>Oleg</i></small></td><td class="middle">23. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-09-11">11. september
 Pondelok
-<i>Bystrík</i></td><td>Pondelok 23. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-12">12. september
+<small><i>Bystrík</i></small></td><td class="middle">Pondelok 23. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-12">12. september
 Utorok
-<i>Mária</i></td><td>Utorok 23. týždňa v Cezročnom období [Zelená]
+<small><i>Mária</i></small></td><td class="middle">Utorok 23. týždňa v Cezročnom období [Zelená]
 alebo
 Najsvätejšieho mena Panny Márie [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-13">13. september
 Streda
-<i>Ctibor</i></td><td>Svätého Jána Zlatoústeho, biskupa a učiteľa Cirkvi [Biela]
+<small><i>Ctibor</i></small></td><td class="middle">Svätého Jána Zlatoústeho, biskupa a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-14">14. september
 Štvrtok
-<i>Ľudomil</i></td><td>Povýšenie Svätého kríža [Červená]
+<small><i>Ľudomil</i></small></td><td class="middle">Povýšenie Svätého kríža [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-15" rowspan="2">15. september
 Piatok
-<i>Jolana</i></td><td>Sedembolestnej Panny Márie, patrónky Slovenska [Biela]
-(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>POPRAD: Sedembolestnej Panny Márie, patrónky Slovenska – titul konkatedrály [Biela]
+<small><i>Jolana</i></small></td><td class="middle">Sedembolestnej Panny Márie, patrónky Slovenska [Biela]
+(slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">POPRAD: Sedembolestnej Panny Márie, patrónky Slovenska – titul konkatedrály [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-09-16">16. september
 Sobota
-<i>Ľudmila</i></td><td>Svätých Kornélia, pápeža, a Cypriána, biskupa, mučeníkov [Červená]
+<small><i>Ľudmila</i></small></td><td class="middle">Svätých Kornélia, pápeža, a Cypriána, biskupa, mučeníkov [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-17">17. september
 Nedeľa
-<i>Olympia</i></td><td>24. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-09-18">18. september
+<small><i>Olympia</i></small></td><td class="middle">24. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-09-18">18. september
 Pondelok
-<i>Eugénia</i></td><td>Pondelok 24. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-19">19. september
+<small><i>Eugénia</i></small></td><td class="middle">Pondelok 24. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-19">19. september
 Utorok
-<i>Konštantín</i></td><td>Utorok 24. týždňa v Cezročnom období [Zelená]
+<small><i>Konštantín</i></small></td><td class="middle">Utorok 24. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Januára, biskupa a mučeníka [Červená]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-20">20. september
 Streda
-<i>Ľuboslav, Ľuboslava</i></td><td>Svätých Ondreja Kima Taegona, kňaza, Pavla Chonga Hasanga a spoločníkov, mučeníkov [Červená]
+<small><i>Ľuboslav, Ľuboslava</i></small></td><td class="middle">Svätých Ondreja Kima Taegona, kňaza, Pavla Chonga Hasanga a spoločníkov, mučeníkov [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-21">21. september
 Štvrtok
-<i>Matúš</i></td><td>Svätého Matúša, apoštola a evanjelistu [Červená]
+<small><i>Matúš</i></small></td><td class="middle">Svätého Matúša, apoštola a evanjelistu [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-22" rowspan="2">22. september
 Piatok
-<i>Móric</i></td><td>Piatok 24. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>NITRA: Svätého Emeráma, biskupa a mučeníka – titul katedrály [Červená]
+<small><i>Móric</i></small></td><td class="middle">Piatok 24. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">NITRA: Svätého Emeráma, biskupa a mučeníka – titul katedrály [Červená]
 (v diecéze spomienka; v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-09-23">23. september
 Sobota
-<i>Zdenka</i></td><td>Svätého Pia z Pietrelciny, kňaza [Biela]
+<small><i>Zdenka</i></small></td><td class="middle">Svätého Pia z Pietrelciny, kňaza [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-24" rowspan="2">24. september
 Nedeľa
-<i>Ľuboš, Ľubor</i></td><td>25. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>BANSKÁ BYSTRICA: Výročie posviacky katedrálneho chrámu svätého Františka Xaverského v Banskej Bystrici [Biela]
+<small><i>Ľuboš, Ľubor</i></small></td><td class="middle">25. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">BANSKÁ BYSTRICA: Výročie posviacky katedrálneho chrámu svätého Františka Xaverského v Banskej Bystrici [Biela]
 (slávnosť; iba v katedrále)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr></tbody><tbody><tr><td class="meniny" id="2023-09-25">25. september
 Pondelok
-<i>Vladislav</i></td><td>Pondelok 25. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-26">26. september
+<small><i>Vladislav</i></small></td><td class="middle">Pondelok 25. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-26">26. september
 Utorok
-<i>Edita</i></td><td>Utorok 25. týždňa v Cezročnom období [Zelená]
+<small><i>Edita</i></small></td><td class="middle">Utorok 25. týždňa v Cezročnom období [Zelená]
 alebo
 Svätých Kozmu a Damiána, mučeníkov [Červená]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-27">27. september
 Streda
-<i>Cyprián</i></td><td>Svätého Vincenta de Paul, kňaza [Biela]
+<small><i>Cyprián</i></small></td><td class="middle">Svätého Vincenta de Paul, kňaza [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-28">28. september
 Štvrtok
-<i>Václav</i></td><td>Štvrtok 25. týždňa v Cezročnom období [Zelená]
+<small><i>Václav</i></small></td><td class="middle">Štvrtok 25. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Václava, mučeníka [Červená]
 alebo
 Svätých Vavrinca Ruiza a spoločníkov, mučeníkov [Červená]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-29">29. september
 Piatok
-<i>Michal, Michaela</i></td><td>Svätých Michala, Gabriela a Rafaela, archanjelov [Biela]
+<small><i>Michal, Michaela</i></small></td><td class="middle">Svätých Michala, Gabriela a Rafaela, archanjelov [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-09-30">30. september
 Sobota
-<i>Jarolím</i></td><td>Svätého Hieronyma, kňaza a učiteľa Cirkvi [Biela]
+<small><i>Jarolím</i></small></td><td class="middle">Svätého Hieronyma, kňaza a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-01">1. október
 Nedeľa
-<i>Arnold</i></td><td>26. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-02">2. október
+<small><i>Arnold</i></small></td><td class="middle">26. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-02">2. október
 Pondelok
-<i>Levoslav</i></td><td>Svätých anjelov strážcov [Biela]
+<small><i>Levoslav</i></small></td><td class="middle">Svätých anjelov strážcov [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-03">3. október
 Utorok
-<i>Stela</i></td><td>Utorok 26. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-04">4. október
+<small><i>Stela</i></small></td><td class="middle">Utorok 26. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-04">4. október
 Streda
-<i>František</i></td><td>Svätého Františka Assiského [Biela]
+<small><i>František</i></small></td><td class="middle">Svätého Františka Assiského [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-05">5. október
 Štvrtok
-<i>Viera</i></td><td>Štvrtok 26. týždňa v Cezročnom období [Zelená]
+<small><i>Viera</i></small></td><td class="middle">Štvrtok 26. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Faustíny Kowalskej, panny [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-06">6. október
 Piatok
-<i>Natália</i></td><td>Piatok 26. týždňa v Cezročnom období [Zelená]
+<small><i>Natália</i></small></td><td class="middle">Piatok 26. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Bruna, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-07">7. október
 Sobota
-<i>Eliška</i></td><td>Ružencovej Panny Márie [Biela]
+<small><i>Eliška</i></small></td><td class="middle">Ružencovej Panny Márie [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-08">8. október
 Nedeľa
-<i>Brigita</i></td><td>27. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-09">9. október
+<small><i>Brigita</i></small></td><td class="middle">27. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-09">9. október
 Pondelok
-<i>Dionýz</i></td><td>Pondelok 27. týždňa v Cezročnom období [Zelená]
+<small><i>Dionýz</i></small></td><td class="middle">Pondelok 27. týždňa v Cezročnom období [Zelená]
 alebo
 Svätých Dionýza, biskupa, a spoločníkov, mučeníkov [Červená]
 alebo
 Svätého Jána Leonardiho, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-10" rowspan="2">10. október
 Utorok
-<i>Slavomíra</i></td><td>Utorok 27. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>ŽILINA: Výročie posviacky katedrálneho chrámu Najvätejšej Trojice v Žiline [Biela]
+<small><i>Slavomíra</i></small></td><td class="middle">Utorok 27. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">ŽILINA: Výročie posviacky katedrálneho chrámu Najvätejšej Trojice v Žiline [Biela]
 (v diecéze sviatok; v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-10-11">11. október
 Streda
-<i>Valentína</i></td><td>Streda 27. týždňa v Cezročnom období [Zelená]
+<small><i>Valentína</i></small></td><td class="middle">Streda 27. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Jána XXIII., pápeža [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-12">12. október
 Štvrtok
-<i>Maximilián</i></td><td>Štvrtok 27. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-13">13. október
+<small><i>Maximilián</i></small></td><td class="middle">Štvrtok 27. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-13">13. október
 Piatok
-<i>Koloman</i></td><td>Piatok 27. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-14">14. október
+<small><i>Koloman</i></small></td><td class="middle">Piatok 27. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-14">14. október
 Sobota
-<i>Boris</i></td><td>Sobota 27. týždňa v Cezročnom období [Zelená]
+<small><i>Boris</i></small></td><td class="middle">Sobota 27. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Kalixta I., pápeža a mučeníka [Červená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-15">15. október
 Nedeľa
-<i>Terézia</i></td><td>28. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-16">16. október
+<small><i>Terézia</i></small></td><td class="middle">28. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-16">16. október
 Pondelok
-<i>Vladimíra</i></td><td>Pondelok 28. týždňa v Cezročnom období [Zelená]
+<small><i>Vladimíra</i></small></td><td class="middle">Pondelok 28. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Hedvigy, rehoľníčky [Biela]
 alebo
@@ -987,258 +1060,261 @@ alebo
 Svätého Gála, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-17">17. október
 Utorok
-<i>Hedviga</i></td><td>Svätého Ignáca Antiochijského, biskupa a mučeníka [Červená]
+<small><i>Hedviga</i></small></td><td class="middle">Svätého Ignáca Antiochijského, biskupa a mučeníka [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-18">18. október
 Streda
-<i>Lukáš</i></td><td>Svätého Lukáša, evanjelistu [Červená]
+<small><i>Lukáš</i></small></td><td class="middle">Svätého Lukáša, evanjelistu [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-19">19. október
 Štvrtok
-<i>Kristián</i></td><td>Štvrtok 28. týždňa v Cezročnom období [Zelená]
+<small><i>Kristián</i></small></td><td class="middle">Štvrtok 28. týždňa v Cezročnom období [Zelená]
 alebo
 Svätých Jána de Brébeuf a Izáka Jogues, kňazov, a ich spoločníkov, mučeníkov [Červená]
 alebo
 Svätého Pavla od Kríža, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-20">20. október
 Piatok
-<i>Vendelín</i></td><td>Piatok 28. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-21">21. október
+<small><i>Vendelín</i></small></td><td class="middle">Piatok 28. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-21">21. október
 Sobota
-<i>Uršuľa</i></td><td>Sobota 28. týždňa v Cezročnom období [Zelená]
+<small><i>Uršuľa</i></small></td><td class="middle">Sobota 28. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-22">22. október
 Nedeľa
-<i>Sergej</i></td><td>29. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-23">23. október
+<small><i>Sergej</i></small></td><td class="middle">29. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-23">23. október
 Pondelok
-<i>Alojzia</i></td><td>Pondelok 29. týždňa v Cezročnom období [Zelená]
+<small><i>Alojzia</i></small></td><td class="middle">Pondelok 29. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Jána Kapistránskeho, kňaza [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-24">24. október
 Utorok
-<i>Kvetoslava</i></td><td>Utorok 29. týždňa v Cezročnom období [Zelená]
+<small><i>Kvetoslava</i></small></td><td class="middle">Utorok 29. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Antona Máriu Clareta, biskupa [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-25" rowspan="2">25. október
 Streda
-<i>Aurel</i></td><td>Streda 29. týždňa v Cezročnom období [Zelená]
+<small><i>Aurel</i></small></td><td class="middle">Streda 29. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Maura, biskupa [Biela]
-(ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>SPIŠ: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Spišskom Podhradí [Biela]
+(ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">SPIŠ: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Spišskom Podhradí [Biela]
 (v diecéze sviatok; v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-10-26" rowspan="2">26. október
 Štvrtok
-<i>Demeter</i></td><td>Štvrtok 29. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>Výročie posviacky chrámov, ktorých deň posviacky je neznámy [Biela]
+<small><i>Demeter</i></small></td><td class="middle">Štvrtok 29. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">Výročie posviacky chrámov, ktorých deň posviacky je neznámy [Biela]
 (slávnosť - len v konsekrovaných kostoloch)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-10-27" rowspan="2">27. október
 Piatok
-<i>Sabína</i></td><td>Piatok 29. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>ROŽŇAVA: Výročie posviacky katedrálneho chrámu Nanebovzatia Panny Márie v Rožňave [Biela]
+<small><i>Sabína</i></small></td><td class="middle">Piatok 29. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">ROŽŇAVA: Výročie posviacky katedrálneho chrámu Nanebovzatia Panny Márie v Rožňave [Biela]
 (v diecéze sviatok; v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-10-28">28. október
 Sobota
-<i>Dobromila</i></td><td>Svätých Šimona a Júdu, apoštolov [Červená]
+<small><i>Dobromila</i></small></td><td class="middle">Svätých Šimona a Júdu, apoštolov [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-29">29. október
 Nedeľa
-<i>Klára</i></td><td>30. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-30">30. október
+<small><i>Klára</i></small></td><td class="middle">30. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-10-30">30. október
 Pondelok
-<i>Šimon, Simona</i></td><td>Pondelok 30. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-31">31. október
+<small><i>Šimon, Simona</i></small></td><td class="middle">Pondelok 30. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-10-31">31. október
 Utorok
-<i>Aurélia</i></td><td>Utorok 30. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-01">1. november
+<small><i>Aurélia</i></small></td><td class="middle">Utorok 30. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-01">1. november
 Streda
-<i>Denisa, Denis</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Denisa, Denis</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Všetkých svätých [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-02">2. november
 Štvrtok
-<i>Pamiatka zosnulých</i></td><td>Spomienka na Všetkých zosnulých veriacich [Fialová]
+<small><i>Pamiatka zosnulých</i></small></td><td class="middle">Spomienka na Všetkých zosnulých veriacich [Fialová]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-03">3. november
 Piatok
-<i>Hubert</i></td><td>Piatok 30. týždňa v Cezročnom období [Zelená]
+<small><i>Hubert</i></small></td><td class="middle">Piatok 30. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Martina de Porres, rehoľníka [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-04">4. november
 Sobota
-<i>Karol</i></td><td>Svätého Karola Boromejského, biskupa [Biela]
+<small><i>Karol</i></small></td><td class="middle">Svätého Karola Boromejského, biskupa [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-05">5. november
 Nedeľa
-<i>Imrich</i></td><td>31. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-11-06">6. november
+<small><i>Imrich</i></small></td><td class="middle">31. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-11-06">6. november
 Pondelok
-<i>Renáta</i></td><td>Pondelok 31. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-07">7. november
+<small><i>Renáta</i></small></td><td class="middle">Pondelok 31. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-07">7. november
 Utorok
-<i>René</i></td><td>Utorok 31. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-08">8. november
+<small><i>René</i></small></td><td class="middle">Utorok 31. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-08">8. november
 Streda
-<i>Bohumír</i></td><td>Streda 31. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-09">9. november
+<small><i>Bohumír</i></small></td><td class="middle">Streda 31. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-09">9. november
 Štvrtok
-<i>Teodor</i></td><td>Výročie posviacky Lateránskej baziliky [Biela]
+<small><i>Teodor</i></small></td><td class="middle">Výročie posviacky Lateránskej baziliky [Biela]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-10">10. november
 Piatok
-<i>Tibor</i></td><td>Svätého Leva Veľkého, pápeža a učiteľa Cirkvi [Biela]
+<small><i>Tibor</i></small></td><td class="middle">Svätého Leva Veľkého, pápeža a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-11" rowspan="2">11. november
 Sobota
-<i>Martin, Maroš</i></td><td>Svätého Martina z Tours, biskupa [Biela]
-(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>BRATISLAVA a SPIŠ: Svätého Martina z Tours, biskupa – hlavného patróna diecéz a titul katedrál [Biela]
+<small><i>Martin, Maroš</i></small></td><td class="middle">Svätého Martina z Tours, biskupa [Biela]
+(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">BRATISLAVA a SPIŠ: Svätého Martina z Tours, biskupa – hlavného patróna diecéz a titul katedrál [Biela]
 (sviatok; v katedrálach slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-11-12">12. november
 Nedeľa
-<i>Svätopluk</i></td><td>32. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-11-13">13. november
+<small><i>Svätopluk</i></small></td><td class="middle">32. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-11-13">13. november
 Pondelok
-<i>Stanislav</i></td><td>Pondelok 32. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-14">14. november
+<small><i>Stanislav</i></small></td><td class="middle">Pondelok 32. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-14">14. november
 Utorok
-<i>Irma</i></td><td>Utorok 32. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-15">15. november
+<small><i>Irma</i></small></td><td class="middle">Utorok 32. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-15">15. november
 Streda
-<i>Leopold</i></td><td>Streda 32. týždňa v Cezročnom období [Zelená]
+<small><i>Leopold</i></small></td><td class="middle">Streda 32. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Alberta Veľkého, biskupa a učiteľa Cirkvi [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-16">16. november
 Štvrtok
-<i>Agnesa</i></td><td>Štvrtok 32. týždňa v Cezročnom období [Zelená]
+<small><i>Agnesa</i></small></td><td class="middle">Štvrtok 32. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Margity Škótskej [Biela]
 alebo
 Svätej Gertrúdy, panny [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-17" rowspan="2">17. november
 Piatok
-<i>Klaudia</i></td><td>Svätej Alžbety Uhorskej, rehoľníčky [Biela]
-(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>KOŠICE: Svätej Alžbety Uhorskej, rehoľníčky – titul katedrály a patrónky mesta Košice [Biela]
+<small><i>Klaudia</i></small></td><td class="middle">Svätej Alžbety Uhorskej, rehoľníčky [Biela]
+(spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">KOŠICE: Svätej Alžbety Uhorskej, rehoľníčky – titul katedrály a patrónky mesta Košice [Biela]
 (slávnosť iba v katedrále)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-11-18">18. november
 Sobota
-<i>Eugen</i></td><td>Sobota 32. týždňa v Cezročnom období [Zelená]
+<small><i>Eugen</i></small></td><td class="middle">Sobota 32. týždňa v Cezročnom období [Zelená]
 alebo
 Výročie posviacky bazilík svätých Petra a Pavla, apoštolov [Biela]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-19">19. november
 Nedeľa
-<i>Alžbeta</i></td><td>33. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-11-20" rowspan="3">20. november
+<small><i>Alžbeta</i></small></td><td class="middle">33. nedeľa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-11-20" rowspan="3">20. november
 Pondelok
-<i>Félix</i></td><td>Pondelok 33. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>KOŠICE:
+<small><i>Félix</i></small></td><td class="middle">Pondelok 33. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">KOŠICE:
 alebo
 Blahoslavenej Anny Kolesárovej, panny a mučenice [Červená]
-(ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>NITRA: Výročie posviacky katedrálneho chrámu svätého Emeráma, biskupa a mučeníka [Biela]
+(ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">NITRA: Výročie posviacky katedrálneho chrámu svätého Emeráma, biskupa a mučeníka [Biela]
 (v diecéze sviatok; v katedrále slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-11-21">21. november
 Utorok
-<i>Elvíra</i></td><td>Obetovanie preblahoslavenej Panny Márie [Biela]
+<small><i>Elvíra</i></small></td><td class="middle">Obetovanie preblahoslavenej Panny Márie [Biela]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-22">22. november
 Streda
-<i>Cecília</i></td><td>Svätej Cecílie, panny a mučenice [Červená]
+<small><i>Cecília</i></small></td><td class="middle">Svätej Cecílie, panny a mučenice [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-23">23. november
 Štvrtok
-<i>Klement</i></td><td>Štvrtok 33. týždňa v Cezročnom období [Zelená]
+<small><i>Klement</i></small></td><td class="middle">Štvrtok 33. týždňa v Cezročnom období [Zelená]
 alebo
 Svätého Klementa I., pápeža a mučeníka [Červená]
 alebo
 Svätého Kolumbána, opáta [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-24">24. november
 Piatok
-<i>Emília</i></td><td>Svätých Ondreja Dung-Laka, kňaza, a spoločníkov, mučeníkov [Červená]
+<small><i>Emília</i></small></td><td class="middle">Svätých Ondreja Dung-Laka, kňaza, a spoločníkov, mučeníkov [Červená]
 (spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-25">25. november
 Sobota
-<i>Katarína</i></td><td>Sobota 33. týždňa v Cezročnom období [Zelená]
+<small><i>Katarína</i></small></td><td class="middle">Sobota 33. týždňa v Cezročnom období [Zelená]
 alebo
 Svätej Kataríny Alexandrijskej, panny a mučenice [Červená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-26">26. november
 Nedeľa
-<i>Kornel</i></td><td>34. nedeľa v Cezročnom období – Nášho Pána Ježiša Krista, Kráľa neba i zeme [Biela]
+<small><i>Kornel</i></small></td><td class="middle">34. nedeľa v Cezročnom období – Nášho Pána Ježiša Krista, Kráľa neba i zeme [Biela]
 (slávnosť)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr></tbody><tbody><tr><td class="meniny" id="2023-11-27">27. november
 Pondelok
-<i>Milan</i></td><td>Pondelok 34. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-28">28. november
+<small><i>Milan</i></small></td><td class="middle">Pondelok 34. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-28">28. november
 Utorok
-<i>Henrieta</i></td><td>Utorok 34. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-29">29. november
+<small><i>Henrieta</i></small></td><td class="middle">Utorok 34. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-29">29. november
 Streda
-<i>Vratko</i></td><td>Streda 34. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-30" rowspan="2">30. november
+<small><i>Vratko</i></small></td><td class="middle">Streda 34. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-11-30" rowspan="2">30. november
 Štvrtok
-<i>Ondrej, Andrej</i></td><td>Svätého Ondreja, apoštola [Červená]
-(sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td>KOŠICE: Svätého Ondreja, apoštola – hlavného patróna arcidiecézy [Červená]
+<small><i>Ondrej, Andrej</i></small></td><td class="middle">Svätého Ondreja, apoštola [Červená]
+(sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="middle">KOŠICE: Svätého Ondreja, apoštola – hlavného patróna arcidiecézy [Červená]
 (sviatok)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr></tr><tr><td class="meniny" id="2023-12-01">1. december
 Piatok
-<i>Edmund</i></td><td>Piatok 34. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-12-02">2. december
+<small><i>Edmund</i></small></td><td class="middle">Piatok 34. týždňa v Cezročnom období [Zelená]</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-12-02">2. december
 Sobota
-<i>Bibiána</i></td><td>Sobota 34. týždňa v Cezročnom období [Zelená]
+<small><i>Bibiána</i></small></td><td class="middle">Sobota 34. týždňa v Cezročnom období [Zelená]
 alebo
 Preblahoslavenej Panny Márie v sobotu [Biela]
 (ľubovoľná spomienka)</td><td>Cezročné obdobie; lit. rok: 2023; ned./fer. cyklus: A/I</td></tr><tr><td class="meniny" id="2023-12-03">3. december
 Nedeľa
-<i>Oldrich</i></td><td>1. adventná nedeľa [rok B, cyklus II.] [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody><tbody><tr><td class="meniny" id="2023-12-04" rowspan="2">4. december
+<small><i>Oldrich</i></small></td><td class="middle">1. adventná nedeľa [rok B, cyklus II.] [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody><tbody><tr><td class="meniny" id="2023-12-04" rowspan="2">4. december
 Pondelok
-<i>Barbora, Barbara</i></td><td>Pondelok po 1. adventnej nedeli [Fialová]
+<small><i>Barbora, Barbara</i></small></td><td class="middle">Pondelok po 1. adventnej nedeli [Fialová]
 alebo
 Svätého Jána Damascénskeho, kňaza a učiteľa Cirkvi [Biela]
 alebo
 Svätej Barbory, panny a mučenice [Červená]
-(ľubovoľná spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td>BANSKÁ BYSTRICA (len v katedrále): Svätého Františka Xaverského, kňaza – hlavného patróna diecézy a titul katedrály [Biela]
+(ľubovoľná spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="middle">BANSKÁ BYSTRICA (len v katedrále): Svätého Františka Xaverského, kňaza – hlavného patróna diecézy a titul katedrály [Biela]
 (slávnosť presunutá z nedele)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr></tr><tr><td class="meniny" id="2023-12-05">5. december
 Utorok
-<i>Oto</i></td><td>Utorok po 1. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-06" rowspan="2">6. december
+<small><i>Oto</i></small></td><td class="middle">Utorok po 1. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-06" rowspan="2">6. december
 Streda
-<i>Mikuláš</i></td><td>Streda po 1. adventnej nedeli [Fialová]
+<small><i>Mikuláš</i></small></td><td class="middle">Streda po 1. adventnej nedeli [Fialová]
 alebo
 Svätého Mikuláša, biskupa [Biela]
-(ľubovoľná spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td>PREŠOV: Svätého Mikuláša, biskupa – titul konkatedrály [Biela]
+(ľubovoľná spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="middle">PREŠOV: Svätého Mikuláša, biskupa – titul konkatedrály [Biela]
 (slávnosť - iba v konkatedrále)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr></tr><tr><td class="meniny" id="2023-12-07">7. december
 Štvrtok
-<i>Ambróz</i></td><td>Svätého Ambróza, biskupa a učiteľa Cirkvi [Biela]
+<small><i>Ambróz</i></small></td><td class="middle">Svätého Ambróza, biskupa a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-08">8. december
 Piatok
-<i>Marína</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Marína</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Nepoškvrnené počatie Preblahoslavenej Panny Márie [Biela]
 (slávnosť)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-09">9. december
 Sobota
-<i>Izabela</i></td><td>Sobota po 1. adventnej nedeli [Fialová]
+<small><i>Izabela</i></small></td><td class="middle">Sobota po 1. adventnej nedeli [Fialová]
 alebo
 Svätého Jána Diega Cuauhtlatoatzina [Biela]
 (ľubovoľná spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-10">10. december
 Nedeľa
-<i>Radúz</i></td><td>2. adventná nedeľa [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody><tbody><tr><td class="meniny" id="2023-12-11">11. december
+<small><i>Radúz</i></small></td><td class="middle">2. adventná nedeľa [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody><tbody><tr><td class="meniny" id="2023-12-11">11. december
 Pondelok
-<i>Hilda</i></td><td>Pondelok po 2. adventnej nedeli [Fialová]
+<small><i>Hilda</i></small></td><td class="middle">Pondelok po 2. adventnej nedeli [Fialová]
 alebo
 Svätého Damaza I., pápeža [Biela]
 (ľubovoľná spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-12">12. december
 Utorok
-<i>Otília</i></td><td>Utorok po 2. adventnej nedeli [Fialová]
+<small><i>Otília</i></small></td><td class="middle">Utorok po 2. adventnej nedeli [Fialová]
 alebo
 Preblahoslavenej Panny Márie Guadalupskej [Biela]
 (ľubovoľná spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-13">13. december
 Streda
-<i>Lucia</i></td><td>Svätej Lucie, panny a mučenice [Červená]
+<small><i>Lucia</i></small></td><td class="middle">Svätej Lucie, panny a mučenice [Červená]
 (spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-14">14. december
 Štvrtok
-<i>Branislava, Bronislava</i></td><td>Svätého Jána od Kríža, kňaza a učiteľa Cirkvi [Biela]
+<small><i>Branislava, Bronislava</i></small></td><td class="middle">Svätého Jána od Kríža, kňaza a učiteľa Cirkvi [Biela]
 (spomienka)</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-15">15. december
 Piatok
-<i>Ivica</i></td><td>Piatok po 2. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-16">16. december
+<small><i>Ivica</i></small></td><td class="middle">Piatok po 2. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-16">16. december
 Sobota
-<i>Albína</i></td><td>Sobota po 2. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-17">17. december
+<small><i>Albína</i></small></td><td class="middle">Sobota po 2. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-17">17. december
 Nedeľa
-<i>Kornélia</i></td><td>3. adventná nedeľa [Ružová] [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody><tbody><tr><td class="meniny" id="2023-12-18">18. december
+<small><i>Kornélia</i></small></td><td class="middle">3. adventná nedeľa [Ružová] [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody><tbody><tr><td class="meniny" id="2023-12-18">18. december
 Pondelok
-<i>Sláva, Slávka</i></td><td>Pondelok po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-19">19. december
+<small><i>Sláva, Slávka</i></small></td><td class="middle">Pondelok po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-19">19. december
 Utorok
-<i>Judita</i></td><td>Utorok po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-20">20. december
+<small><i>Judita</i></small></td><td class="middle">Utorok po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-20">20. december
 Streda
-<i>Dagmara</i></td><td>Streda po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-21">21. december
+<small><i>Dagmara</i></small></td><td class="middle">Streda po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-21">21. december
 Štvrtok
-<i>Bohdan</i></td><td>Štvrtok po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-22">22. december
+<small><i>Bohdan</i></small></td><td class="middle">Štvrtok po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-22">22. december
 Piatok
-<i>Adela</i></td><td>Piatok po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-23">23. december
+<small><i>Adela</i></small></td><td class="middle">Piatok po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-23">23. december
 Sobota
-<i>Nadežda</i></td><td>Sobota po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-24">24. december
+<small><i>Nadežda</i></small></td><td class="middle">Sobota po 3. adventnej nedeli [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-24">24. december
 Nedeľa
-<i>Adam a Eva</i></td><td>4. adventná nedeľa [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody><tbody><tr><td class="meniny" id="2023-12-25">25. december
+<small><i>Adam a Eva</i></small></td><td class="middle">4. adventná nedeľa [Fialová]</td><td>Adventné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody><tbody><tr><td class="meniny" id="2023-12-25">25. december
 Pondelok
-<i>Prvý sviatok vianočný</i></td><td>PRIKÁZANÁ SLÁVNOSŤ:
+<small><i>Prvý sviatok vianočný</i></small></td><td class="middle">PRIKÁZANÁ SLÁVNOSŤ:
 Narodenie Pána [Biela]
 (slávnosť)</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-26">26. december
 Utorok
-<i>Štefan</i></td><td>Svätého Štefana, prvého mučeníka [Červená]
+<small><i>Štefan</i></small></td><td class="middle">Svätého Štefana, prvého mučeníka [Červená]
 (sviatok)</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-27">27. december
 Streda
-<i>Filoména</i></td><td>Svätého Jána, apoštola a evanjelistu [Biela]
+<small><i>Filoména</i></small></td><td class="middle">Svätého Jána, apoštola a evanjelistu [Biela]
 (sviatok)</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-28">28. december
 Štvrtok
-<i>Ivana, Ivona</i></td><td>Svätých Neviniatok, mučeníkov [Červená]
+<small><i>Ivana, Ivona</i></small></td><td class="middle">Svätých Neviniatok, mučeníkov [Červená]
 (sviatok)</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-29">29. december
 Piatok
-<i>Milada</i></td><td>Piaty deň v oktáve narodenia Pána [Biela]</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-30">30. december
+<small><i>Milada</i></small></td><td class="middle">Piaty deň v oktáve narodenia Pána [Biela]</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-30">30. december
 Sobota
-<i>Dávid</i></td><td>Šiesty deň v oktáve narodenia Pána [Biela]</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-31">31. december
+<small><i>Dávid</i></small></td><td class="middle">Šiesty deň v oktáve narodenia Pána [Biela]</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr><tr><td class="meniny" id="2023-12-31">31. december
 Nedeľa
-<i>Silvester</i></td><td>Svätej rodiny – Ježiša, Márie a Jozefa [Biela]
+<small><i>Silvester</i></small></td><td class="middle">Svätej rodiny – Ježiša, Márie a Jozefa [Biela]
 (sviatok)</td><td>Vianočné obdobie; lit. rok: 2024; ned./fer. cyklus: B/II</td></tr></tbody></table>
 </body>
+<script>
+    naDnes();
+</script>
 </html>
