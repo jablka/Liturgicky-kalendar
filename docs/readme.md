@@ -8,7 +8,7 @@ Prejdite na:
 3. [Plain](https://jablka.github.io/Liturgicky-kalendar/onepage_plain.html)  
 (tri stĺpce, bez farebného štýlovania)
 
-4. [Kalendár .ics]( https://jablka.github.io/Liturgicky-kalendar/kalendarLC2023.ics)  
+4. [Kalendár .ics](https://jablka.github.io/Liturgicky-kalendar/kalendarLC2023.ics)  
 (vo forme .ics iCalendar súboru)
 
 5. archív: [staršia verzia](https://jablka.github.io/Liturgicky-kalendar/old/onepage.html)  
