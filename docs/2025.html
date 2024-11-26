@@ -90,10 +90,10 @@
       elem.style = 'outline: DodgerBlue solid 4px;'
     
       let pelem = document.getElementById(pformattedDate) // previous elements
-      if (window.history.length===1) {
+      // if (window.history.length===1) {
         pelem.scrollIntoView({behavior: 'instant', block: 'center'});
         elem.scrollIntoView({behavior: 'smooth', block: 'center'});
-      }
+      // }
     
       console.log(pformattedDate);
       console.log(formattedDate);
