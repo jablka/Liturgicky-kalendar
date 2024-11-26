@@ -1,0 +1,6970 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>LK (Nov 2024 ~ Dec 2025)</title>
+<script>
+    function init(){
+      document.write(
+       "<div id='offlineMenu'>"
+      +"    <button id='lcToday' onclick='naDnesK()' title='Prechod na dnešný deň'>Dnes</button>"
+      +"    <button id='lcFontSizeSmaller' onclick='fontMinus()' title='Zmenšiť písmo'>A-</button>"
+      +"    <input id='lcFontSize' onchange='setFontSize(this.value);' onclick='this.select();' "
+      +           " title='Veľkosť písma' value='"+getFontSize()+"%' />"
+      +"    <button id='lcFontSizeBigger' onclick='fontPlus()' title='Zväčšiť písmo'>A+</button>"
+      +"    <button id='lcRezim' onclick='zmenRezim()' title='Režim: svetlý / tmavý'>Režim</button>"
+      +"</div>");
+    
+      applyRezim();
+    
+      root = document.querySelector(':root');
+      setFontSize(getFontSize());
+    }
+    
+    function applyRezim(){
+      if(jeTmavy())
+        document.body.classList.add('dark');
+      else document.body.classList.remove('dark');
+    }
+    
+    function jeTmavy() {
+      return localStorage.getItem('rezim')=='dark';
+    }
+    
+    function zmenRezim(){
+      localStorage.setItem('rezim', ((jeTmavy())   ?   ''   :   'dark'));
+      applyRezim();
+    }
+
+    function naDnesK(){ // iba pri Kliknutí !
+      // moje:
+      // zisťujeme súčasný dátum:
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+      const day = String(currentDate.getDate()).padStart(2, '0'); // 
+    
+      // dva dni pred
+      const prev_date = new Date();
+      prev_date.setDate(prev_date.getDate() - 2); // Subtract 
+      const pyear = prev_date.getFullYear();
+      const pmonth = String(prev_date.getMonth() + 1).padStart(2, '0');
+      const pday = String(prev_date.getDate()).padStart(2, '0'); // 
+    
+      var formattedDate = `${year}-${month}-${day}`; // rok-mesiac-deň
+      var pformattedDate = `${pyear}-${pmonth}-${pday}`;
+      
+        // window.location.hash = formattedDate; 
+      let elem = document.getElementById(formattedDate)
+      elem.style = 'outline: DodgerBlue solid 4px;'
+    
+      let pelem = document.getElementById(pformattedDate) // previous elements
+      // pelem.scrollIntoView({behavior: 'instant', block: 'center'});
+      elem.scrollIntoView({behavior: 'smooth', block: 'center'});
+    
+      console.log(pformattedDate);
+      console.log(formattedDate);
+    }
+    
+    function naDnes(){ //úvodné
+      // moje:
+      // zisťujeme súčasný dátum:
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+      const day = String(currentDate.getDate()).padStart(2, '0'); // 
+    
+      // dva dni pred
+      const prev_date = new Date();
+      prev_date.setDate(prev_date.getDate() - 2); // Subtract 
+      const pyear = prev_date.getFullYear();
+      const pmonth = String(prev_date.getMonth() + 1).padStart(2, '0');
+      const pday = String(prev_date.getDate()).padStart(2, '0'); // 
+    
+      var formattedDate = `${year}-${month}-${day}`; // rok-mesiac-deň
+      var pformattedDate = `${pyear}-${pmonth}-${pday}`;
+      
+        // window.location.hash = formattedDate; 
+      let elem = document.getElementById(formattedDate)
+      elem.style = 'outline: DodgerBlue solid 4px;'
+    
+      let pelem = document.getElementById(pformattedDate) // previous elements
+      if (window.history.length===1) {
+        pelem.scrollIntoView({behavior: 'instant', block: 'center'});
+        elem.scrollIntoView({behavior: 'smooth', block: 'center'});
+      }
+    
+      console.log(pformattedDate);
+      console.log(formattedDate);
+    }
+    
+    var font_size_min = 40,   // percentá
+        font_size_max = 500,
+        font_size_krok = 10;
+    var root;   // = document.querySelector(':root');    -> init();
+    
+    function fontMinus(){
+      setFontSize(getFontSize() - font_size_krok);
+    }
+    function fontPlus(){
+      setFontSize(getFontSize() + font_size_krok);
+    }
+    function getFontSize() {
+      var font_size = localStorage.getItem('fontSize');
+      if(!font_size) font_size = 100;
+      return parseInt(font_size);
+    }
+    function setFontSize(font_size) {
+      font_size = parseInt(font_size);
+      if(!font_size) font_size = 100;
+      font_size = Math.min(font_size_max, Math.max(font_size, font_size_min));    // do limitov
+      localStorage.setItem('fontSize', font_size);
+      root.style.setProperty('--zoom', font_size+'%');
+      document.getElementById('lcFontSize').value = font_size+'%';
+      console.log('font_size',font_size);
+    
+      return font_size;
+    }
+
+    function mf(where) {
+      window.location.href = 'https://lc.kbs.sk/static/'+where+'.html';
+      // window.location.href = where+'.html';
+      // window.open('https://lc.kbs.sk/static/'+where+'.html', '_blank');      
+    }
+  </script>
+<style>
+    :root {   
+      --farba-pozadie: white;
+      --farba-pismo: black;
+    
+      --farba-cierna: black;
+      --farba-biela: white;
+      --farba-seda: gray;
+      --farba-svetlo-seda: #CCC;
+    
+      --zoom: 100%;
+      --zoom1: calc( var(--zoom) / 100 );
+    }
+    
+    html {
+      font-size: var(--zoom);
+      padding: 0 0 5rem 0;
+    }
+    
+    body {
+      max-width: 50em;
+      margin: auto;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+        
+    h1, h2, h3, h4, h5 {
+      /* margin: 2rem 0 .5rem 0; */ /*mažem*/
+        margin: 0.5rem 0 0.5rem 0; /*moje*/
+    }
+    
+    .lcWD, .lcND {  /* deň v týždni a meniny */
+      /* font-size: 70%; */
+      color: var(--farba-seda);
+    }
+    
+    .lcND {
+      font-size: 84%; /* meniny menšie. moje */
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block; /*pre apku, moje!*/
+    }  
+    
+    .lcHEAD {
+      border-color: var(--farba-seda);
+    }
+    
+    /******** lcHEAD ************/    
+
+    .lcHEAD {
+      /* border-left: .3rem solid var(--farba-seda); */ /*bez farieb, moje*/
+      /* padding-left: .5rem; */ /*bez farieb, moje*/
+      margin: .5rem 0 .5rem 0;
+    }
+    
+    .lcHEAD p {
+      margin: .303rem;
+      margin-bottom: 0;
+      padding: 0;
+    }
+    .lcHEAD h2 {
+      font-size: 0.9rem; /*moje upravené*/
+      margin-top: .5rem;
+    }
+    .lcHEAD h2 span.lcMOD {
+      font-size: 90%;
+      font-weight: normal;
+    }
+    .lcHEAD h2 i {
+      /* display: block; */ /*mažem*/
+      font-size: 90%;
+      font-weight: normal;
+      /* padding-top: .2rem; */ /*mažem*/
+      /* padding-left: 2.5rem; */ /*mažem*/
+    }
+    .lcFARBA {
+      /* width: 1em; */
+      /* height: 1em; */
+      /* baseline-shift: .1em; */
+      padding: .1rem .2rem;
+      border-radius: 40%;
+      font-size: 50%;
+      font-weight: normal;
+    }
+    
+    .lcFARBA::after {
+      content: "\a0";
+    }
+
+    .lcMOD {
+      font-style: italic;
+      font-weight: normal;
+    }
+    
+    .lcHEAD .lcMOD {
+      display: inline;
+    }
+    
+    /* ******************************************* */
+    /*             FAREBNE DELENIE                 */
+    /* ******************************************* */
+
+    .lcHEAD {
+      /* border-left: .5rem solid var(--farba-feria); */ /*bez farieb, moje*/
+      /* padding-left: .5rem; */ /*bez farieb, moje*/
+    }
+
+    .lcHEAD h2 {
+      /* background-color: var(--farba-feria-p); */ /*moje mažem*/
+      /* margin-left: -.5rem;
+      padding: .5rem; */
+      /* background-color-opacity: .3; */
+    }
+    
+    /* ///////////////// Liturgicke farby ///////////// */
+    #lc .lcHEAD span.lcFARBA {
+      /* display: inline-block;  */ /*mažem*/
+      /* font-size: 90%; */ /*mažem*/
+      font-family: monospace;
+      padding: 0px 3px /*!important*/;
+      margin: 0 4px;
+    	border: 1px solid black;
+      vertical-align: middle;
+      /* border-radius: 3px; */ /*mažem*/
+      margin-left: 7px;
+    }
+    
+    .W { background-color: white; color: black /*!important*/; }
+    .G { background-color: green; color: white; }
+    .V { background-color: purple; color: white; }
+    .R { background-color: red; color: white; }
+    .P { background-color: hotpink; color: black /*!important*/; } /*hotpink moje*/
+    /*.GOLD { background-color: gold; color: black !important; }*/
+    .B { background-color: black; color: white; }
+    
+    
+    /* Tmavý režim *********************/
+    body.dark {
+      --farba-pozadie: #222;
+      --farba-pismo: white;
+    
+      background-color: var(--farba-pozadie);
+      color: var(--farba-pismo);
+    }
+    
+    /**********************************/
+    
+    .lcGEN {
+      display: inline; /*moje*/
+      /* font-size: 75%; */ /*mažem*/
+      color: var(--farba-seda);
+    }
+    
+    /********************************************************/
+    
+    #offlineMenu {
+      margin-bottom: 1em;
+      display: flex;
+      position: sticky;
+      top: 0;
+      gap: .5em;
+      font-size: 100%;
+      /* justify-content: space-between; */
+    }
+    #lcFontSize {
+      opacity: .5;
+      text-align: center;
+      font-size: 100%;
+      width: 5em;
+    }
+    #offlineMenu button {
+      opacity: .5;
+      flex-grow: 1;
+      height: 2rem;
+      vertical-align: middle;
+      font-size: 1rem;
+      font-weight: bold;
+      /* display: block; */
+    }
+    #offlineMenu button:hover {
+      cursor: pointer;
+    }
+    #offlineMenu button:hover,
+    #lcFontSize:hover {
+      opacity:.8;
+    }
+    #lcFontSizeSmaller::first-letter {
+      font-size: 80%;
+    }
+    #lcFontSizeBigger::first-letter {
+      font-size: 120%;
+    }
+
+/*********************************/
+/* pridávam moje, minimal style: */
+/*********************************/ 
+table,
+td {
+    border: 1px solid gray; 
+    border-collapse: collapse; 
+}
+  
+td {
+  padding: 1rem; /**/
+  /* white-space: nowrap; */
+  cursor: pointer;
+  user-select: none; /* Standard syntax, pre moju apku */
+}
+  
+tbody {
+    border-style: ridge;
+    border-width: 5px;
+    border-color: coral
+}
+
+h1 {
+    font-size: 100%;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.lcHEAD {
+  line-height: 1.5;
+}
+
+.sp {
+  color: var(--farba-seda);  
+}
+
+div.lcHEAD:not(:first-of-type) {
+  color: var(--farba-seda);  
+  line-height: normal;
+}
+</style>
+</head>
+<body id="lc">
+<script>init();</script>
+<table><tbody><tr><td id="2024-11-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+1 november </span>
+<span class="lcND">meniny: Denisa, Denis</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ:
+<span>Všetkých svätých</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+2 november </span>
+<span class="lcND">Pamiatka zosnulých</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Spomienka na Všetkých zosnulých veriacich</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA V"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+3 november </span>
+<span class="lcND">meniny: Hubert</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>31. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr></tbody><tbody><tr><td id="2024-11-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+4 november </span>
+<span class="lcND">meniny: Karol</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Karola Boromejského, biskupa</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+5 november </span>
+<span class="lcND">meniny: Imrich</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div><div class="lcHEAD">
+<h2>
+<span>TRNAVA, NITRA, BANSKÁ BYSTRICA, ROŽŇAVA:<br/> <span class="lcMOD">al.</span> Svätého Imricha</span><span class="lcFARBA W"></span>
+
+</h2>
+</div></td></tr><tr><td id="2024-11-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+6 november </span>
+<span class="lcND">meniny: Renáta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+7 november </span>
+<span class="lcND">meniny: René</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+8 november </span>
+<span class="lcND">meniny: Bohumír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+9 november </span>
+<span class="lcND">meniny: Teodor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Výročie posviacky Lateránskej baziliky</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+10 november </span>
+<span class="lcND">meniny: Tibor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>32. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr></tbody><tbody><tr><td id="2024-11-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+11 november </span>
+<span class="lcND">meniny: Martin, Maroš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Martina z Tours, biskupa</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+</div><div class="lcHEAD">
+<h2>
+<span>BRATISLAVA a SPIŠ: Svätého Martina z Tours, biskupa – hlavného patróna diecéz a titul katedrál</span>
+<i class="lcTYP">(sviatok; v katedrálach slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+12 november </span>
+<span class="lcND">meniny: Svätopluk</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jozafáta, biskupa a mučeníka</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+13 november </span>
+<span class="lcND">meniny: Stanislav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 32. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+14 november </span>
+<span class="lcND">meniny: Irma</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 32. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+15 november </span>
+<span class="lcND">meniny: Leopold</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 32. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Alberta Veľkého, biskupa a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+
+</h2>
+</div></td></tr><tr><td id="2024-11-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+16 november </span>
+<span class="lcND">meniny: Agnesa</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 32. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Margity Škótskej</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Gertrúdy, panny</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+</div></td></tr><tr><td id="2024-11-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+17 november </span>
+<span class="lcND">meniny: Klaudia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>33. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div><div class="lcHEAD">
+<h2>
+<span>KOŠICE: Svätej Alžbety Uhorskej, rehoľníčky – titul katedrály a patrónky mesta Košice</span>
+<i class="lcTYP">(slávnosť; iba v katedrále)</i><span class="lcFARBA W"></span>
+</h2>
+</div></td></tr></tbody><tbody><tr><td id="2024-11-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+18 november </span>
+<span class="lcND">meniny: Eugen</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 33. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Výročie posviacky bazilík svätých Petra a Pavla, apoštolov</span><span class="lcFARBA W"></span>
+
+</h2>
+</div></td></tr><tr><td id="2024-11-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+19 november </span>
+<span class="lcND">meniny: Alžbeta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 33. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+20 november </span>
+<span class="lcND">meniny: Félix</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 33. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div><div class="lcHEAD">
+<h2>
+<span>KOŠICE:<br/> <span class="lcMOD">al.</span> Blahoslavenej Anny Kolesárovej, panny a mučenice</span><span class="lcFARBA R"></span>
+
+</h2>
+</div><div class="lcHEAD">
+<h2>
+<span>NITRA: Výročie posviacky katedrálneho chrámu svätého Emeráma, biskupa a mučeníka</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+21 november </span>
+<span class="lcND">meniny: Elvíra</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Obetovanie preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+22 november </span>
+<span class="lcND">meniny: Cecília</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Cecílie, panny a mučenice</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+23 november </span>
+<span class="lcND">meniny: Klement</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 33. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Klimenta I., pápeža a mučeníka</span><span class="lcFARBA R"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Kolumbána, opáta</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+</div></td></tr><tr><td id="2024-11-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+24 november </span>
+<span class="lcND">meniny: Emília</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>34. nedeľa v Cezročnom období – Nášho Pána Ježiša Krista, Kráľa neba i zeme</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+</div></td></tr></tbody><tbody><tr><td id="2024-11-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+25 november </span>
+<span class="lcND">meniny: Katarína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Kataríny Alexandrijskej, panny a mučenice</span><span class="lcFARBA R"></span>
+
+</h2>
+</div></td></tr><tr><td id="2024-11-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+26 november </span>
+<span class="lcND">meniny: Kornel</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+27 november </span>
+<span class="lcND">meniny: Milan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+28 november </span>
+<span class="lcND">meniny: Henrieta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+29 november </span>
+<span class="lcND">meniny: Vratko</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+</div></td></tr><tr><td id="2024-11-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+30 november </span>
+<span class="lcND">meniny: Ondrej, Andrej</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Ondreja, apoštola</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+</div><div class="lcHEAD">
+<h2>
+<span>KOŠICE: Svätého Ondreja, apoštola – hlavného patróna arcidiecézy</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+</div></td></tr><tr><td id="2024-12-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+1 december </span>
+<span class="lcND">meniny: Edmund</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>1. adventná nedeľa [rok C, cyklus I.]</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2024-12-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+2 december </span>
+<span class="lcND">meniny: Bibiána</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 1. adventnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+3 december </span>
+<span class="lcND">meniny: Oldrich</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Františka Xaverského, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>BANSKÁ BYSTRICA: Svätého Františka Xaverského, kňaza – hlavného patróna diecézy a titul katedrály</span>
+<i class="lcTYP">(sviatok, v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+4 december </span>
+<span class="lcND">meniny: Barbora, Barbara</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 1. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána Damascénskeho, kňaza a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Barbory, panny a mučenice</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2024-12-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+5 december </span>
+<span class="lcND">meniny: Oto</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 1. adventnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+6 december </span>
+<span class="lcND">meniny: Mikuláš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 1. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Mikuláša, biskupa</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2024-12-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+7 december </span>
+<span class="lcND">meniny: Ambróz</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Ambróza, biskupa a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+8 december </span>
+<span class="lcND">meniny: Marína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>2. adventná nedeľa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2024-12-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+9 december </span>
+<span class="lcND">meniny: Izabela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Nepoškvrnené počatie Panny Márie</span>
+<i class="lcTYP">(slávnosť presunutá z nedele)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+10 december </span>
+<span class="lcND">meniny: Radúz</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 2. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie Loretánskej</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2024-12-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+11 december </span>
+<span class="lcND">meniny: Hilda</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 2. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Damaza I., pápeža</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2024-12-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+12 december </span>
+<span class="lcND">meniny: Otília</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 2. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie Guadalupskej</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2024-12-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+13 december </span>
+<span class="lcND">meniny: Lucia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Lucie, panny a mučenice</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+14 december </span>
+<span class="lcND">meniny: Branislava, Bronislava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jána od Kríža, kňaza a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+15 december </span>
+<span class="lcND">meniny: Ivica</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>
+3. adventná nedeľa (Nedeľa Gaudete)
+ </span><span class="lcFARBA V"></span><span class="lcFARBA P"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2024-12-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+16 december </span>
+<span class="lcND">meniny: Albína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 3. adventnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+17 december </span>
+<span class="lcND">meniny: Kornélia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 3. adventnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+18 december </span>
+<span class="lcND">meniny: Sláva, Slávka</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 3. adventnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+19 december </span>
+<span class="lcND">meniny: Judita</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 3. adventnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+20 december </span>
+<span class="lcND">meniny: Dagmara</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 3. adventnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+21 december </span>
+<span class="lcND">meniny: Bohdan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 3. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Petra Kanízia, kňaza a učiteľa Cirkvi).</span></h2>
+
+</div></td></tr><tr><td id="2024-12-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+22 december </span>
+<span class="lcND">meniny: Adela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>4. adventná nedeľa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2024-12-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+23 december </span>
+<span class="lcND">meniny: Nadežda</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 4. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Jána Kentského, kňaza)</span></h2>
+
+</div></td></tr><tr><td id="2024-12-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+24 december </span>
+<span class="lcND">meniny: Adam a Eva</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 4. adventnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+25 december </span>
+<span class="lcND">Prvý sviatok vianočný</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Narodenie Pána</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+26 december </span>
+<span class="lcND">meniny: Štefan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Štefana, prvého mučeníka</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+27 december </span>
+<span class="lcND">meniny: Filoména</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jána, apoštola a evanjelistu</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+28 december </span>
+<span class="lcND">meniny: Ivana, Ivona</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Neviniatok, mučeníkov</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+29 december </span>
+<span class="lcND">meniny: Milada</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej rodiny – Ježiša, Márie a Jozefa</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2024-12-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+30 december </span>
+<span class="lcND">meniny: Dávid</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Šiesty deň v oktáve narodenia Pána</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2024-12-31" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+31 december </span>
+<span class="lcND">meniny: Silvester</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Siedmy deň v oktáve narodenia Pána</span><span class="lcFARBA W"></span>
+<br/><span class="sp">(svätého Silvestra I., pápeža)</span></h2>
+
+</div></td></tr><tr><td id="2025-01-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+1 január </span>
+<span class="lcND">Nový rok</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Panny Márie Bohorodičky</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+2 január </span>
+<span class="lcND">meniny: Alexandra, Karina</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Bazila Veľkého a Gregora Naziánzskeho, biskupov a učiteľov Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+3 január </span>
+<span class="lcND">meniny: Daniela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok vo Vianočnom období</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Najsvätejšieho mena Ježiš</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-01-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+4 január </span>
+<span class="lcND">meniny: Drahoslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota vo Vianočnom období</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+5 január </span>
+<span class="lcND">meniny: Andrea</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>2. nedeľa po narodení Pána</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-01-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+6 január </span>
+<span class="lcND">meniny: Antónia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Zjavenie Pána</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+7 január </span>
+<span class="lcND">meniny: Bohuslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po Zjavení Pána</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Rajmunda z Peňafortu, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-01-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+8 január </span>
+<span class="lcND">meniny: Severín</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po Zjavení Pána</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+9 január </span>
+<span class="lcND">meniny: Alexej</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po Zjavení Pána</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+10 január </span>
+<span class="lcND">meniny: Daša</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po Zjavení Pána</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+11 január </span>
+<span class="lcND">meniny: Malvína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po Zjavení Pána</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+12 január </span>
+<span class="lcND">meniny: Ernest</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Krst Krista Pána</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-01-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+13 január </span>
+<span class="lcND">meniny: Rastislav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 1. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Hilára, biskupa a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-01-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+14 január </span>
+<span class="lcND">meniny: Radovan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 1. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+15 január </span>
+<span class="lcND">meniny: Dobroslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 1. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+16 január </span>
+<span class="lcND">meniny: Kristína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 1. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+17 január </span>
+<span class="lcND">meniny: Nataša</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Antona, opáta</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+18 január </span>
+<span class="lcND">meniny: Bohdana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 1. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-01-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+19 január </span>
+<span class="lcND">meniny: Drahomíra, Mário</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>2. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-01-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+20 január </span>
+<span class="lcND">meniny: Dalibor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 2. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Fabiána, pápeža a mučeníka</span><span class="lcFARBA R"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Šebastiána, mučeníka</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>ORDINARIÁT OS a OZ SR: Svätého Šebastiána, mučeníka – hlavného patróna ordinariátu a titul katedrály</span>
+<i class="lcTYP">(v ordinariáte sviatok, v katedrále slávnosť)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+21 január </span>
+<span class="lcND">meniny: Vincent</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Agnesy, panny a mučenice</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+22 január </span>
+<span class="lcND">meniny: Zora</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 2. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Vincenta, diakona a mučeníka</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-01-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+23 január </span>
+<span class="lcND">meniny: Miloš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 2. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>BRATISLAVA (len v katedrále): Svätého Jána Almužníka, biskupa</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+24 január </span>
+<span class="lcND">meniny: Timotej</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Františka Saleského, biskupa a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+25 január </span>
+<span class="lcND">meniny: Gejza</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Obrátenie svätého Pavla, apoštola</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+26 január </span>
+<span class="lcND">meniny: Tamara</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>3. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-01-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+27 január </span>
+<span class="lcND">meniny: Bohuš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 3. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Angely Merici, panny</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-01-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+28 január </span>
+<span class="lcND">meniny: Alfonz</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Tomáša Akvinského, kňaza a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+29 január </span>
+<span class="lcND">meniny: Gašpar</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 3. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+30 január </span>
+<span class="lcND">meniny: Ema</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 3. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-01-31" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+31 január </span>
+<span class="lcND">meniny: Emil</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jána Bosca, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+1 február </span>
+<span class="lcND">meniny: Tatiana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 3. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-02-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+2 február </span>
+<span class="lcND">meniny: Erika, Erik</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Obetovanie Pána</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-02-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+3 február </span>
+<span class="lcND">meniny: Blažej</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 4. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Blažeja, biskupa a mučeníka</span><span class="lcFARBA R"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Oskára, biskupa</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-02-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+4 február </span>
+<span class="lcND">meniny: Veronika</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 4. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+5 február </span>
+<span class="lcND">meniny: Agáta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Agáty, panny a mučenice</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+6 február </span>
+<span class="lcND">meniny: Dorota</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Pavla Mikiho a spoločníkov, mučeníkov</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+7 február </span>
+<span class="lcND">meniny: Vanda</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 4. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+8 február </span>
+<span class="lcND">meniny: Zoja</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 4. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Hieronyma Emilianiho</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Jozefíny Bakhity, panny</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-02-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+9 február </span>
+<span class="lcND">meniny: Zdenko</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>5. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-02-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+10 február </span>
+<span class="lcND">meniny: Gabriela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Školastiky, panny</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+11 február </span>
+<span class="lcND">meniny: Dezider</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 5. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie Lurdskej</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-02-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+12 február </span>
+<span class="lcND">meniny: Perla</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 5. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+13 február </span>
+<span class="lcND">meniny: Arpád</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 5. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+14 február </span>
+<span class="lcND">meniny: Valentín</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 5. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>votívna svätá omša o svätých Cyrilovi, mníchovi, a Metodovi, biskupovi, patrónoch Európy</span><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>ŽILINA: Svätých Cyrila, mnícha, a Metoda, biskupa – hlavní patróni diecézy</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+15 február </span>
+<span class="lcND">meniny: Pravoslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 5. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-02-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+16 február </span>
+<span class="lcND">meniny: Ida, Liana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>6. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-02-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+17 február </span>
+<span class="lcND">meniny: Miloslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 6. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Siedmich svätých zakladateľov rehole Služobníkov preblahoslavenej Panny Márie</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-02-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+18 február </span>
+<span class="lcND">meniny: Jaromír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 6. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+19 február </span>
+<span class="lcND">meniny: Vlasta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 6. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+20 február </span>
+<span class="lcND">meniny: Lívia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 6. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+21 február </span>
+<span class="lcND">meniny: Eleonóra</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 6. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Petra Damianiho, biskupa a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-02-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+22 február </span>
+<span class="lcND">meniny: Etela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Katedry svätého Petra, apoštola</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+23 február </span>
+<span class="lcND">meniny: Roman, Romana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>7. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-02-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+24 február </span>
+<span class="lcND">meniny: Matej</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 7. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+25 február </span>
+<span class="lcND">meniny: Frederik, Frederika</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 7. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+26 február </span>
+<span class="lcND">meniny: Viktor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 7. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-02-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+27 február </span>
+<span class="lcND">meniny: Alexander</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 7. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Gregora z Nareku, opáta a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-02-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+28 február </span>
+<span class="lcND">meniny: Zlatica</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 7. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+1 marec </span>
+<span class="lcND">meniny: Albín</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 7. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-03-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+2 marec </span>
+<span class="lcND">meniny: Anežka</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>8. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-03-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+3 marec </span>
+<span class="lcND">meniny: Bohumil, Bohumila</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 8. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+4 marec </span>
+<span class="lcND">meniny: Kazimír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 8. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Kazimíra</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-03-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+5 marec </span>
+<span class="lcND">meniny: Fridrich</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Popolcová streda</span>
+<i class="lcTYP">(Pôst a zdržovanie sa mäsitého pokrmu. Je deň pokánia v celej Cirkvi.)</i><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+6 marec </span>
+<span class="lcND">meniny: Radoslav, Radoslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po Popolcovej strede</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+7 marec </span>
+<span class="lcND">meniny: Tomáš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po Popolcovej strede</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätých Perpetuy a Felicity, mučeníc)</span></h2>
+
+</div></td></tr><tr><td id="2025-03-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+8 marec </span>
+<span class="lcND">meniny: Alan, Alana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po Popolcovej strede</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Jána od Boha, rehoľníka).</span></h2>
+
+</div></td></tr><tr><td id="2025-03-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+9 marec </span>
+<span class="lcND">meniny: Františka</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>1. pôstna nedeľa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-03-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+10 marec </span>
+<span class="lcND">meniny: Branislav, Bruno</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 1. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>BRATISLAVA: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Bratislave</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+11 marec </span>
+<span class="lcND">meniny: Angela, Angelika</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 1. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+12 marec </span>
+<span class="lcND">meniny: Gregor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 1. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+13 marec </span>
+<span class="lcND">meniny: Vlastimil</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 1. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+14 marec </span>
+<span class="lcND">meniny: Matilda</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 1. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+15 marec </span>
+<span class="lcND">meniny: Svetlana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 1. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+16 marec </span>
+<span class="lcND">meniny: Boleslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>2. pôstna nedeľa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-03-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+17 marec </span>
+<span class="lcND">meniny: Ľubica</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 2. pôstnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Patrika, biskupa)</span></h2>
+
+</div></td></tr><tr><td id="2025-03-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+18 marec </span>
+<span class="lcND">meniny: Eduard</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 2. pôstnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Cyrila Jeruzalemského, biskupa a učiteľa Cirkvi)</span></h2>
+
+</div></td></tr><tr><td id="2025-03-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+19 marec </span>
+<span class="lcND">meniny: Jozef</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jozefa, ženícha preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+20 marec </span>
+<span class="lcND">meniny: Víťazoslav, Klaudius</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 2. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+21 marec </span>
+<span class="lcND">meniny: Blahoslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 2. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+22 marec </span>
+<span class="lcND">meniny: Beňadik</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 2. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+23 marec </span>
+<span class="lcND">meniny: Adrián</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>3. pôstna nedeľa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-03-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+24 marec </span>
+<span class="lcND">meniny: Gabriel</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 3. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+25 marec </span>
+<span class="lcND">meniny: Marián</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Zvestovanie Pána</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+26 marec </span>
+<span class="lcND">meniny: Emanuel</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 3. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+27 marec </span>
+<span class="lcND">meniny: Alena</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 3. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+28 marec </span>
+<span class="lcND">meniny: Soňa</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 3. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+29 marec </span>
+<span class="lcND">meniny: Miroslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 3. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-03-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+30 marec </span>
+<span class="lcND">meniny: Vieroslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>
+4. pôstna nedeľa (nedeľa Laetare)
+ </span><span class="lcFARBA V"></span><span class="lcFARBA P"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-03-31" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+31 marec </span>
+<span class="lcND">meniny: Benjamín</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 4. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+1 apríl </span>
+<span class="lcND">meniny: Hugo</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 4. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+2 apríl </span>
+<span class="lcND">meniny: Zita</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 4. pôstnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Františka z Paoly, pustovníka)</span></h2>
+
+</div></td></tr><tr><td id="2025-04-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+3 apríl </span>
+<span class="lcND">meniny: Richard</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 4. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+4 apríl </span>
+<span class="lcND">meniny: Izidor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 4. pôstnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Izidora, biskupa a učiteľa Cirkvi)</span></h2>
+
+</div></td></tr><tr><td id="2025-04-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+5 apríl </span>
+<span class="lcND">meniny: Miroslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 4. pôstnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Vincenta Ferrera, kňaza).</span></h2>
+
+</div></td></tr><tr><td id="2025-04-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+6 apríl </span>
+<span class="lcND">meniny: Irena</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>5. pôstna nedeľa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-04-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+7 apríl </span>
+<span class="lcND">meniny: Zoltán</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 5. pôstnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Jána Krstiteľa de la Salle, kňaza)</span></h2>
+
+</div></td></tr><tr><td id="2025-04-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+8 apríl </span>
+<span class="lcND">meniny: Albert</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 5. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+9 apríl </span>
+<span class="lcND">meniny: Milena</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 5. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+10 apríl </span>
+<span class="lcND">meniny: Igor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 5. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+11 apríl </span>
+<span class="lcND">meniny: Július</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 5. pôstnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="sp">(svätého Stanislava, biskupa a mučeníka)</span></h2>
+
+</div></td></tr><tr><td id="2025-04-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+12 apríl </span>
+<span class="lcND">meniny: Estera</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 5. pôstnej nedeli</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+13 apríl </span>
+<span class="lcND">meniny: Aleš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Palmová (Kvetná) nedeľa – Nedeľa utrpenia Pána</span><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-04-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+14 apríl </span>
+<span class="lcND">meniny: Justína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok Svätého týždňa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+15 apríl </span>
+<span class="lcND">meniny: Fedor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok Svätého týždňa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+16 apríl </span>
+<span class="lcND">meniny: Dana, Danica</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda Svätého týždňa</span><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+17 apríl </span>
+<span class="lcND">meniny: Rudolf</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok Svätého týždňa – Zelený štvrtok</span><span class="lcFARBA V"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span><span class="lcMOD">Večer</span> Štvrtok Pánovej večere</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+18 apríl </span>
+<span class="lcND">meniny: Valér</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok utrpenia Pána (Veľký piatok) – slávenie utrpenia a smrti Pána</span><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+19 apríl </span>
+<span class="lcND">meniny: Jela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Biela sobota</span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+20 apríl </span>
+<span class="lcND">meniny: Marcel</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Veľkonočná nedeľa Pánovho zmŕtvychvstania</span>
+<i class="lcTYP">(slávnosť s oktávou)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-04-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+21 apríl </span>
+<span class="lcND">meniny: Ervín</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok vo Veľkonočnej oktáve</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+22 apríl </span>
+<span class="lcND">meniny: Slavomír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok vo Veľkonočnej oktáve</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+23 apríl </span>
+<span class="lcND">meniny: Vojtech</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda vo Veľkonočnej oktáve</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+24 apríl </span>
+<span class="lcND">meniny: Juraj</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok vo Veľkonočnej oktáve</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+25 apríl </span>
+<span class="lcND">meniny: Marek</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok vo Veľkonočnej oktáve</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+26 apríl </span>
+<span class="lcND">meniny: Jaroslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota vo Veľkonočnej oktáve</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+27 apríl </span>
+<span class="lcND">meniny: Jaroslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>2. Veľkonočná nedeľa<br/> <span class="lcMOD">al.</span> Nedeľa Božieho milosrdenstva</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-04-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+28 apríl </span>
+<span class="lcND">meniny: Jarmila</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 2. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Petra Chanela, kňaza a mučeníka</span><span class="lcFARBA R"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Ľudovíta Máriu Grigniona z Montfortu, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-04-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+29 apríl </span>
+<span class="lcND">meniny: Lea</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Kataríny Sienskej, panny a učiteľky Cirkvi, patrónky Európy</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-04-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+30 apríl </span>
+<span class="lcND">meniny: Anastázia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 2. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Pia V., pápeža</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+1 máj </span>
+<span class="lcND">Sviatok práce</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 2. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jozefa, robotníka</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+2 máj </span>
+<span class="lcND">meniny: Žigmund</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Atanáza, biskupa a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+3 máj </span>
+<span class="lcND">meniny: Galina</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Filipa a Jakuba, apoštolov</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+4 máj </span>
+<span class="lcND">meniny: Florián</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>3. veľkonočná nedeľa</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-05-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+5 máj </span>
+<span class="lcND">meniny: Lesana, Lesia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 3. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+6 máj </span>
+<span class="lcND">meniny: Hermína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 3. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+7 máj </span>
+<span class="lcND">meniny: Monika</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 3. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+8 máj </span>
+<span class="lcND">meniny: Ingrida</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 3. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+9 máj </span>
+<span class="lcND">meniny: Roland</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 3. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+10 máj </span>
+<span class="lcND">meniny: Viktória</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 3. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána z Avily, kňaza a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+11 máj </span>
+<span class="lcND">meniny: Blažena</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>4. veľkonočná nedeľa</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-05-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+12 máj </span>
+<span class="lcND">meniny: Pankrác</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 4. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätých Nerea a Achila, mučeníkov</span><span class="lcFARBA R"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Pankráca, mučeníka</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+13 máj </span>
+<span class="lcND">meniny: Servác</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 4. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Blahoslavenej Panny Márie Fatimskej</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+14 máj </span>
+<span class="lcND">meniny: Bonifác</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Mateja, apoštola</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+15 máj </span>
+<span class="lcND">meniny: Žofia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 4. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+16 máj </span>
+<span class="lcND">meniny: Svetozár</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jána Nepomuckého, kňaza a mučeníka</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>ROŽŇAVA: Svätého Jána Nepomuckého, kňaza a mučeníka – hlavného patróna diecézy</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+17 máj </span>
+<span class="lcND">meniny: Gizela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 4. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+18 máj </span>
+<span class="lcND">meniny: Viola</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>5. veľkonočná nedeľa</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-05-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+19 máj </span>
+<span class="lcND">meniny: Gertrúda</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 5. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+20 máj </span>
+<span class="lcND">meniny: Bernard</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 5. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Bernardína Sienského, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+21 máj </span>
+<span class="lcND">meniny: Zina</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 5. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Krištofa Magallanesa, kňaza, a spoločníkov, mučeníkov</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+22 máj </span>
+<span class="lcND">meniny: Júlia, Juliana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok po 5. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Rity z Cascie, rehoľníčky</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+23 máj </span>
+<span class="lcND">meniny: Želmíra</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 5. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+24 máj </span>
+<span class="lcND">meniny: Ela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 5. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+25 máj </span>
+<span class="lcND">meniny: Urban</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>6. veľkonočná nedeľa</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-05-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+26 máj </span>
+<span class="lcND">meniny: Dušan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Filipa Neriho, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+27 máj </span>
+<span class="lcND">meniny: Iveta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok po 6. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Augustína z Canterbury, biskupa</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-05-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+28 máj </span>
+<span class="lcND">meniny: Viliam</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 6. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+29 máj </span>
+<span class="lcND">meniny: Vilma</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Nanebovstúpenie Pána</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+30 máj </span>
+<span class="lcND">meniny: Ferdinand</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 6. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-05-31" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+31 máj </span>
+<span class="lcND">meniny: Petrana, Petronela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 6. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+1 jún </span>
+<span class="lcND">meniny: Žaneta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>7. veľkonočná nedeľa</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-06-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+2 jún </span>
+<span class="lcND">meniny: Xénia, Oxana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok po 7. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätých Marcelína a Petra, mučeníkov</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-06-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+3 jún </span>
+<span class="lcND">meniny: Karolína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Karola Lwangu a spoločníkov, mučeníkov</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+4 jún </span>
+<span class="lcND">meniny: Lenka</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda po 7. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+5 jún </span>
+<span class="lcND">meniny: Laura</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Bonifáca, biskupa a mučeníka</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+6 jún </span>
+<span class="lcND">meniny: Norbert</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok po 7. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Norberta, biskupa</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-06-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+7 jún </span>
+<span class="lcND">meniny: Róbert</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota po 7. veľkonočnej nedeli</span><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+8 jún </span>
+<span class="lcND">meniny: Medard</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Zoslanie Ducha Svätého</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-06-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+9 jún </span>
+<span class="lcND">meniny: Stanislava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Preblahoslavenej Panny Márie, Matky Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>Votívna omša o Duchu svätom</span><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+10 jún </span>
+<span class="lcND">meniny: Margaréta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 10. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+11 jún </span>
+<span class="lcND">meniny: Dobroslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Barnabáša, apoštola</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+12 jún </span>
+<span class="lcND">meniny: Zlatko</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Nášho Pána Ježiša Krista, najvyššieho a večného kňaza</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+13 jún </span>
+<span class="lcND">meniny: Anton</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Antona Paduánskeho, kňaza a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>ORDINARIÁT OS a OZ SR: Výročie posviacky katedrálneho chrámu svätého Šebastiána v Bratislave</span>
+<i class="lcTYP">(v ordinariáte sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+14 jún </span>
+<span class="lcND">meniny: Vasil</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 10. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-06-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+15 jún </span>
+<span class="lcND">meniny: Vit</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Najsvätejšej Trojice</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>ŽILINA: Najsvätejšej Trojice – titul katedrály</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-06-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+16 jún </span>
+<span class="lcND">meniny: Blanka, Bianka</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 11. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>ROŽŇAVA (len v katedrále): Svätého Neita, mučeníka</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+17 jún </span>
+<span class="lcND">meniny: Adolf</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 11. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+18 jún </span>
+<span class="lcND">meniny: Vratislav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 11. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+19 jún </span>
+<span class="lcND">meniny: Alfréd</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Najsvätejšieho Kristovho Tela a Krvi</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+20 jún </span>
+<span class="lcND">meniny: Valéria</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 11. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+21 jún </span>
+<span class="lcND">meniny: Alojz</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Alojza Gonzágu, rehoľníka</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+22 jún </span>
+<span class="lcND">meniny: Paulína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>12. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-06-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+23 jún </span>
+<span class="lcND">meniny: Sidónia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 12. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+24 jún </span>
+<span class="lcND">meniny: Ján</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Narodenie svätého Jána Krstiteľa</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>TRNAVA: Narodenie svätého Jána Krstiteľa – hlavného patróna diecézy a titul katedrály</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+25 jún </span>
+<span class="lcND">meniny: Olívia, Tadeáš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 12. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+26 jún </span>
+<span class="lcND">meniny: Adriána</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 12. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+27 jún </span>
+<span class="lcND">meniny: Ladislav, Ladislava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Najsvätejšieho Srdca Ježišovho</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+28 jún </span>
+<span class="lcND">meniny: Beáta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Nepoškvrneného Srdca preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-06-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+29 jún </span>
+<span class="lcND">meniny: Peter a Pavol, Petra</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Svätých Petra a Pavla, apoštolov</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-06-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+30 jún </span>
+<span class="lcND">meniny: Melánia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 13. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Prvých svätých mučeníkov Cirkvi v Ríme</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+1 júl </span>
+<span class="lcND">meniny: Diana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 13. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+2 júl </span>
+<span class="lcND">meniny: Berta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Návšteva preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+3 júl </span>
+<span class="lcND">meniny: Miloslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Tomáša, apoštola</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+4 júl </span>
+<span class="lcND">meniny: Prokop</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 13. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Alžbety Portugalskej</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+5 júl </span>
+<span class="lcND">meniny: Cyril a Metod</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Cyrila, mnícha, a Metoda, biskupa, slovanských vierozvestov, patrónov Európy</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+6 júl </span>
+<span class="lcND">meniny: Patrik, Patrícia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>14. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-07-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+7 júl </span>
+<span class="lcND">meniny: Oliver</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 14. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Antona Máriu Zaccariu, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+8 júl </span>
+<span class="lcND">meniny: Ivan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 14. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+9 júl </span>
+<span class="lcND">meniny: Lujza</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 14. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätých Augustína Zhao Ronga, kňaza, a spoločníkov, mučeníkov</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+10 júl </span>
+<span class="lcND">meniny: Amália</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 14. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+11 júl </span>
+<span class="lcND">meniny: Milota</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Benedikta, opáta, patróna Európy</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+12 júl </span>
+<span class="lcND">meniny: Nina</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 14. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+13 júl </span>
+<span class="lcND">meniny: Margita</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>15. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-07-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+14 júl </span>
+<span class="lcND">meniny: Kamil</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 15. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Kamila z Lellisu, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+15 júl </span>
+<span class="lcND">meniny: Henrich</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Bonaventúru, biskupa a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+16 júl </span>
+<span class="lcND">meniny: Drahomír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 15. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie Karmelskej</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+17 júl </span>
+<span class="lcND">meniny: Bohuslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Andreja-Svorada a Beňadika, pustovníkov</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>NITRA: Svätých Andreja-Svorada a Beňadika, pustovníkov – hlavných patrónov diecézy</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>Mesto Nitra: Svätého Andreja-Svorada – patróna mesta</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+18 júl </span>
+<span class="lcND">meniny: Kamila</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 15. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+19 júl </span>
+<span class="lcND">meniny: Dušana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 15. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+20 júl </span>
+<span class="lcND">meniny: Iľja, Eliáš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>16. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-07-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+21 júl </span>
+<span class="lcND">meniny: Daniel</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 16. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Vavrinca z Brindisi, kňaza a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+22 júl </span>
+<span class="lcND">meniny: Magdaléna</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Márie Magdalény</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+23 júl </span>
+<span class="lcND">meniny: Oľga</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Brigity, rehoľníčky, patrónky Európy</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+24 júl </span>
+<span class="lcND">meniny: Vladimír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 16. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Šarbela Machlúfa, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+25 júl </span>
+<span class="lcND">meniny: Jakub</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jakuba, apoštola</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+26 júl </span>
+<span class="lcND">meniny: Anna, Hana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Joachima a Anny, rodičov preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+27 júl </span>
+<span class="lcND">meniny: Božena</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>17. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-07-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+28 júl </span>
+<span class="lcND">meniny: Krištof</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 17. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+29 júl </span>
+<span class="lcND">meniny: Marta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Marty, Márie a Lazára</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-07-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+30 júl </span>
+<span class="lcND">meniny: Libuša</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 17. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Petra Chryzológa, biskupa a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Blahoslavenej Zdenky Cecílie Schelingovej, panny a mučenice</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-07-31" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+31 júl </span>
+<span class="lcND">meniny: Ignác</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Ignáca z Loyoly, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+1 august </span>
+<span class="lcND">meniny: Božidara</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Alfonza Máriu de’ Liguori, biskupa a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+2 august </span>
+<span class="lcND">meniny: Gustáv</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 17. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Euzébia Vercellského, biskupa</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Petra Juliána Eymarda, kňaza</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+3 august </span>
+<span class="lcND">meniny: Jerguš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>18. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-08-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+4 august </span>
+<span class="lcND">meniny: Dominik, Dominika</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jána Máriu Vianneya, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+5 august </span>
+<span class="lcND">meniny: Hortenzia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 18. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Výročie posviacky hlavnej mariánskej baziliky v Ríme</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+6 august </span>
+<span class="lcND">meniny: Jozefína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Premenenie Pána</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+7 august </span>
+<span class="lcND">meniny: Štefánia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 18. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätých Sixta II., pápeža, a jeho spoločníkov, mučeníkov</span><span class="lcFARBA R"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Kajetána, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+8 august </span>
+<span class="lcND">meniny: Oskar</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Dominika, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+9 august </span>
+<span class="lcND">meniny: Ľubomíra</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Terézie Benedikty od Kríža, panny a mučenice, patrónky Európy</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+10 august </span>
+<span class="lcND">meniny: Vavrinec</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>19. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-08-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+11 august </span>
+<span class="lcND">meniny: Zuzana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Kláry, panny</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+12 august </span>
+<span class="lcND">meniny: Darina</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 19. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Jany Františky de Chantal, rehoľníčky</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+13 august </span>
+<span class="lcND">meniny: Ľubomír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 19. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätých Ponciána, pápeža, a Hipolyta, kňaza, mučeníkov</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+14 august </span>
+<span class="lcND">meniny: Mojmír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Maximiliána Máriu Kolbeho, kňaza a mučeníka</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+15 august </span>
+<span class="lcND">meniny: Marcela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Nanebovzatie preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>ROŽŇAVA: Nanebovzatie preblahoslavenej Panny Márie – titul katedrály</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+16 august </span>
+<span class="lcND">meniny: Leonard</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 19. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Štefana Uhorského</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+17 august </span>
+<span class="lcND">meniny: Milica</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>20. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-08-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+18 august </span>
+<span class="lcND">meniny: Elena, Helena</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 20. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Heleny</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+19 august </span>
+<span class="lcND">meniny: Lýdia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 20. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána Eudesa, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+20 august </span>
+<span class="lcND">meniny: Anabela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Bernarda, opáta a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+21 august </span>
+<span class="lcND">meniny: Jana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Pia X., pápeža</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+22 august </span>
+<span class="lcND">meniny: Tichomír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Preblahoslavenej Panny Márie Kráľovnej</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+23 august </span>
+<span class="lcND">meniny: Filip</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 20. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Ruženy Limskej, panny</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+24 august </span>
+<span class="lcND">meniny: Bartolomej</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>21. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-08-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+25 august </span>
+<span class="lcND">meniny: Ľudovít</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 21. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jozefa Kalazanského, kňaza</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Ľudovíta</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-08-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+26 august </span>
+<span class="lcND">meniny: Samuel</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 21. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+27 august </span>
+<span class="lcND">meniny: Silvia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Moniky</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+28 august </span>
+<span class="lcND">meniny: Augustín</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Augustína, biskupa a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+29 august </span>
+<span class="lcND">meniny: Nikola, Nikolaj</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Mučenícka smrť svätého Jána Krstiteľa</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+30 august </span>
+<span class="lcND">meniny: Ružena</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 21. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>TRNAVA: Výročie posviacky katedrálneho chrámu svätého Jána Krstiteľa v Trnave</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-08-31" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+31 august </span>
+<span class="lcND">meniny: Nora</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>22. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-09-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+1 september </span>
+<span class="lcND">meniny: Drahoslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 22. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+2 september </span>
+<span class="lcND">meniny: Linda</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 22. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+3 september </span>
+<span class="lcND">meniny: Belo</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Gregora Veľkého, pápeža a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+4 september </span>
+<span class="lcND">meniny: Rozália</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 22. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+5 september </span>
+<span class="lcND">meniny: Regina</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 22. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+6 september </span>
+<span class="lcND">meniny: Alica</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 22. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>KOŠICE: Výročie posviacky katedrálneho chrámu svätej Alžbety Uhorskej v Košiciach</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+7 september </span>
+<span class="lcND">meniny: Marianna</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>23. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-09-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+8 september </span>
+<span class="lcND">meniny: Miriama</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Narodenie preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+9 september </span>
+<span class="lcND">meniny: Martina</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 23. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Petra Clavera, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-09-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+10 september </span>
+<span class="lcND">meniny: Oleg</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 23. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+11 september </span>
+<span class="lcND">meniny: Bystrík</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 23. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+12 september </span>
+<span class="lcND">meniny: Mária</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 23. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Najsvätejšieho mena Mária</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-09-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+13 september </span>
+<span class="lcND">meniny: Ctibor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jána Zlatoústeho, biskupa a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+14 september </span>
+<span class="lcND">meniny: Ľudomil</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Povýšenie svätého kríža</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-09-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+15 september </span>
+<span class="lcND">meniny: Jolana</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sedembolestnej Panny Márie, patrónky Slovenska</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+16 september </span>
+<span class="lcND">meniny: Ľudmila</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Kornela, pápeža, a Cypriána, biskupa, mučeníkov</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+17 september </span>
+<span class="lcND">meniny: Olympia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 24. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Róberta Bellarmína, biskupa a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Hildegardy z Bingenu, panny a učiteľky Cirkvi</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-09-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+18 september </span>
+<span class="lcND">meniny: Eugénia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 24. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+19 september </span>
+<span class="lcND">meniny: Konštantín</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 24. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Januára, biskupa a mučeníka</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-09-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+20 september </span>
+<span class="lcND">meniny: Ľuboslav, Ľuboslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Andreja Kima Taegona, kňaza, Pavla Chonga Hasanga a spoločníkov, mučeníkov</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+21 september </span>
+<span class="lcND">meniny: Matúš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>25. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-09-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+22 september </span>
+<span class="lcND">meniny: Móric</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 25. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>NITRA: Svätého Emeráma, biskupa a mučeníka – titul katedrály</span>
+<i class="lcTYP">(v diecéze spomienka; v katedrále slávnosť)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+23 september </span>
+<span class="lcND">meniny: Zdenka</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Pia z Pietrelciny, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+24 september </span>
+<span class="lcND">meniny: Ľuboš, Ľubor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 25. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>BANSKÁ BYSTRICA: Výročie posviacky katedrálneho chrámu svätého Františka Xaverského</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+25 september </span>
+<span class="lcND">meniny: Vladislav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 25. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+26 september </span>
+<span class="lcND">meniny: Edita</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 25. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätých Kozmu a Damiána, mučeníkov</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-09-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+27 september </span>
+<span class="lcND">meniny: Cyprián</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Vincenta de Paul, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+28 september </span>
+<span class="lcND">meniny: Václav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>26. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-09-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+29 september </span>
+<span class="lcND">meniny: Michal, Michaela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Michala, Gabriela a Rafaela, archanjelov</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-09-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+30 september </span>
+<span class="lcND">meniny: Jarolím</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Hieronyma, kňaza a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+1 október </span>
+<span class="lcND">meniny: Arnold</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Terézie od Dieťaťa Ježiša (z Lisieux), panny a učiteľky Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+2 október </span>
+<span class="lcND">meniny: Levoslav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých anjelov strážcov</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+3 október </span>
+<span class="lcND">meniny: Stela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 26. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+4 október </span>
+<span class="lcND">meniny: František</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Františka Assiského</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+5 október </span>
+<span class="lcND">meniny: Viera</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>27. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-10-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+6 október </span>
+<span class="lcND">meniny: Natália</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 27. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Bruna, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-10-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+7 október </span>
+<span class="lcND">meniny: Eliška</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Ružencovej Panny Márie</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+8 október </span>
+<span class="lcND">meniny: Brigita</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 27. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+9 október </span>
+<span class="lcND">meniny: Dionýz</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 27. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätých Dionýza, biskupa, a spoločníkov, mučeníkov</span><span class="lcFARBA R"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána Leonardiho, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-10-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+10 október </span>
+<span class="lcND">meniny: Slavomíra</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 27. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>ŽILINA: Výročie posviacky katedrálneho chrámu Najvätejšej Trojice v Žiline</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+11 október </span>
+<span class="lcND">meniny: Valentína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 27. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána XXIII., pápeža</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-10-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+12 október </span>
+<span class="lcND">meniny: Maximilián</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>28. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-10-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+13 október </span>
+<span class="lcND">meniny: Koloman</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 28. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+14 október </span>
+<span class="lcND">meniny: Boris</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 28. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Kalixta I., pápeža, mučeníka</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-10-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+15 október </span>
+<span class="lcND">meniny: Terézia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Terézie od Ježiša (z Avily), panny a učiteľky Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+16 október </span>
+<span class="lcND">meniny: Vladimíra</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 28. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Hedvigy, rehoľníčky</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Margity Márie Alacoque, panny</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Gála, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-10-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+17 október </span>
+<span class="lcND">meniny: Hedviga</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Ignáca Antiochijského, biskupa a mučeníka</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+18 október </span>
+<span class="lcND">meniny: Lukáš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Lukáša, evanjelistu</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+19 október </span>
+<span class="lcND">meniny: Kristián</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>29. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-10-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+20 október </span>
+<span class="lcND">meniny: Vendelín</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 29. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+21 október </span>
+<span class="lcND">meniny: Uršuľa</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 29. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+22 október </span>
+<span class="lcND">meniny: Sergej</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 29. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána Pavla II., pápeža</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-10-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+23 október </span>
+<span class="lcND">meniny: Alojzia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 29. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána Kapistránskeho, kňaza</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-10-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+24 október </span>
+<span class="lcND">meniny: Kvetoslava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 29. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Antona Máriu Clareta, biskupa</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-10-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+25 október </span>
+<span class="lcND">meniny: Aurel</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 29. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Maura, biskupa</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>SPIŠ: Výročie posviacky katedrálneho chrámu svätého Martina z Tours v Spišskom Podhradí</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+26 október </span>
+<span class="lcND">meniny: Demeter</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>30. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>Výročie posviacky chrámov, ktorých deň posviacky je neznámy</span>
+<i class="lcTYP">(slávnosť; len v posvätených kostoloch)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-10-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+27 október </span>
+<span class="lcND">meniny: Sabína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 30. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>ROŽŇAVA: Výročie posviacky katedrálneho chrámu Nanebovzatia Panny Márie v Rožňave</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+28 október </span>
+<span class="lcND">meniny: Dobromila</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Šimona a Júdu, apoštolov</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+29 október </span>
+<span class="lcND">meniny: Klára</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 30. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+30 október </span>
+<span class="lcND">meniny: Šimon, Simona</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 30. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-10-31" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+31 október </span>
+<span class="lcND">meniny: Aurélia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 30. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+1 november </span>
+<span class="lcND">meniny: Denisa, Denis</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Všetkých svätých</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+2 november </span>
+<span class="lcND">Pamiatka zosnulých</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Spomienka na Všetkých zosnulých veriacich</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA V"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-11-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+3 november </span>
+<span class="lcND">meniny: Hubert</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Pondelok 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Martina de Porres, rehoľníka</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-11-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+4 november </span>
+<span class="lcND">meniny: Karol</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Karola Boromejského, biskupa</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+5 november </span>
+<span class="lcND">meniny: Imrich</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>TRNAVA, NITRA, BANSKÁ BYSTRICA, ROŽŇAVA:<br/> <span class="lcMOD">al.</span> Svätého Imricha</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-11-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+6 november </span>
+<span class="lcND">meniny: Renáta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+7 november </span>
+<span class="lcND">meniny: René</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+8 november </span>
+<span class="lcND">meniny: Bohumír</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 31. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-11-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+9 november </span>
+<span class="lcND">meniny: Teodor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Výročie posviacky Lateránskej baziliky</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-11-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+10 november </span>
+<span class="lcND">meniny: Tibor</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Leva Veľkého, pápeža a učiteľa Cirkvi</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+11 november </span>
+<span class="lcND">meniny: Martin, Maroš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Martina z Tours, biskupa</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>BRATISLAVA a SPIŠ: Svätého Martina z Tours, biskupa – hlavného patróna diecéz a titul katedrál</span>
+<i class="lcTYP">(sviatok; v katedrálach slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+12 november </span>
+<span class="lcND">meniny: Svätopluk</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätého Jozafáta, biskupa a mučeníka</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+13 november </span>
+<span class="lcND">meniny: Stanislav</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 32. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+14 november </span>
+<span class="lcND">meniny: Irma</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 32. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+15 november </span>
+<span class="lcND">meniny: Leopold</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 32. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Alberta Veľkého, biskupa a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-11-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+16 november </span>
+<span class="lcND">meniny: Agnesa</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>33. nedeľa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-11-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+17 november </span>
+<span class="lcND">meniny: Klaudia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Alžbety Uhorskej, rehoľníčky</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>KOŠICE: Svätej Alžbety Uhorskej, rehoľníčky – titul katedrály a patrónky mesta Košice</span>
+<i class="lcTYP">(slávnosť; iba v katedrále)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+18 november </span>
+<span class="lcND">meniny: Eugen</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 33. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Výročie posviacky bazilík svätých Petra a Pavla, apoštolov</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-11-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+19 november </span>
+<span class="lcND">meniny: Alžbeta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 33. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+20 november </span>
+<span class="lcND">meniny: Félix</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 33. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>KOŠICE:<br/> <span class="lcMOD">al.</span> Blahoslavenej Anny Kolesárovej, panny a mučenice</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div><div class="lcHEAD">
+<h2>
+<span>NITRA: Výročie posviacky katedrálneho chrámu svätého Emeráma, biskupa a mučeníka</span>
+<i class="lcTYP">(v diecéze sviatok; v katedrále slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+21 november </span>
+<span class="lcND">meniny: Elvíra</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Obetovanie preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+22 november </span>
+<span class="lcND">meniny: Cecília</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätej Cecílie, panny a mučenice</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+23 november </span>
+<span class="lcND">meniny: Klement</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>34. nedeľa v Cezročnom období – Nášho Pána Ježiša Krista, Kráľa neba i zeme</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span>
+</h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-11-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+24 november </span>
+<span class="lcND">meniny: Emília</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Svätých Ondreja Dung-Laka, kňaza, a spoločníkov, mučeníkov</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+25 november </span>
+<span class="lcND">meniny: Katarína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Utorok 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Kataríny Alexandrijskej, panny a mučenice</span><span class="lcFARBA R"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-11-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+26 november </span>
+<span class="lcND">meniny: Kornel</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Streda 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+27 november </span>
+<span class="lcND">meniny: Milan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Štvrtok 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+28 november </span>
+<span class="lcND">meniny: Henrieta</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Piatok 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+</h2>
+
+</div></td></tr><tr><td id="2025-11-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+29 november </span>
+<span class="lcND">meniny: Vratko</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+<h2>
+<span>Sobota 34. týždňa v Cezročnom období</span><span class="lcFARBA G"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie v sobotu</span><span class="lcFARBA W"></span>
+
+</h2>
+
+</div></td></tr><tr><td id="2025-11-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+30 november </span>
+<span class="lcND">meniny: Ondrej, Andrej</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>1. adventná nedeľa [rok A, cyklus II.]</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-12-01" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+1 december </span>
+<span class="lcND">meniny: Edmund</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Pondelok po 1. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-02" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+2 december </span>
+<span class="lcND">meniny: Bibiána</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Utorok po 1. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-03" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+3 december </span>
+<span class="lcND">meniny: Oldrich</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Svätého Františka Xaverského, kňaza</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA W"></span><div class="lcGEN">?!</div></h2>
+
+</div><div class="lcHEAD">
+
+<h2>
+<span>BANSKÁ BYSTRICA: Svätého Františka Xaverského, kňaza – hlavného patróna diecézy a titul katedrály</span>
+<i class="lcTYP">(sviatok, v katedrále slávnosť)</i><span class="lcFARBA W"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-04" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+4 december </span>
+<span class="lcND">meniny: Barbora, Barbara</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Štvrtok po 1. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána Damascénskeho, kňaza a učiteľa Cirkvi</span><span class="lcFARBA W"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätej Barbory, panny a mučenice</span><span class="lcFARBA R"></span>
+<div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-05" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+5 december </span>
+<span class="lcND">meniny: Oto</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Piatok po 1. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-06" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+6 december </span>
+<span class="lcND">meniny: Mikuláš</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Sobota po 1. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Mikuláša, biskupa</span><span class="lcFARBA W"></span>
+<div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-07" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+7 december </span>
+<span class="lcND">meniny: Ambróz</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>2. adventná nedeľa</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-12-08" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+8 december </span>
+<span class="lcND">meniny: Marína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Nepoškvrnené počatie preblahoslavenej Panny Márie</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-09" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+9 december </span>
+<span class="lcND">meniny: Izabela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Utorok po 2. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Jána Diega Cuauhtlatoatzina</span><span class="lcFARBA W"></span>
+<div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-10" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+10 december </span>
+<span class="lcND">meniny: Radúz</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Streda po 2. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie Loretánskej</span><span class="lcFARBA W"></span>
+<div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-11" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+11 december </span>
+<span class="lcND">meniny: Hilda</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Štvrtok po 2. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Svätého Damaza I., pápeža</span><span class="lcFARBA W"></span>
+<div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-12" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+12 december </span>
+<span class="lcND">meniny: Otília</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Piatok po 2. adventnej nedeli</span><span class="lcFARBA V"></span>
+<br/><span class="lcMOD">al.</span>
+<span>Preblahoslavenej Panny Márie Guadalupskej</span><span class="lcFARBA W"></span>
+<div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-13" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+13 december </span>
+<span class="lcND">meniny: Lucia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Svätej Lucie, panny a mučenice</span>
+<i class="lcTYP">(spomienka)</i><span class="lcFARBA R"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-14" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+14 december </span>
+<span class="lcND">meniny: Branislava, Bronislava</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>
+3. adventná nedeľa (Nedeľa Gaudete)
+ </span><span class="lcFARBA V"></span><span class="lcFARBA P"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-12-15" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+15 december </span>
+<span class="lcND">meniny: Ivica</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Pondelok po 3. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-16" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+16 december </span>
+<span class="lcND">meniny: Albína</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Utorok po 3. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-17" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+17 december </span>
+<span class="lcND">meniny: Kornélia</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Streda po 3. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-18" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+18 december </span>
+<span class="lcND">meniny: Sláva, Slávka</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Štvrtok po 3. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-19" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+19 december </span>
+<span class="lcND">meniny: Judita</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Piatok po 3. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-20" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+20 december </span>
+<span class="lcND">meniny: Dagmara</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Sobota po 3. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-21" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+21 december </span>
+<span class="lcND">meniny: Bohdan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>4. adventná nedeľa</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-12-22" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+22 december </span>
+<span class="lcND">meniny: Adela</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Pondelok po 4. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-23" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+23 december </span>
+<span class="lcND">meniny: Nadežda</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Utorok po 4. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div><br/><span class="sp">(svätého Jána Kentského, kňaza)</span></h2>
+
+</div></td></tr><tr><td id="2025-12-24" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+24 december </span>
+<span class="lcND">meniny: Adam a Eva</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Streda po 4. adventnej nedeli</span><span class="lcFARBA V"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-25" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Štvrtok</span>
+<span class="lcDMY">
+25 december </span>
+<span class="lcND">Prvý sviatok vianočný</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>PRIKÁZANÁ SLÁVNOSŤ: 
+<span>Narodenie Pána</span>
+<i class="lcTYP">(slávnosť)</i><span class="lcFARBA W"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-26" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Piatok</span>
+<span class="lcDMY">
+26 december </span>
+<span class="lcND">meniny: Štefan</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Svätého Štefana, prvého mučeníka</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA R"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-27" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Sobota</span>
+<span class="lcDMY">
+27 december </span>
+<span class="lcND">meniny: Filoména</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Svätého Jána, apoštola a evanjelistu</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-28" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Nedeľa</span>
+<span class="lcDMY">
+28 december </span>
+<span class="lcND">meniny: Ivana, Ivona</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Svätej rodiny – Ježiša, Márie a Jozefa</span>
+<i class="lcTYP">(sviatok)</i><span class="lcFARBA W"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr></tbody><tbody><tr><td id="2025-12-29" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Pondelok</span>
+<span class="lcDMY">
+29 december </span>
+<span class="lcND">meniny: Milada</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Piaty deň v oktáve narodenia Pána</span><span class="lcFARBA W"></span><div class="lcGEN">?!</div><br/><span class="sp">(svätého Tomáša Becketa, biskupa a mučeníka)</span></h2>
+
+</div></td></tr><tr><td id="2025-12-30" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Utorok</span>
+<span class="lcDMY">
+30 december </span>
+<span class="lcND">meniny: Dávid</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Šiesty deň v oktáve narodenia Pána</span><span class="lcFARBA W"></span><div class="lcGEN">?!</div></h2>
+
+</div></td></tr><tr><td id="2025-12-31" onclick="mf(this.id)"><h1>
+<div class="lcDATUM">
+<span class="lcWD">Streda</span>
+<span class="lcDMY">
+31 december </span>
+<span class="lcND">meniny: Silvester</span>
+</div>
+
+
+</h1><div class="lcHEAD">
+
+<h2>
+<span>Siedmy deň v oktáve narodenia Pána</span><span class="lcFARBA W"></span><div class="lcGEN">?!</div><br/><span class="sp">(svätého Silvestra I., pápeža)</span></h2>
+
+</div></td></tr></tbody></table></body>
+<script>
+    naDnes();
+</script>
+</html>
