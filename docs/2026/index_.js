@@ -89,11 +89,11 @@ function naDnes() {
   elem.style = "outline: DodgerBlue solid 4px;";
 
   let pelem = document.getElementById(pformattedDate); // previous elements
-  if (window.history.length === 1) {
+  // if (window.history.length === 1) {
     // úvodné jemné rolovanie
     pelem.scrollIntoView({ behavior: "instant", block: "center" });
     elem.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
+  // }
   // else nič. Ak ide o navigáciu "späť", nerobíme žiaden scrolling.
 
   console.log(pformattedDate);
